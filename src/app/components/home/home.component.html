@@ -20,7 +20,7 @@
     <div class="row">
       <div class="col-md-4">
         <!-- Card -->
-        <div class="card">
+        <div class="card" *ngIf="!authService.isUserLoggedIn()">
           <!-- Card image -->
           <div class="view overlay">
             <img
@@ -28,7 +28,7 @@
               src="https://simpleicon.com/wp-content/uploads/favorite-user.png"
               alt="Card image cap"
             />
-            <a href="#!">
+            <a (click)="openLoginModal()">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
@@ -42,7 +42,7 @@
               Log in here, if you already have an account.
             </p>
             <!-- Button -->
-            <a href="#" class="btn btn-primary">Take me there</a>
+            <button (click)="openLoginModal()" class="btn btn-primary">Take me there</button>
           </div>
         </div>
         <!-- Card -->
@@ -50,7 +50,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <!-- Card -->
-        <div class="card">
+        <div class="card" *ngIf="!authService.isUserLoggedIn()">
           <!-- Card image -->
           <div class="view overlay">
             <img
@@ -58,7 +58,7 @@
               src="https://simpleicon.com/wp-content/uploads/add-user.png"
               alt="Card image cap"
             />
-            <a href="#!">
+            <a (click)="openRegisterModal()">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
@@ -72,7 +72,7 @@
               Don't have an account yet? Register here.
             </p>
             <!-- Button -->
-            <a href="#" class="btn btn-primary">Take me there</a>
+            <button (click)="openRegisterModal()" class="btn btn-primary">Take me there</button>
           </div>
         </div>
         <!-- Card -->

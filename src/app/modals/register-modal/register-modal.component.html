@@ -1,0 +1,33 @@
+<div class="modal-header">
+  <h4 class="modal-title w-100" id="myModalLabel">Create a new user</h4>
+</div>
+<div class="modal-body">
+  <form class="text-center border border-light p-5" [formGroup]="registerForm" (ngSubmit)="tryRegister()">
+      <input type="username" class="form-control mb-4" placeholder="Username" formControlName="username">
+      <div class="text-danger" *ngIf="username.invalid && (username.dirty || username.touched)">Username must be
+        between {{minLength}} and {{maxLength}} characters.
+      </div>
+      <input type="password" class="form-control mb-4" placeholder="Password" formControlName="password">
+      <div class="text-danger" *ngIf="password.invalid && (password.dirty || password.touched) && !password.pending">Password must be
+        between {{minLength}} and {{maxLength}} characters.
+      </div>
+
+      <button [disabled]="registerForm.invalid" mdbBtn color="success" block="true" class="my-4" type="submit">Register</button>
+  </form>
+
+</div>
+<div *ngIf="succesfullyRegistered" class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>You have succesfully registered.</p>
+</div>
+<div *ngIf="registrationError" class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Oops!</h4>
+  <p>Something went wrong during your sign in process. You might try again with a different username.</p>
+  <hr>
+  <p class="mb-0">If the error consists, try contacting one of our administrators.</p>
+</div>
+<div class="modal-footer">
+  <button type="button" mdbBtn color="warning" class="relative waves-light" aria-label="Cancel" (click)="onCancelClick()"
+          mdbWavesEffect>Cancel
+  </button>
+</div>

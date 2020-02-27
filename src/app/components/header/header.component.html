@@ -19,7 +19,7 @@
         >
       </li>
       <li class="nav-item">
-        <a
+        <a *ngIf="authService.isUserLoggedIn()"
           class="nav-link waves-light"
           mdbWavesEffect
           routerLink="/payments"
@@ -30,7 +30,7 @@
       </li>
 
       <li class="nav-item dropdown" dropdown>
-        <a
+        <a *ngIf="authService.isUserLoggedIn()"
           dropdownToggle
           mdbWavesEffect
           type="button"
@@ -44,12 +44,12 @@
           class="dropdown-menu dropdown dropdown-primary"
           role="menu"
         >
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+          <a routerLink="/home" class="dropdown-item waves-light" mdbWavesEffect href="#"
             >My profile</a
           >
 
           <div class="divider dropdown-divider"></div>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+          <a routerLink="/logout" class="dropdown-item waves-light" mdbWavesEffect href="#"
             >Logout</a
           >
         </div>
