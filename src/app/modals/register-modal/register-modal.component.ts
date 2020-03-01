@@ -3,7 +3,6 @@ import {AuthService} from "../../services/auth-service/auth.service";
 import {Subject} from "rxjs";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {MDBModalRef} from "angular-bootstrap-md";
-import {log} from "util";
 
 @Component({
   selector: 'app-register-modal',
@@ -39,12 +38,12 @@ export class RegisterModalComponent implements OnInit {
 
 
     tryRegister() {
-    this.authService.register(this.username, this.password)
+    this.authService.register(this.username.value, this.password.value)
       .subscribe(
         data => {
           this.registrationError = false;
           this.succesfullyRegistered = true;
-          this.authService.authenticate(this.username, this.password)
+          this.authService.authenticate(this.username.value, this.password.value)
             .subscribe();
           setTimeout(() => {
             this.modalRef.hide();

@@ -24,7 +24,7 @@ import { RegisterModalComponent } from './modals/register-modal/register-modal.c
     ErrorComponent,
     LogoutComponent,
     LoginModalComponent,
-    RegisterModalComponent,
+    RegisterModalComponent
 
   ],
   imports: [

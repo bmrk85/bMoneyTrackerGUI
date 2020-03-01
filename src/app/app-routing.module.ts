@@ -8,7 +8,7 @@ import {LogoutComponent} from "./components/home/logout/logout.component";
 
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'payments', component: PaymentHistoryComponent, canActivate: [AuthGuardService]},
   {path: 'logout', component: LogoutComponent},
   {path: '**', component: ErrorComponent}

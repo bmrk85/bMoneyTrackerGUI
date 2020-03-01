@@ -1,4 +1,5 @@
 import {User} from "./user";
+import {Category} from "./category";
 
 export class Saving {
 
@@ -13,7 +14,7 @@ export class Saving {
 
   amount: number;
 
-  category: string;
+  category: Category;
 
   userEntity: User;
 

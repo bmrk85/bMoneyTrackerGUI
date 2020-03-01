@@ -19,7 +19,7 @@ export class LogoutComponent implements OnInit {
   logout(){
     setTimeout(() => {
       this.authService.logout();
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/');
     }, 1500);
   }
 

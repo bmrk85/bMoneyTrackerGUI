@@ -3,18 +3,19 @@
 </div>
 <div class="modal-body">
   <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
+    <div class="md-form">
+      <input type="username" class="form-control mb-4" placeholder="Username" formControlName="username">
 
-    <input type="username" class="form-control mb-4" placeholder="Username" formControlName="username">
+      <input type="password" class="form-control mb-4" placeholder="Password" formControlName="password">
 
-    <input type="password" class="form-control mb-4" placeholder="Password" formControlName="password">
-
-    <div class="d-flex justify-content-around">
-      <div>
-        <a href="">Forgot password?</a>
+      <div class="d-flex justify-content-around">
+        <div>
+          <a href="">Forgot password?</a>
+        </div>
       </div>
     </div>
-
-    <button mdbBtn [disabled]="loginForm.invalid" color="success" block="true" class="my-4" type="submit">Sign in</button>
+    <button mdbBtn [disabled]="loginForm.invalid" color="success" block="true" class="my-4" type="submit">Sign in
+    </button>
 
   </form>
 
@@ -26,7 +27,8 @@
   <p class="mb-0">If the error consists, try contacting one of our administrators.</p>
 </div>
 <div class="modal-footer">
-  <button type="button" mdbBtn color="warning" class="relative waves-light" aria-label="Cancel" (click)="onCancelClick()"
+  <button type="button" mdbBtn color="warning" class="relative waves-light" aria-label="Cancel"
+          (click)="onCancelClick()"
           mdbWavesEffect>Cancel
   </button>
 </div>
