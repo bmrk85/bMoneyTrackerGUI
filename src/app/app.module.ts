@@ -15,7 +15,18 @@ import { LoginModalComponent } from './modals/login-modal/login-modal.component'
 import { RegisterModalComponent } from './modals/register-modal/register-modal.component';
 import { NewSpendingModalComponent } from './modals/new-spending-modal/new-spending-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDialogModule, MatInputModule, MatButtonModule} from "@angular/material";
+import {
+  MatDialogModule,
+  MatInputModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatDatepickerModule, MatNativeDateModule
+} from "@angular/material";
+import { SpendingComponent } from './components/spending/spending.component';
+import { IncomeComponent } from './components/income/income.component';
+import { SavingComponent } from './components/saving/saving.component';
+import { NewSavingModalComponent } from './modals/new-saving-modal/new-saving-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +38,11 @@ import {MatDialogModule, MatInputModule, MatButtonModule} from "@angular/materia
     LogoutComponent,
     LoginModalComponent,
     RegisterModalComponent,
-    NewSpendingModalComponent
+    NewSpendingModalComponent,
+    SpendingComponent,
+    IncomeComponent,
+    SavingComponent,
+    NewSavingModalComponent
 
   ],
   imports: [
@@ -39,14 +54,23 @@ import {MatDialogModule, MatInputModule, MatButtonModule} from "@angular/materia
     BrowserAnimationsModule,
     MatDialogModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
+    MatDatepickerModule,
     {
       provide: HTTP_INTERCEPTORS, useClass: BasicAuthHttpInterceptorService, multi: true
     }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [LoginModalComponent, RegisterModalComponent]
+  entryComponents: [LoginModalComponent, RegisterModalComponent, NewSavingModalComponent]
 })
 export class AppModule { }

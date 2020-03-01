@@ -1,4 +1,4 @@
-<h4 mat-dialog-title>Create a new user</h4>
+<h4 mat-dialog-title>Sign in to your user</h4>
 <div mat-dialog-content>
   <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
     <mat-form-field appearance="outline">
@@ -17,10 +17,10 @@
 
     <mat-dialog-actions>
 
-      <button mat-button [disabled]="loginForm.invalid" type="submit">
-        Register
+      <button mat-raised-button color="primary" [disabled]="loginForm.invalid" type="submit">
+        Sign in
       </button>
-      <button type="button" mat-button mat-dialog-close aria-label="Cancel"
+      <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
               (click)="onCancelClick()">Cancel
       </button>
 
@@ -30,7 +30,7 @@
 
   <div *ngIf="invalidLogin" class="alert alert-danger" role="alert">
     <h4 class="alert-heading">Oops!</h4>
-    <p>Something went wrong during your login process. You might try again with a different username.</p>
+    <p>Something went wrong during your login process. You might try again.</p>
     <hr>
     <p class="mb-0">If the error consists, try contacting one of our administrators.</p>
   </div>

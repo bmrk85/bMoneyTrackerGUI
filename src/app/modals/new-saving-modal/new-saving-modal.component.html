@@ -1,0 +1,51 @@
+<h4 mat-dialog-title>Create a saving</h4>
+<div mat-dialog-content>
+  <form class="text-center border border-light p-5" [formGroup]="savingForm" (ngSubmit)="createSaving()">
+    <mat-form-field appearance="outline">
+      <mat-label>Saving name</mat-label>
+      <input matInput formControlName="name">
+      <mat-hint align="end">Unique name for what you are saving up for</mat-hint>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Date From</mat-label>
+      <input matInput [matDatepicker]="dateFromDP" formControlName="dateFrom">
+      <mat-datepicker-toggle matSuffix [for]="dateFromDP"></mat-datepicker-toggle>
+      <mat-hint align="end">Start date of your saving</mat-hint>
+      <mat-datepicker #dateFromDP></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Date To</mat-label>
+      <input matInput [matDatepicker]="dateToDP" formControlName="dateTo">
+      <mat-datepicker-toggle matSuffix [for]="dateToDP"></mat-datepicker-toggle>
+      <mat-hint align="end">End date of your saving</mat-hint>
+      <mat-datepicker #dateToDP></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Amount</mat-label>
+      <input matInput formControlName="amount">
+      <mat-hint align="end">Amount of your saving</mat-hint>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="category">
+      <mat-hint align="end">Category of your saving</mat-hint>
+    </mat-form-field>
+    <br>
+
+    <mat-dialog-actions>
+
+      <button mat-raised-button color="primary" [disabled]="savingForm.invalid" type="submit">
+        Save
+      </button>
+      <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
+              (click)="onCancelClick($event)">Cancel
+      </button>
+
+    </mat-dialog-actions>
+  </form>
+</div>
+

@@ -17,12 +17,13 @@
       <mat-error *ngIf="hasError('password', 'minlength')">Required field</mat-error>
       <mat-error *ngIf="hasError('password', 'minlength')">Must be between {{minLength}} and {{maxLength}} characters</mat-error>
     </mat-form-field>
+    <p></p>
 
     <mat-dialog-actions>
-      <button mat-button [disabled]="registerForm.invalid" type="submit">
+      <button mat-raised-button color="primary" [disabled]="registerForm.invalid" type="submit">
         Register
       </button>
-      <button type="button" mat-button mat-dialog-close aria-label="Cancel"
+      <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
               (click)="onCancelClick()">Cancel
       </button>
 
