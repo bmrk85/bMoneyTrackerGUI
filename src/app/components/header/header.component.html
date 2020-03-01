@@ -1,41 +1,36 @@
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
-  <!-- Navbar brand -->
-  <mdb-navbar-brand
+<nav class="navbar navbar-expand-lg navbar-dark indigo">
+  <div class="container-fluid">
+    <div class="navbar-header"
     ><a class="navbar-brand" href="#"><i class="fas fa-home"></i></a
-  ></mdb-navbar-brand>
+    ></div>
 
-  <!-- Collapsible content -->
-  <links>
+    <!-- Collapsible content -->
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a
-          class="nav-link waves-light"
-          mdbWavesEffect
+          class="nav-link"
           routerLink="/"
           routerLinkActive="active"
-          >Home</a
+        >Home</a
         >
       </li>
       <li class="nav-item">
         <a *ngIf="authService.isUserLoggedIn()"
-          class="nav-link waves-light"
-          mdbWavesEffect
-          routerLink="/payments"
-          routerLinkActive="active"
-          >Payment history</a
+           class="nav-link"
+           routerLink="/payments"
+           routerLinkActive="active"
+        >Payment history</a
         >
         <!-- Dropdown -->
       </li>
 
       <li class="nav-item dropdown" dropdown>
         <a *ngIf="authService.isUserLoggedIn()"
-          dropdownToggle
-          mdbWavesEffect
-          type="button"
-          class="nav-link dropdown-toggle waves-light"
-          mdbWavesEffect
+           dropdownToggle
+           type="button"
+           class="nav-link dropdown-toggle"
         >
           User<span class="caret"></span
         ></a>
@@ -44,19 +39,20 @@
           class="dropdown-menu dropdown dropdown-primary"
           role="menu"
         >
-          <a routerLink="/home" class="dropdown-item waves-light" mdbWavesEffect href="#"
-            >My profile</a
+          <a routerLink="/home" class="dropdown-item" href="#"
+          >My profile</a
           >
 
           <div class="divider dropdown-divider"></div>
-          <a routerLink="/logout" class="dropdown-item waves-light" mdbWavesEffect href="#"
-            >Logout</a
+          <a routerLink="/logout" class="dropdown-item" href="#"
+          >Logout</a
           >
         </div>
       </li>
     </ul>
-    <!-- Links -->
-  </links>
+  </div>
+  <!-- Links -->
+
   <!-- Collapsible content -->
-</mdb-navbar>
+</nav>
 <!--/.Navbar-->

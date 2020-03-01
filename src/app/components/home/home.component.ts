@@ -4,6 +4,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {MDBModalRef, MDBModalService} from "angular-bootstrap-md";
 import {LoginModalComponent} from "../../modals/login-modal/login-modal.component";
 import {RegisterModalComponent} from "../../modals/register-modal/register-modal.component";
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -12,23 +13,29 @@ import {RegisterModalComponent} from "../../modals/register-modal/register-modal
 })
 export class HomeComponent implements OnInit {
 
-  modalRef: MDBModalRef;
-
 
   constructor(private authService: AuthService,
-              private modalService: MDBModalService) {
+              public dialog: MatDialog) {
   }
 
   ngOnInit() {
   }
 
   openLoginModal(){
-    this.modalRef = this.modalService.show(LoginModalComponent);
-    this.modalRef.content.action.subscribe( (result: any) => { console.log(result); });
+    // this.modalRef = this.modalService.show(LoginModalComponent);
+    // this.modalRef.content.action.subscribe( (result: any) => { console.log(result); });
+    this.dialog.open(LoginModalComponent,{
+      height: '600px',
+      width: '600px'
+    });
   }
   openRegisterModal(){
-    this.modalRef = this.modalService.show(RegisterModalComponent);
-    this.modalRef.content.action.subscribe( (result: any) => { console.log(result); });
+    this.dialog.open(RegisterModalComponent,{
+      height: '600px',
+      width: '600px'
+    });
+    // this.modalRef = this.modalService.show(RegisterModalComponent);
+    // this.modalRef.content.action.subscribe( (result: any) => { console.log(result); });
   }
 
 

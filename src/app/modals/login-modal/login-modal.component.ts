@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {MDBModalRef} from "angular-bootstrap-md";
 import {Subject} from "rxjs";
 import {AuthService} from "../../services/auth-service/auth.service";
 import {Router} from "@angular/router";
+import {MatDialogRef} from "@angular/material";
 
 @Component({
   selector: 'app-login-modal',
@@ -18,7 +18,7 @@ export class LoginModalComponent implements OnInit {
 
   constructor(private router: Router,
               private authService: AuthService,
-              private modalRef: MDBModalRef) { }
+              public dialogRef: MatDialogRef<LoginModalComponent>) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -31,15 +31,20 @@ export class LoginModalComponent implements OnInit {
     this.authService.authenticate(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
       data => {
         this.invalidLogin = false;
-        this.modalRef.hide();
+        this.dialogRef.close();
       },
       error => {
         this.invalidLogin = true;
       });
   }
 
+
+  public hasError = (controlName: string, errorName: string) =>{
+    return this.loginForm.controls[controlName].hasError(errorName);
+  };
+
   onCancelClick() {
-    this.modalRef.hide();
+    this.dialogRef.close();
     this.action.next('No');
   }
 

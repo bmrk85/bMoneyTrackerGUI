@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../services/auth-service/auth.service";
 import {Subject} from "rxjs";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {MDBModalRef} from "angular-bootstrap-md";
+import {MatDialogRef} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-register-modal',
@@ -19,7 +20,7 @@ export class RegisterModalComponent implements OnInit {
   maxLength = 32;
 
   constructor(private authService: AuthService,
-              private modalRef: MDBModalRef) {
+              public dialogRef: MatDialogRef<RegisterModalComponent>) {
   }
 
   ngOnInit() {
@@ -46,7 +47,7 @@ export class RegisterModalComponent implements OnInit {
           this.authService.authenticate(this.username.value, this.password.value)
             .subscribe();
           setTimeout(() => {
-            this.modalRef.hide();
+            this.dialogRef.close();
           }, 2000)
         },
         error => {
@@ -55,8 +56,12 @@ export class RegisterModalComponent implements OnInit {
       )
   }
 
+  public hasError = (controlName: string, errorName: string) =>{
+    return this.registerForm.controls[controlName].hasError(errorName);
+  };
+
   onCancelClick() {
-    this.modalRef.hide();
+    this.dialogRef.close();
     this.action.next('No');
   }
 

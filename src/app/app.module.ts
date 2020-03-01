@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +13,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LogoutComponent } from './components/home/logout/logout.component';
 import { LoginModalComponent } from './modals/login-modal/login-modal.component';
 import { RegisterModalComponent } from './modals/register-modal/register-modal.component';
+import { NewSpendingModalComponent } from './modals/new-spending-modal/new-spending-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule, MatInputModule, MatButtonModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -24,16 +26,20 @@ import { RegisterModalComponent } from './modals/register-modal/register-modal.c
     ErrorComponent,
     LogoutComponent,
     LoginModalComponent,
-    RegisterModalComponent
+    RegisterModalComponent,
+    NewSpendingModalComponent
 
   ],
   imports: [
-    MDBBootstrapModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [
     {
