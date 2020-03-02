@@ -10,6 +10,10 @@
   vertical-align: middle;
 }
 
+::ng-deep .mat-form-field-wrapper {
+  width: 100%;
+}
+
 .mat-form-field-appearance-outline .mat-form-field:nth-child(1) {
   margin-right: 10px;
 }
