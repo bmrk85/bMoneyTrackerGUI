@@ -1,0 +1,45 @@
+<h4 mat-dialog-title>Create a new user</h4>
+<div mat-dialog-content>
+  <form class="text-center border border-light p-5" [formGroup]="registerForm" (ngSubmit)="tryRegister()">
+    <mat-form-field appearance="outline">
+      <mat-label>User name</mat-label>
+      <input matInput formControlName="username">
+      <mat-hint align="end">Unique username</mat-hint>
+      <mat-error *ngIf="hasError('username', 'required')">Required field</mat-error>
+      <mat-error *ngIf="hasError('username', 'minlength')">Must be between {{minLength}} and {{maxLength}} characters</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password">
+      <mat-hint align="end">Strong password</mat-hint>
+      <mat-error *ngIf="hasError('password', 'required')">Required field</mat-error>
+      <mat-error *ngIf="hasError('password', 'minlength')">Required field</mat-error>
+      <mat-error *ngIf="hasError('password', 'minlength')">Must be between {{minLength}} and {{maxLength}} characters</mat-error>
+    </mat-form-field>
+    <p></p>
+
+    <mat-dialog-actions>
+      <button mat-raised-button color="primary" [disabled]="registerForm.invalid" type="submit">
+        Register
+      </button>
+      <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
+              (click)="onCancelClick()">Cancel
+      </button>
+
+    </mat-dialog-actions>
+  </form>
+
+
+  <div *ngIf="succesfullyRegistered" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>You have succesfully registered.</p>
+  </div>
+  <div *ngIf="registrationError" class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Oops!</h4>
+    <p>Something went wrong during your registration process. You might try again with a different username.</p>
+    <hr>
+    <p class="mb-0">If the error consists, try contacting one of our administrators.</p>
+  </div>
+</div>
+

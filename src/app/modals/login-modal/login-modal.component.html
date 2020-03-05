@@ -1,0 +1,38 @@
+<h4 mat-dialog-title>Sign in to your user</h4>
+<div mat-dialog-content>
+  <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
+    <mat-form-field appearance="outline">
+      <mat-label>User name</mat-label>
+      <input matInput formControlName="username">
+      <mat-hint>Unique username</mat-hint>
+      <mat-error *ngIf="hasError('username', 'required')">Required field</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password">
+      <mat-hint>Strong password</mat-hint>
+      <mat-error *ngIf="hasError('password', 'required')">Required field</mat-error>
+    </mat-form-field>
+
+    <mat-dialog-actions>
+
+      <button mat-raised-button color="primary" [disabled]="loginForm.invalid" type="submit">
+        Sign in
+      </button>
+      <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
+              (click)="onCancelClick()">Cancel
+      </button>
+
+    </mat-dialog-actions>
+  </form>
+
+
+  <div *ngIf="invalidLogin" class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Oops!</h4>
+    <p>Something went wrong during your login process. You might try again.</p>
+    <hr>
+    <p class="mb-0">If the error consists, try contacting one of our administrators.</p>
+  </div>
+</div>
+
