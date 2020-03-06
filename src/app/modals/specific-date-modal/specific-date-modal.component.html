@@ -1,0 +1,29 @@
+<form class="text-center border border-light p-5" [formGroup]="dateForm" (ngSubmit)="setDate()">
+  <mat-form-field appearance="outline">
+    <mat-label>Date from</mat-label>
+    <input matInput [matDatepicker]="dateFromDP" formControlName="dateFrom">
+    <mat-datepicker-toggle matSuffix [for]="dateFromDP"></mat-datepicker-toggle>
+    <mat-hint align="end">Start date of your saving</mat-hint>
+    <mat-datepicker #dateFromDP></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Date to</mat-label>
+    <input matInput [matDatepicker]="dateToDP" formControlName="dateTo">
+    <mat-datepicker-toggle matSuffix [for]="dateToDP"></mat-datepicker-toggle>
+    <mat-hint align="end">Start date of your saving</mat-hint>
+    <mat-datepicker #dateToDP></mat-datepicker>
+  </mat-form-field>
+
+  <mat-dialog-actions>
+
+    <button mat-raised-button color="primary" [disabled]="dateForm.invalid" type="submit">
+      Query
+    </button>
+    <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
+            (click)="onCancelClick()">Cancel
+    </button>
+
+  </mat-dialog-actions>
+</form>
+

@@ -9,6 +9,8 @@ export class Spending {
 
   amount: number;
 
+  name: string;
+
   date: Date;
 
   userEntity: User;
