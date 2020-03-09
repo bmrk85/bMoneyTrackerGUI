@@ -38,7 +38,7 @@ export class NewSpendingModalComponent implements OnInit {
       this.spendingForm = new FormGroup({
         name: new FormControl(this.row.name, Validators.required),
         category: new FormControl(this.row.category.title, Validators.required),
-        date: new FormControl(''),
+        date: new FormControl(this.row.date),
         amount: new FormControl(this.row.amount, Validators.required)
       })
     }
@@ -60,7 +60,9 @@ export class NewSpendingModalComponent implements OnInit {
       name: this.spendingForm.controls['name'].value,
       category: this.spendingForm.controls['category'].value,
       amount: this.spendingForm.controls['amount'].value,
-      date: this.spendingForm.controls['date'].value === '' ? new Date() : this.spendingForm.controls['date'].value
+      date: this.spendingForm.controls['date'].value === '' ?
+        new Date().toISOString() :
+        this.row ? this.spendingForm.controls['date'].value : this.spendingForm.controls['date'].value.toISOString()
     });
 
 

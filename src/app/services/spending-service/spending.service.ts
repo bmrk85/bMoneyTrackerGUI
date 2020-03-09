@@ -44,7 +44,7 @@ export class SpendingService {
         } as Category,
         name: spending.name,
         amount: spending.amount,
-        date: spending.date.toISOString()
+        date: spending.date
       })
 }
 
