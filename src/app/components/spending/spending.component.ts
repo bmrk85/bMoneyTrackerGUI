@@ -17,7 +17,7 @@ export class SpendingComponent implements OnInit {
 
   spendings = [];
   tableToggled = false;
-  displayedColumns: string[] = ['spendingId', 'spendingName', 'spendingCategory', 'spendingDate', 'spendingAmount'];
+  displayedColumns: string[] = ['spendingId', 'spendingName', 'spendingCategory', 'spendingDate', 'spendingAmount', 'actions'];
 
   constructor(private spendingService: SpendingService,
               public dialog: MatDialog) {
@@ -39,7 +39,7 @@ export class SpendingComponent implements OnInit {
     } else {
       if (param === 'all') {
         this.spendingService.getAll().subscribe(data => {
-         // console.log(data);
+          // console.log(data);
           this.spendings = data;
           this.tableToggled = true;
         })
@@ -53,19 +53,19 @@ export class SpendingComponent implements OnInit {
       } else if (param === 'month') {
         let date = new Date();
         this.spendingService.getBetweenDates(new Date(date.setDate(date.getMonth() - 1)), new Date()).subscribe(data => {
-        //  console.log(data);
+          //  console.log(data);
           this.spendings = data;
           this.tableToggled = true;
         })
       } else if (param === 'specificDate') {
         const dialogRef = this.dialog.open(SpecificDateModalComponent, {
-          width:'32rem'
+          width: '32rem'
         });
         dialogRef.afterClosed().subscribe(data => {
-        //  console.log(data);
+            //  console.log(data);
             if (!data.cancelled) {
               this.spendingService.getBetweenDates(data.dateFrom, data.dateTo).subscribe(data => {
-             //   console.log(data);
+                //   console.log(data);
                 this.spendings = data;
                 this.tableToggled = true;
               })
@@ -82,7 +82,20 @@ export class SpendingComponent implements OnInit {
 
   newSpending() {
     const dialogRef = this.dialog.open(NewSpendingModalComponent, {
-      width:'32rem'
+      width: '32rem'
     });
+    dialogRef.afterClosed().subscribe(data =>{
+      this.spendingService.saveSpending(data).subscribe();
+    })
+  }
+
+  editSpending(row) {
+    const dialogRef = this.dialog.open(NewSpendingModalComponent, {
+      data: row,
+      width: '32rem'
+    });
+    dialogRef.afterClosed().subscribe(data =>{
+      this.spendingService.saveSpending(data).subscribe();
+    })
   }
 }
