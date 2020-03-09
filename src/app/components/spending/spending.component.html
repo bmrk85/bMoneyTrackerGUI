@@ -155,11 +155,11 @@
     </div>
   </div>
   <div class="jumbotron" #dataTable >
-    <div class="row" *ngIf="!tableToggled">
+    <div class="row" [hidden]="tableToggled">
       <h3>Select what to display.</h3>
     </div>
-    <div class="row" *ngIf="tableToggled">
-      <table mat-table [dataSource]="spendings">
+    <div class="row" [hidden]="!tableToggled">
+      <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="spendingId">
           <th mat-header-cell *matHeaderCellDef> Id</th>
           <td mat-cell *matCellDef="let spending"> {{spending.id}} </td>
@@ -191,7 +191,7 @@
             <button mat-icon-button (click)="editSpending(row)">
               <mat-icon>edit</mat-icon>
             </button>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="deleteSpending(row)">
               <mat-icon>delete</mat-icon>
             </button>
           </td>
@@ -202,6 +202,7 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
       </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
     </div>
   </div>
 </main>

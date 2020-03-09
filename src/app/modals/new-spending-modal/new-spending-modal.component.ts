@@ -23,6 +23,16 @@ export class NewSpendingModalComponent implements OnInit {
 
   ngOnInit() {
 
+    this.dialogRef.backdropClick().subscribe(() => {
+      this.onCancelClick();
+    });
+    this.dialogRef.keydownEvents().subscribe(event => {
+      if (event.key === 'Escape') {
+        this.onCancelClick();
+      }
+    });
+
+
     this.categoryService.getAll().subscribe(data => {
       this.availableCategories = data;
     });
@@ -46,14 +56,7 @@ export class NewSpendingModalComponent implements OnInit {
 
   }
 
-
-  onCancelClick($event: MouseEvent) {
-
-  }
-
   createSpending() {
-
-    console.log(this.row);
 
     this.dialogRef.close({
       id: this.row ? this.row.id : null,
@@ -64,7 +67,11 @@ export class NewSpendingModalComponent implements OnInit {
         new Date().toISOString() :
         this.row ? this.spendingForm.controls['date'].value : this.spendingForm.controls['date'].value.toISOString()
     });
-
-
   }
+
+  onCancelClick() {
+    this.dialogRef.close({'cancelled': true})
+  }
+
+
 }

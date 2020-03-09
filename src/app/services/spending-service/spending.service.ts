@@ -35,7 +35,7 @@ export class SpendingService {
     });
   }
 
-  saveSpending(spending): Observable<Spending>{
+  saveSpending(spending): Observable<Spending> {
     return this.http.post<Spending>(`http://localhost:8080/spendings/new`,
       {
         id: spending.id ? spending.id : null,
@@ -46,6 +46,10 @@ export class SpendingService {
         amount: spending.amount,
         date: spending.date
       })
-}
+  }
+
+  deleteSpending(id): Observable<void> {
+    return this.http.post<void>(`http://localhost:8080/spendings/delete/${id}`,{});
+  }
 
 }
