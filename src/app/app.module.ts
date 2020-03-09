@@ -21,7 +21,13 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatIconModule,
-  MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatDatepickerModule, MatNativeDateModule
+  MatSidenavModule,
+  MatListModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSelectModule
 } from '@angular/material';
 import {SpendingComponent} from './components/spending/spending.component';
 import {IncomeComponent} from './components/income/income.component';
@@ -64,7 +70,8 @@ import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-
     MatTableModule,
     MatPaginatorModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [
     MatDatepickerModule,

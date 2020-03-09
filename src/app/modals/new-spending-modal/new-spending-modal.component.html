@@ -11,20 +11,24 @@
       <mat-label>Date</mat-label>
       <input matInput [matDatepicker]="dateDP" formControlName="date">
       <mat-datepicker-toggle matSuffix [for]="dateDP"></mat-datepicker-toggle>
-      <mat-hint align="end">Date of your spending</mat-hint>
+      <mat-hint align="end">Date of your spending. If empty, current date gets saved.</mat-hint>
       <mat-datepicker #dateDP></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let cat of availableCategories" [value]="cat.title">
+          {{cat.title}}
+        </mat-option>
+      </mat-select>
+      <mat-hint align="end">Category of your spending</mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
       <mat-label>Amount</mat-label>
       <input matInput formControlName="amount">
       <mat-hint align="end">Amount of your spending</mat-hint>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="outline">
-      <mat-label>Category</mat-label>
-      <input matInput formControlName="category">
-      <mat-hint align="end">Category of your spending</mat-hint>
     </mat-form-field>
     <br>
 

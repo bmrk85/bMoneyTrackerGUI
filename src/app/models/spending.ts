@@ -3,16 +3,16 @@ import {Category} from "./category";
 
 export class Spending {
 
-  id: number;
+  id?: number;
 
-  category: Category;
+  category?: Category;
 
-  amount: number;
+  amount?: number;
 
-  name: string;
+  name?: string;
 
-  date: Date;
+  date?: Date;
 
-  userEntity: User;
+  userEntity?: User;
 
 }

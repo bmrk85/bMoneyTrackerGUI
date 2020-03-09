@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Spending} from '../../models/spending';
+import {Category} from '../../models/category';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,17 @@ export class SpendingService {
       })
     });
   }
+
+  saveSpending(spending): Observable<Spending>{
+    return this.http.post<Spending>(`http://localhost:8080/spendings/new`,
+      {
+        category: {
+          title: spending.category
+        } as Category,
+        name: spending.name,
+        amount: spending.amount,
+        date: spending.date.toISOString()
+      })
+}
 
 }
