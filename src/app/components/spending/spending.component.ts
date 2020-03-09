@@ -2,11 +2,13 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {SpendingService} from '../../services/spending-service/spending.service';
 import {MatDialog} from '@angular/material/dialog';
 import {SpecificDateModalComponent} from '../../modals/specific-date-modal/specific-date-modal.component';
+import {NewSpendingModalComponent} from '../../modals/new-spending-modal/new-spending-modal.component';
 
 @Component({
   selector: 'app-spending',
   templateUrl: './spending.component.html',
-  styleUrls: ['./spending.component.scss']
+  styleUrls: ['./spending.component.scss'],
+
 })
 export class SpendingComponent implements OnInit {
 
@@ -30,36 +32,57 @@ export class SpendingComponent implements OnInit {
   }
 
   toggleTable(param: string) {
-    this.tableToggled = true;
-    if (param === 'all') {
-      this.spendingService.getAll().subscribe(data => {
-        console.log(data);
-        this.spendings = data;
-      })
-    } else if (param === 'week') {
-      let date = new Date();
-      this.spendingService.getBetweenDates(new Date(date.setDate(date.getDate() - 7)), new Date()).subscribe(data => {
-        console.log(data);
-        this.spendings = data;
-      })
+    this.spendings = [];
 
-
-    } else if (param === 'month') {
-      let date = new Date();
-      this.spendingService.getBetweenDates(new Date(date.setDate(date.getMonth() - 1)), new Date()).subscribe(data => {
-        console.log(data);
-        this.spendings = data;
-      })
-    } else if (param === 'specificDate') {
-      const dialogRef = this.dialog.open(SpecificDateModalComponent);
-      dialogRef.afterClosed().subscribe(data =>
-        this.spendingService.getBetweenDates(data.dateFrom, data.dateTo).subscribe(data => {
-          console.log(data);
+    if (this.tableToggled) {
+      this.tableToggled = false;
+    } else {
+      if (param === 'all') {
+        this.spendingService.getAll().subscribe(data => {
+         // console.log(data);
           this.spendings = data;
+          this.tableToggled = true;
         })
-      )
+      } else if (param === 'week') {
+        let date = new Date();
+        this.spendingService.getBetweenDates(new Date(date.setDate(date.getDate() - 7)), new Date()).subscribe(data => {
+          //console.log(data);
+          this.spendings = data;
+          this.tableToggled = true;
+        })
+      } else if (param === 'month') {
+        let date = new Date();
+        this.spendingService.getBetweenDates(new Date(date.setDate(date.getMonth() - 1)), new Date()).subscribe(data => {
+        //  console.log(data);
+          this.spendings = data;
+          this.tableToggled = true;
+        })
+      } else if (param === 'specificDate') {
+        const dialogRef = this.dialog.open(SpecificDateModalComponent, {
+          width:'32rem'
+        });
+        dialogRef.afterClosed().subscribe(data => {
+        //  console.log(data);
+            if (!data.cancelled) {
+              this.spendingService.getBetweenDates(data.dateFrom, data.dateTo).subscribe(data => {
+             //   console.log(data);
+                this.spendings = data;
+                this.tableToggled = true;
+              })
+            } else {
+              this.tableToggled = false;
+            }
+          }
+        )
+      }
     }
     this.dataTable.nativeElement.scrollIntoView();
 
+  }
+
+  newSpending() {
+    const dialogRef = this.dialog.open(NewSpendingModalComponent, {
+      width:'32rem'
+    });
   }
 }

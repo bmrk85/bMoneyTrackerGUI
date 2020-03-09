@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSelectModule } from '@angular/material/select';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-new-spending-modal',
@@ -8,9 +10,27 @@ import { MatSelectModule } from '@angular/material/select';
 })
 export class NewSpendingModalComponent implements OnInit {
 
-  constructor() { }
+  spendingForm: FormGroup;
+
+  constructor(public dialogRef: MatDialogRef<NewSpendingModalComponent>) { }
 
   ngOnInit() {
+
+    this.spendingForm = new FormGroup({
+      name: new FormControl('', Validators.required),
+      category: new FormControl('', Validators.required),
+      date: new FormControl('', Validators.required),
+      amount: new FormControl('', Validators.required)
+    })
+
   }
 
+
+  onCancelClick($event: MouseEvent) {
+    
+  }
+
+  createSpending() {
+
+  }
 }

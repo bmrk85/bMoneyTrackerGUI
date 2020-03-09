@@ -12,7 +12,7 @@
         mollit anim id est laborum."
       </p>
       <div class="d-flex justify-content-center">
-        <button mat-fab color="primary">
+        <button mat-fab color="primary" (click)="newSpending()">
           <mat-icon>add</mat-icon>
         </button>
       </div>
@@ -30,7 +30,7 @@
               src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
               alt="Card image cap"
             />
-            <a href="#!">
+            <a (click)="toggleTable('specificDate')">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
@@ -62,7 +62,7 @@
               src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
               alt="Card image cap"
             />
-            <a href="#!">
+            <a (click)="toggleTable('week')">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
@@ -94,7 +94,7 @@
               src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
               alt="Card image cap"
             />
-            <a href="#!">
+            <a (click)="toggleTable('month')">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
@@ -126,7 +126,7 @@
               src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
               alt="Card image cap"
             />
-            <a href="#!">
+            <a (click)="toggleTable('all')">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
@@ -151,6 +151,9 @@
     </div>
   </div>
   <div class="jumbotron" #dataTable >
+    <div class="row" *ngIf="!tableToggled">
+      <h3>Select what to display.</h3>
+    </div>
     <div class="row" *ngIf="tableToggled">
       <table mat-table [dataSource]="spendings">
         <ng-container matColumnDef="spendingId">

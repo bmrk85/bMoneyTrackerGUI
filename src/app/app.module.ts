@@ -73,7 +73,7 @@ import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-
     }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [LoginModalComponent, RegisterModalComponent, NewSavingModalComponent, SpecificDateModalComponent]
+  entryComponents: [LoginModalComponent, RegisterModalComponent, NewSavingModalComponent, SpecificDateModalComponent, NewSpendingModalComponent]
 })
 export class AppModule {
 }
