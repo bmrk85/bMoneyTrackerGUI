@@ -43,13 +43,13 @@ export class SpendingService {
           title: spending.category
         } as Category,
         name: spending.name,
-        amount: spending.amount,
+        amount: spending.amount < 0 ? spending.amount : -spending.amount,
         date: spending.date
       })
   }
 
   deleteSpending(id): Observable<void> {
-    return this.http.post<void>(`http://localhost:8080/spendings/delete/${id}`,{});
+    return this.http.post<void>(`http://localhost:8080/spendings/delete/${id}`, {});
   }
 
 }

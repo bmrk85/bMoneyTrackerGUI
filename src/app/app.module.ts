@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {HomeComponent} from './components/home/home.component';
-import {PaymentHistoryComponent} from './components/payment-history/payment-history.component';
+import {CashFlowComponent} from './components/cash-flow/cash-flow.component';
 import {ErrorComponent} from './components/error/error.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BasicAuthHttpInterceptorService} from './services/basic-auth-http-interceptor-service/basic-auth-http-interceptor.service';
@@ -41,7 +41,7 @@ import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-mo
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    PaymentHistoryComponent,
+    CashFlowComponent,
     ErrorComponent,
     LogoutComponent,
     LoginModalComponent,
