@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {HomeComponent} from './components/home/home.component';
-import {PaymentHistoryComponent} from './components/payment-history/payment-history.component';
+import {CashFlowComponent} from './components/cash-flow/cash-flow.component';
 import {ErrorComponent} from './components/error/error.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BasicAuthHttpInterceptorService} from './services/basic-auth-http-interceptor-service/basic-auth-http-interceptor.service';
@@ -21,20 +21,27 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatIconModule,
-  MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatDatepickerModule, MatNativeDateModule
+  MatSidenavModule,
+  MatListModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSelectModule
 } from '@angular/material';
 import {SpendingComponent} from './components/spending/spending.component';
 import {IncomeComponent} from './components/income/income.component';
 import {SavingComponent} from './components/saving/saving.component';
 import {NewSavingModalComponent} from './modals/new-saving-modal/new-saving-modal.component';
 import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-date-modal.component';
+import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    PaymentHistoryComponent,
+    CashFlowComponent,
     ErrorComponent,
     LogoutComponent,
     LoginModalComponent,
@@ -44,7 +51,8 @@ import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-
     IncomeComponent,
     SavingComponent,
     NewSavingModalComponent,
-    SpecificDateModalComponent
+    SpecificDateModalComponent,
+    NewIncomeModalComponent
 
   ],
   imports: [
@@ -64,7 +72,8 @@ import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-
     MatTableModule,
     MatPaginatorModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [
     MatDatepickerModule,
@@ -73,7 +82,14 @@ import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-
     }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [LoginModalComponent, RegisterModalComponent, NewSavingModalComponent, SpecificDateModalComponent]
+  entryComponents: [
+    LoginModalComponent,
+    RegisterModalComponent,
+    NewSavingModalComponent,
+    SpecificDateModalComponent,
+    NewSpendingModalComponent,
+    NewIncomeModalComponent
+  ]
 })
 export class AppModule {
 }

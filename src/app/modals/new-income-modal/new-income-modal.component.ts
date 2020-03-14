@@ -1,22 +1,22 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Category} from '../../models/category';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {CategoryService} from '../../services/category-service/category.service';
-import {Category} from '../../models/category';
 
 @Component({
-  selector: 'app-new-spending-modal',
-  templateUrl: './new-spending-modal.component.html',
-  styleUrls: ['./new-spending-modal.component.scss']
+  selector: 'app-new-income-modal',
+  templateUrl: './new-income-modal.component.html',
+  styleUrls: ['./new-income-modal.component.scss']
 })
-export class NewSpendingModalComponent implements OnInit {
+export class NewIncomeModalComponent implements OnInit {
 
-  spendingForm: FormGroup;
+  incomeForm: FormGroup;
   availableCategories: Category[];
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public row: any,
-    public dialogRef: MatDialogRef<NewSpendingModalComponent>,
+    public dialogRef: MatDialogRef<NewIncomeModalComponent>,
     private categoryService: CategoryService
   ) {
   }
@@ -38,14 +38,14 @@ export class NewSpendingModalComponent implements OnInit {
     });
 
     if (!this.row) {
-      this.spendingForm = new FormGroup({
+      this.incomeForm = new FormGroup({
         name: new FormControl('', Validators.required),
         category: new FormControl('', Validators.required),
         date: new FormControl(''),
         amount: new FormControl('', Validators.required)
       })
     } else {
-      this.spendingForm = new FormGroup({
+      this.incomeForm = new FormGroup({
         name: new FormControl(this.row.name, Validators.required),
         category: new FormControl(this.row.category.title, Validators.required),
         date: new FormControl(this.row.date),
@@ -56,22 +56,22 @@ export class NewSpendingModalComponent implements OnInit {
 
   }
 
-  createSpending() {
-
+  createIncome() {
     this.dialogRef.close({
       id: this.row ? this.row.id : null,
-      name: this.spendingForm.controls['name'].value,
-      category: this.spendingForm.controls['category'].value,
-      amount: this.spendingForm.controls['amount'].value,
-      date: this.spendingForm.controls['date'].value === '' ?
+      name: this.incomeForm.controls['name'].value,
+      category: this.incomeForm.controls['category'].value,
+      amount: this.incomeForm.controls['amount'].value,
+      date: this.incomeForm.controls['date'].value === '' ?
         new Date().toISOString() :
-        this.row ? this.spendingForm.controls['date'].value : this.spendingForm.controls['date'].value.toISOString()
+        this.row ? this.incomeForm.controls['date'].value : this.incomeForm.controls['date'].value.toISOString()
     });
   }
 
   onCancelClick() {
     this.dialogRef.close({'cancelled': true})
   }
+
 
 
 }

@@ -1,5 +1,5 @@
 import {ErrorComponent} from './components/error/error.component';
-import {PaymentHistoryComponent} from './components/payment-history/payment-history.component';
+import {CashFlowComponent} from './components/cash-flow/cash-flow.component';
 import {HomeComponent} from './components/home/home.component';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
@@ -12,7 +12,7 @@ import {SavingComponent} from "./components/saving/saving.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'payments', component: PaymentHistoryComponent, canActivate: [AuthGuardService]},
+  {path: 'cashflow', component: CashFlowComponent, canActivate: [AuthGuardService]},
   {path: 'incomes', component: IncomeComponent, canActivate: [AuthGuardService]},
   {path: 'spendings', component: SpendingComponent, canActivate: [AuthGuardService]},
   {path: 'savings', component: SavingComponent, canActivate: [AuthGuardService]},

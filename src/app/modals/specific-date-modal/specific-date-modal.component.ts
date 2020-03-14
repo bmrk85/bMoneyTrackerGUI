@@ -16,6 +16,15 @@ export class SpecificDateModalComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dialogRef.backdropClick().subscribe(() => {
+      this.onCancelClick();
+    });
+    this.dialogRef.keydownEvents().subscribe(event => {
+      if (event.key === 'Escape') {
+        this.onCancelClick();
+      }
+    });
+
     this.dateForm = new FormGroup({
       dateFrom: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
       dateTo: new FormControl('', {validators: Validators.required, updateOn: 'blur'})
@@ -32,6 +41,7 @@ export class SpecificDateModalComponent implements OnInit {
   }
 
   onCancelClick() {
+    this.dialogRef.close({'cancelled': true})
 
   }
 }
