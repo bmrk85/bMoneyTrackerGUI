@@ -5,7 +5,6 @@ import {SpecificDateModalComponent} from '../../modals/specific-date-modal/speci
 import {NewSpendingModalComponent} from '../../modals/new-spending-modal/new-spending-modal.component';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 import {Spending} from '../../models/spending';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-spending',

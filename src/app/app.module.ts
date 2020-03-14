@@ -34,6 +34,7 @@ import {IncomeComponent} from './components/income/income.component';
 import {SavingComponent} from './components/saving/saving.component';
 import {NewSavingModalComponent} from './modals/new-saving-modal/new-saving-modal.component';
 import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-date-modal.component';
+import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-modal.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-
     IncomeComponent,
     SavingComponent,
     NewSavingModalComponent,
-    SpecificDateModalComponent
+    SpecificDateModalComponent,
+    NewIncomeModalComponent
 
   ],
   imports: [
@@ -80,7 +82,14 @@ import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-
     }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [LoginModalComponent, RegisterModalComponent, NewSavingModalComponent, SpecificDateModalComponent, NewSpendingModalComponent]
+  entryComponents: [
+    LoginModalComponent,
+    RegisterModalComponent,
+    NewSavingModalComponent,
+    SpecificDateModalComponent,
+    NewSpendingModalComponent,
+    NewIncomeModalComponent
+  ]
 })
 export class AppModule {
 }
