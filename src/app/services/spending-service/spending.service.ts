@@ -36,7 +36,7 @@ export class SpendingService {
   }
 
   saveSpending(spending): Observable<Spending> {
-    return this.http.post<Spending>(`http://localhost:8080/spendings/new`,
+    return this.http.post<Spending>(`http://localhost:8080/spendings`,
       {
         id: spending.id ? spending.id : null,
         category: {

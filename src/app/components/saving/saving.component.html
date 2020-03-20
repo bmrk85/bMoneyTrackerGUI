@@ -1,7 +1,7 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <h2 class="display-3">Your payment history</h2>
+      <h2 class="display-3">Your savings</h2>
       <p>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -12,153 +12,36 @@
         mollit anim id est laborum."
       </p>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary">
-          Generate excel
+        <button type="button" class="btn btn-primary" (click)="addSaving()">
+          Add saving
         </button>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <!-- Card -->
-        <div class="card">
-          <!-- Card image -->
-          <div class="view overlay">
-            <img
-              class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-              alt="Card image cap"
-            />
-            <a href="#!">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
-
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="card-title">This day</h4>
-            <!-- Text -->
-            <p class="card-text">
-              Take a quick look at your spendings this day.
-            </p>
-            <!-- Button -->
-            <a href="#" class="btn btn-primary">Show me</a>
-          </div>
-        </div>
-        <!-- Card -->
+    <div *ngFor="let s of savings" class="jumbotron">
+      <div class="page-header">
+        <h3>{{s.name}}</h3>
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-3">
-        <!-- Card -->
-        <div class="card">
-          <!-- Card image -->
-          <div class="view overlay">
-            <img
-              class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-              alt="Card image cap"
-            />
-            <a href="#!">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
-
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="card-title">This week</h4>
-            <!-- Text -->
-            <p class="card-text">
-              Take a quick look at your spendings this week.
-            </p>
-            <!-- Button -->
-            <a href="#" class="btn btn-primary">Show me</a>
-          </div>
+      <mat-divider></mat-divider>
+      <div class="row">
+        <div class="col-md-4"><h4>Leírás</h4>
+          <p>{{s.description}}</p></div>
+        <div class="col-md-2"><h4>Kategória</h4>
+          <p>{{s.category.title}}</p></div>
+        <div class="col-md-3"><h4>Dátum tól-ig</h4>
+          <p>{{s.dateFrom | date}} - {{s.dateTo | date}}</p></div>
+        <div class="col-md-2"><h4>Összeg</h4>
+          <p>{{s.amount}}</p></div>
+        <div class="col-md-1">
+          <button mat-icon-button (click)="editSaving(s)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteSaving(s)">
+            <mat-icon>delete</mat-icon>
+          </button>
         </div>
-        <!-- Card -->
-      </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-3">
-        <!-- Card -->
-        <div class="card">
-          <!-- Card image -->
-          <div class="view overlay">
-            <img
-              class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-              alt="Card image cap"
-            />
-            <a href="#!">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
-
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="card-title">This month</h4>
-            <!-- Text -->
-            <p class="card-text">
-              Take a quick look at your spendings this month.
-            </p>
-            <!-- Button -->
-            <a href="#" class="btn btn-primary">Show me</a>
-          </div>
-        </div>
-        <!-- Card -->
       </div>
     </div>
   </div>
 </main>
-
-
-
-
-
-
-
-
-
-
-
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No.</th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name</th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <th mat-header-cell *matHeaderCellDef> Weight</th>
-    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-  </ng-container>
-
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef> Symbol</th>
-    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-<mat-toolbar>
-  <mat-toolbar-row>
-    <a (click)="addSaving()">
-      <mat-icon>add</mat-icon>
-    </a>
-  </mat-toolbar-row>
-</mat-toolbar>

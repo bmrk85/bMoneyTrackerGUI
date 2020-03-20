@@ -8,6 +8,8 @@ export class Saving {
 
   name: string;
 
+  description: string;
+
   dateFrom: Date;
 
   dateTo: Date;

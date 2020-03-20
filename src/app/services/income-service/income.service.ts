@@ -36,7 +36,7 @@ export class IncomeService {
   }
 
   saveIncome(income): Observable<Income> {
-    return this.http.post<Income>(`http://localhost:8080/incomes/new`,
+    return this.http.post<Income>(`http://localhost:8080/incomes`,
       {
         id: income.id ? income.id : null,
         category: {

@@ -27,7 +27,7 @@ import {
   MatPaginatorModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatSelectModule
+  MatSelectModule, MatCardModule
 } from '@angular/material';
 import {SpendingComponent} from './components/spending/spending.component';
 import {IncomeComponent} from './components/income/income.component';
@@ -73,7 +73,8 @@ import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-mo
     MatPaginatorModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [
     MatDatepickerModule,
