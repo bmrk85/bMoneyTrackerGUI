@@ -52,7 +52,6 @@ export class SavingComponent implements OnInit {
     });
     dialogref.afterClosed().subscribe(data => {
       if (!data.cancelled) {
-        console.log(data);
         this.savingService.saveSaving(data).subscribe(
           null,
           () => this.messageService.displayErrorMessage('saving'),
