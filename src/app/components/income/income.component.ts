@@ -5,6 +5,7 @@ import {IncomeService} from '../../services/income-service/income.service';
 import {SpecificDateModalComponent} from '../../modals/specific-date-modal/specific-date-modal.component';
 import {NewSpendingModalComponent} from '../../modals/new-spending-modal/new-spending-modal.component';
 import {NewIncomeModalComponent} from '../../modals/new-income-modal/new-income-modal.component';
+import {MessageService} from '../../services/message-service/message.service';
 
 @Component({
   selector: 'app-income',
@@ -32,7 +33,9 @@ export class IncomeComponent implements OnInit {
   displayedColumns: string[] = ['incomeId', 'incomeName', 'incomeCategory', 'incomeDate', 'incomeAmount', 'actions'];
 
   constructor(private incomeService: IncomeService,
-              public dialog: MatDialog) { }
+              public dialog: MatDialog,
+              private messageService: MessageService) {
+  }
 
   ngOnInit() {
   }
@@ -50,7 +53,7 @@ export class IncomeComponent implements OnInit {
       this.incomeService.getAll().subscribe(data => {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      }, ()=>this.messageService.displayErrorMessage())
     } else if (param === 'week') {
       let date = new Date();
       this.toggleWeek();
@@ -58,7 +61,7 @@ export class IncomeComponent implements OnInit {
         //console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      }, () => this.messageService.displayErrorMessage())
     } else if (param === 'month') {
       let date = new Date();
       this.toggleMonth();
@@ -66,7 +69,7 @@ export class IncomeComponent implements OnInit {
         //  console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      }, () => this.messageService.displayErrorMessage())
     } else if (param === 'specificDate' && !this.tableToggled) {
       const dialogRef = this.dialog.open(SpecificDateModalComponent, {
         width: '32rem'
@@ -81,7 +84,7 @@ export class IncomeComponent implements OnInit {
               //   console.log(data);
               this.dataSource.data = data;
               this.dataSource.paginator = this.paginator;
-            });
+            }, () => this.messageService.displayErrorMessage());
 
             this.tableToggled = true;
           } else {
@@ -105,8 +108,11 @@ export class IncomeComponent implements OnInit {
         if (!data.cancelled) {
           this.incomeService.saveIncome(data).subscribe(
             null,
-            null,
-            () => this.refreshDataSource()
+            () => this.messageService.displayErrorMessage('income'),
+            () => {
+              this.refreshDataSource();
+              this.messageService.displaySuccessMessage('income')
+            }
           )
         }
       }
@@ -123,8 +129,11 @@ export class IncomeComponent implements OnInit {
         if (!data.cancelled) {
           this.incomeService.saveIncome(data).subscribe(
             null,
-            null,
-            () => this.refreshDataSource()
+            () => this.messageService.displayErrorMessage('income'),
+            () => {
+              this.refreshDataSource();
+              this.messageService.displaySuccessMessage('income');
+            }
           )
         }
       }
@@ -134,8 +143,11 @@ export class IncomeComponent implements OnInit {
   deleteIncome(row) {
     return this.incomeService.deleteIncome(row.id).subscribe(
       null,
-      null,
-      () => this.refreshDataSource()
+      () => this.messageService.displayErrorMessage('income'),
+      () => {
+        this.refreshDataSource();
+        this.messageService.displaySuccessMessage('income')
+      }
     );
   }
 
@@ -179,7 +191,7 @@ export class IncomeComponent implements OnInit {
       this.incomeService.getBetweenDates(this.specifiedDateFrom, this.specifiedDateTo).subscribe(data => {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      }, () => this.messageService.displayErrorMessage())
     }
 
   }

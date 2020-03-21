@@ -4,6 +4,7 @@ import {Spending} from '../../models/spending';
 import {SpecificDateModalComponent} from '../../modals/specific-date-modal/specific-date-modal.component';
 import {CashFlow} from '../../models/cash-flow';
 import {CashFlowService} from '../../services/cash-flow-service/cash-flow.service';
+import {MessageService} from '../../services/message-service/message.service';
 
 @Component({
   selector: 'app-cashFlow',
@@ -28,7 +29,8 @@ export class CashFlowComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'category', 'date', 'amount'];
 
   constructor(private cashFlowService: CashFlowService,
-              private dialog: MatDialog) { }
+              private dialog: MatDialog,
+              private messageService: MessageService) { }
 
   ngOnInit() {
   }
@@ -53,7 +55,7 @@ export class CashFlowComponent implements OnInit {
               data.sort((a,b) => (a.date > b.date) ? 1 : -1);
               this.dataSource.data = data;
               this.dataSource.paginator = this.paginator;
-            });
+            }, ()=>this.messageService.displayErrorMessage());
 
             this.tableToggled = true;
           } else {

@@ -17,6 +17,7 @@ import {NewSpendingModalComponent} from './modals/new-spending-modal/new-spendin
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatDialogModule,
+  MatSnackBarModule,
   MatInputModule,
   MatButtonModule,
   MatToolbarModule,
@@ -59,6 +60,7 @@ import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-mo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatSnackBarModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

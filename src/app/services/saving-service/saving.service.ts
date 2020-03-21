@@ -14,7 +14,7 @@ export class SavingService {
   saveSaving(saving): Observable<Saving> {
     return this.http.post<Saving>(`http://localhost:8080/savings`, {
       id: saving.id ? saving.id : null,
-      done: false,
+      done: saving.done ? saving.done : false,
       name: saving.name,
       description: saving.description,
       dateFrom: saving.dateFrom,
@@ -26,7 +26,7 @@ export class SavingService {
     });
   }
 
-  changeSavingStatus(saving): Observable<Saving>{
+  changeSavingStatus(saving): Observable<Saving> {
     return this.http.post<Saving>(`http://localhost:8080/savings`, {
       id: saving.id,
       done: !saving.done,
@@ -47,8 +47,8 @@ export class SavingService {
     });
   }
 
-  deleteSaving(id): Observable<Saving>{
-    return this.http.post<Saving>(`http://localhost:8080/savings/delete/${id}`,{});
+  deleteSaving(id): Observable<Saving> {
+    return this.http.post<Saving>(`http://localhost:8080/savings/delete/${id}`, {});
   }
 
 }

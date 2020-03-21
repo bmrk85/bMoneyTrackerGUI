@@ -36,7 +36,7 @@
         <div class="col-md-3"><h4>Dátum tól-ig</h4>
           <p>{{s.dateFrom | date}} - {{s.dateTo | date}}</p></div>
         <div class="col-md-2"><h4>Összeg</h4>
-          <p>{{s.amount}}</p></div>
+          <p>{{s.amount | currency:'HUF':'symbol':'1.0-0'}}</p></div>
         <div class="col-md-1">
           <button mat-icon-button (click)="editSaving(s)">
             <mat-icon>edit</mat-icon>
