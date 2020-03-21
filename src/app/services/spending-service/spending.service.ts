@@ -24,6 +24,8 @@ export class SpendingService {
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<Spending[]> {
 
+    dateTo.setDate(dateTo.getDate()+1);
+
     return this.http.get<Spending[]>(`http://localhost:8080/spendings/date`, {
       params: {
         dateFrom: dateFrom.toISOString(),
