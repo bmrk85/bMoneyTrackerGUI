@@ -24,6 +24,8 @@ export class SpendingService {
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<Spending[]> {
 
+    dateTo.setDate(dateTo.getDate()+1);
+
     return this.http.get<Spending[]>(`http://localhost:8080/spendings/date`, {
       params: {
         dateFrom: dateFrom.toISOString(),
@@ -36,7 +38,7 @@ export class SpendingService {
   }
 
   saveSpending(spending): Observable<Spending> {
-    return this.http.post<Spending>(`http://localhost:8080/spendings/new`,
+    return this.http.post<Spending>(`http://localhost:8080/spendings`,
       {
         id: spending.id ? spending.id : null,
         category: {

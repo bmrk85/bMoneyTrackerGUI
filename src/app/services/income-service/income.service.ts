@@ -24,6 +24,8 @@ export class IncomeService {
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<Income[]> {
 
+    dateTo.setDate(dateTo.getDate()+1);
+
     return this.http.get<Income[]>(`http://localhost:8080/incomes/date`, {
       params: {
         dateFrom: dateFrom.toISOString(),
@@ -36,7 +38,7 @@ export class IncomeService {
   }
 
   saveIncome(income): Observable<Income> {
-    return this.http.post<Income>(`http://localhost:8080/incomes/new`,
+    return this.http.post<Income>(`http://localhost:8080/incomes`,
       {
         id: income.id ? income.id : null,
         category: {

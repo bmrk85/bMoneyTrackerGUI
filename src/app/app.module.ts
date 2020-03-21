@@ -17,6 +17,7 @@ import {NewSpendingModalComponent} from './modals/new-spending-modal/new-spendin
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatDialogModule,
+  MatSnackBarModule,
   MatInputModule,
   MatButtonModule,
   MatToolbarModule,
@@ -27,7 +28,7 @@ import {
   MatPaginatorModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatSelectModule
+  MatSelectModule, MatCardModule, MatCheckboxModule
 } from '@angular/material';
 import {SpendingComponent} from './components/spending/spending.component';
 import {IncomeComponent} from './components/income/income.component';
@@ -59,6 +60,7 @@ import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-mo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatSnackBarModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -73,7 +75,9 @@ import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-mo
     MatPaginatorModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule,
+    MatCheckboxModule
   ],
   providers: [
     MatDatepickerModule,

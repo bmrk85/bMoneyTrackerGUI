@@ -15,8 +15,14 @@
       <mat-datepicker #dateDP></mat-datepicker>
     </mat-form-field>
     <br>
+    <mat-checkbox formControlName="newCategoryCheckbox">Create new category</mat-checkbox>
+    <br>
     <mat-form-field appearance="outline">
       <mat-label>Category</mat-label>
+      <input matInput formControlName="newCategory">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Existing categories</mat-label>
       <mat-select formControlName="category">
         <mat-option *ngFor="let cat of availableCategories" [value]="cat.title">
           {{cat.title}}

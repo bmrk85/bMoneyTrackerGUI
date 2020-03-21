@@ -5,6 +5,7 @@ import {SpecificDateModalComponent} from '../../modals/specific-date-modal/speci
 import {NewSpendingModalComponent} from '../../modals/new-spending-modal/new-spending-modal.component';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 import {Spending} from '../../models/spending';
+import {MessageService} from '../../services/message-service/message.service';
 
 @Component({
   selector: 'app-spending',
@@ -33,7 +34,8 @@ export class SpendingComponent implements OnInit {
   displayedColumns: string[] = ['spendingId', 'spendingName', 'spendingCategory', 'spendingDate', 'spendingAmount', 'actions'];
 
   constructor(private spendingService: SpendingService,
-              public dialog: MatDialog) {
+              public dialog: MatDialog,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -53,7 +55,7 @@ export class SpendingComponent implements OnInit {
       this.spendingService.getAll().subscribe(data => {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      }, () => this.messageService.displayErrorMessage())
     } else if (param === 'week') {
       let date = new Date();
       this.toggleWeek();
@@ -61,7 +63,7 @@ export class SpendingComponent implements OnInit {
         //console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      }, () => this.messageService.displayErrorMessage())
     } else if (param === 'month') {
       let date = new Date();
       this.toggleMonth();
@@ -69,7 +71,7 @@ export class SpendingComponent implements OnInit {
         //  console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      }, () => this.messageService.displayErrorMessage())
     } else if (param === 'specificDate' && !this.tableToggled) {
       const dialogRef = this.dialog.open(SpecificDateModalComponent, {
         width: '32rem'
@@ -84,7 +86,7 @@ export class SpendingComponent implements OnInit {
               //   console.log(data);
               this.dataSource.data = data;
               this.dataSource.paginator = this.paginator;
-            });
+            }, () => this.messageService.displayErrorMessage());
 
             this.tableToggled = true;
           } else {
@@ -109,8 +111,11 @@ export class SpendingComponent implements OnInit {
         if (!data.cancelled) {
           this.spendingService.saveSpending(data).subscribe(
             null,
-            null,
-            () => this.refreshDataSource()
+            () => this.messageService.displayErrorMessage('spending'),
+            () => {
+              this.refreshDataSource();
+              this.messageService.displaySuccessMessage('spending');
+            }
           )
         }
       }
@@ -127,8 +132,11 @@ export class SpendingComponent implements OnInit {
         if (!data.cancelled) {
           this.spendingService.saveSpending(data).subscribe(
             null,
-            null,
-            () => this.refreshDataSource()
+            () => this.messageService.displayErrorMessage('spending'),
+            () => {
+              this.refreshDataSource();
+              this.messageService.displaySuccessMessage('spending');
+            }
           )
         }
       }
@@ -138,8 +146,11 @@ export class SpendingComponent implements OnInit {
   deleteSpending(row) {
     return this.spendingService.deleteSpending(row.id).subscribe(
       null,
-      null,
-      () => this.refreshDataSource()
+      () => this.messageService.displayErrorMessage('spending'),
+      () => {
+        this.refreshDataSource();
+        this.messageService.displaySuccessMessage('spending');
+      }
     );
   }
 
@@ -183,7 +194,7 @@ export class SpendingComponent implements OnInit {
       this.spendingService.getBetweenDates(this.specifiedDateFrom, this.specifiedDateTo).subscribe(data => {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      })
+      },()=>this.messageService.displayErrorMessage())
     }
 
   }

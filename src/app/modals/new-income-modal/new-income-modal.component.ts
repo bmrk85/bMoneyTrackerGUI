@@ -40,6 +40,8 @@ export class NewIncomeModalComponent implements OnInit {
     if (!this.row) {
       this.incomeForm = new FormGroup({
         name: new FormControl('', Validators.required),
+        newCategoryCheckbox: new FormControl(false),
+        newCategory: new FormControl(''),
         category: new FormControl('', Validators.required),
         date: new FormControl(''),
         amount: new FormControl('', Validators.required)
@@ -47,20 +49,36 @@ export class NewIncomeModalComponent implements OnInit {
     } else {
       this.incomeForm = new FormGroup({
         name: new FormControl(this.row.name, Validators.required),
+        newCategoryCheckbox: new FormControl(false),
+        newCategory: new FormControl(''),
         category: new FormControl(this.row.category.title, Validators.required),
         date: new FormControl(this.row.date),
         amount: new FormControl(this.row.amount, Validators.required)
       })
     }
-
-
+    this.incomeForm.controls['newCategory'].disable();
+    this.onCategoryChanges();
   }
+
+
+  onCategoryChanges(): void {
+    this.incomeForm.get('newCategoryCheckbox').valueChanges.subscribe(val => {
+      if (val) {
+        this.incomeForm.controls['category'].disable();
+        this.incomeForm.controls['newCategory'].enable();
+      } else {
+        this.incomeForm.controls['category'].enable();
+        this.incomeForm.controls['newCategory'].disable();
+      }
+    });
+  }
+
 
   createIncome() {
     this.dialogRef.close({
       id: this.row ? this.row.id : null,
       name: this.incomeForm.controls['name'].value,
-      category: this.incomeForm.controls['category'].value,
+      category: this.incomeForm.controls['newCategoryCheckbox'].value ? this.incomeForm.controls['newCategory'].value : this.incomeForm.controls['category'].value,
       amount: this.incomeForm.controls['amount'].value,
       date: this.incomeForm.controls['date'].value === '' ?
         new Date().toISOString() :

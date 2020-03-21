@@ -1,27 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {MatDialog} from "@angular/material";
-import {NewSavingModalComponent} from "../../modals/new-saving-modal/new-saving-modal.component";
-
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
+import {MatDialog, MatSnackBar} from '@angular/material';
+import {NewSavingModalComponent} from '../../modals/new-saving-modal/new-saving-modal.component';
+import {SavingService} from '../../services/saving-service/saving.service';
+import {Saving} from '../../models/saving';
+import {MessageService} from '../../services/message-service/message.service';
 
 @Component({
   selector: 'app-saving',
@@ -30,17 +12,82 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class SavingComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  private savings: Saving[];
 
-  constructor(public dialog: MatDialog) {
+  constructor(private savingService: SavingService,
+              public dialog: MatDialog,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
+    this.savingService.getAll().subscribe(data => {
+      this.savings = data;
+    }, ()=>this.messageService.displayErrorMessage());
   }
 
-  addSaving(){
-    this.dialog.open(NewSavingModalComponent)
+  addSaving() {
+    const dialogref = this.dialog.open(NewSavingModalComponent, {
+      width: '32rem'
+    });
+    dialogref.afterClosed().subscribe(data => {
+      if (!data.cancelled) {
+        this.savingService.saveSaving(data).subscribe(
+          null,
+          () => this.messageService.displayErrorMessage('saving'),
+          () => {
+            this.savingService.getAll().subscribe(data => {
+              this.savings = data;
+            });
+            this.messageService.displaySuccessMessage('saving')
+          }
+        );
+      }
+    });
   }
 
+  editSaving(clickedSaving) {
+    const dialogref = this.dialog.open(NewSavingModalComponent, {
+      data: clickedSaving,
+      width: '32rem'
+    });
+    dialogref.afterClosed().subscribe(data => {
+      if (!data.cancelled) {
+        this.savingService.saveSaving(data).subscribe(
+          null,
+          () => this.messageService.displayErrorMessage('saving'),
+          () => {
+            this.savingService.getAll().subscribe(data => {
+              this.savings = data;
+            });
+            this.messageService.displaySuccessMessage('saving')
+          }
+        );
+      }
+    });
+  }
+
+  changeSavingStatus(clickedSaving) {
+    this.savingService.changeSavingStatus(clickedSaving).subscribe(
+      null,
+      () =>this.messageService.displayErrorMessage('status'),
+      () => {
+        this.savingService.getAll().subscribe(data => {
+          this.savings = data;
+        });
+        this.messageService.displaySuccessMessage('status')
+      }
+    );
+  }
+
+  deleteSaving(s) {
+    this.savingService.deleteSaving(s.id).subscribe(
+      null,
+      () => this.messageService.displayErrorMessage('saving'),
+      () => {
+        this.savingService.getAll().subscribe(data => {
+          this.savings = data;
+        });
+        this.messageService.displaySuccessMessage('saving')
+      });
+  }
 }
