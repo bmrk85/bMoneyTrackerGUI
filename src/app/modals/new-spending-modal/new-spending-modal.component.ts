@@ -40,6 +40,8 @@ export class NewSpendingModalComponent implements OnInit {
     if (!this.row) {
       this.spendingForm = new FormGroup({
         name: new FormControl('', Validators.required),
+        newCategoryCheckbox: new FormControl(false),
+        newCategory: new FormControl(''),
         category: new FormControl('', Validators.required),
         date: new FormControl(''),
         amount: new FormControl('', Validators.required)
@@ -47,13 +49,28 @@ export class NewSpendingModalComponent implements OnInit {
     } else {
       this.spendingForm = new FormGroup({
         name: new FormControl(this.row.name, Validators.required),
+        newCategoryCheckbox: new FormControl(false),
+        newCategory: new FormControl('', Validators.required),
         category: new FormControl(this.row.category.title, Validators.required),
         date: new FormControl(this.row.date),
         amount: new FormControl(this.row.amount, Validators.required)
       })
     }
+    this.spendingForm.controls['newCategory'].disable();
+    this.onCategoryChanges();
 
+  }
 
+  onCategoryChanges(): void {
+    this.spendingForm.get('newCategoryCheckbox').valueChanges.subscribe(val => {
+      if (val) {
+        this.spendingForm.controls['category'].disable();
+        this.spendingForm.controls['newCategory'].enable();
+      } else {
+        this.spendingForm.controls['category'].enable();
+        this.spendingForm.controls['newCategory'].disable();
+      }
+    });
   }
 
   createSpending() {
@@ -61,7 +78,7 @@ export class NewSpendingModalComponent implements OnInit {
     this.dialogRef.close({
       id: this.row ? this.row.id : null,
       name: this.spendingForm.controls['name'].value,
-      category: this.spendingForm.controls['category'].value,
+      category: this.spendingForm.controls['newCategoryCheckbox'].value ? this.spendingForm.controls['newCategory'].value : this.spendingForm.controls['category'].value,
       amount: this.spendingForm.controls['amount'].value,
       date: this.spendingForm.controls['date'].value === '' ?
         new Date().toISOString() :

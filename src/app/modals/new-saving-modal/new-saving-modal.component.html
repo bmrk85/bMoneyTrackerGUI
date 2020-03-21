@@ -25,7 +25,6 @@
       <mat-label>Date To</mat-label>
       <input matInput [matDatepicker]="dateToDP" formControlName="dateTo">
       <mat-datepicker-toggle matSuffix [for]="dateToDP"></mat-datepicker-toggle>
-
       <mat-hint align="end">End date of your saving</mat-hint>
       <mat-datepicker #dateToDP></mat-datepicker>
     </mat-form-field>
@@ -36,8 +35,14 @@
       <mat-hint align="end">Amount of your saving</mat-hint>
     </mat-form-field>
     <br>
+    <mat-checkbox formControlName="newCategoryCheckbox">Create new category</mat-checkbox>
+    <br>
     <mat-form-field appearance="outline">
       <mat-label>Category</mat-label>
+      <input matInput formControlName="newCategory">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Existing categories</mat-label>
       <mat-select formControlName="category">
         <mat-option *ngFor="let cat of availableCategories" [value]="cat.title">
           {{cat.title}}
@@ -49,7 +54,7 @@
 
     <mat-dialog-actions>
 
-      <button mat-raised-button color="primary" type="submit">
+      <button mat-raised-button color="primary" [disabled]="savingForm.invalid" type="submit">
         Save
       </button>
       <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"

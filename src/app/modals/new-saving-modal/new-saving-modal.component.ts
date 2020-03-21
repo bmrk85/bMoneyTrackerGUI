@@ -42,6 +42,8 @@ export class NewSavingModalComponent implements OnInit {
         dateFrom: new FormControl('', Validators.required),
         dateTo: new FormControl('', Validators.required),
         amount: new FormControl('', Validators.required),
+        newCategoryCheckbox: new FormControl(false),
+        newCategory: new FormControl(''),
         category: new FormControl('', Validators.required)
       });
     } else {
@@ -51,10 +53,27 @@ export class NewSavingModalComponent implements OnInit {
         dateFrom: new FormControl(this.saving.dateFrom, Validators.required),
         dateTo: new FormControl(this.saving.dateTo, Validators.required),
         amount: new FormControl(this.saving.amount, Validators.required),
+        newCategoryCheckbox: new FormControl(false),
+        newCategory: new FormControl(''),
         category: new FormControl(this.saving.category.title, Validators.required)
       });
     }
+    this.savingForm.controls['newCategory'].disable();
 
+    this.onCategoryChanges();
+
+  }
+
+  onCategoryChanges(): void {
+    this.savingForm.get('newCategoryCheckbox').valueChanges.subscribe(val => {
+      if (val) {
+        this.savingForm.controls['category'].disable();
+        this.savingForm.controls['newCategory'].enable();
+      } else {
+        this.savingForm.controls['category'].enable();
+        this.savingForm.controls['newCategory'].disable();
+      }
+    });
   }
 
 
@@ -66,7 +85,7 @@ export class NewSavingModalComponent implements OnInit {
       dateFrom: this.savingForm.controls['dateFrom'].value,
       dateTo: this.savingForm.controls['dateTo'].value,
       amount: this.savingForm.controls['amount'].value,
-      category: this.savingForm.controls['category'].value,
+      category: this.savingForm.controls['newCategoryCheckbox'].value ? this.savingForm.controls['newCategory'].value : this.savingForm.controls['category'].value,
       done: this.saving ? this.saving.done : false
     });
   }
