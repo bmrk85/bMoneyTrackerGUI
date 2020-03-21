@@ -19,9 +19,13 @@
     </div>
   </div>
   <div class="container">
-    <div *ngFor="let s of savings" class="jumbotron">
+    <div *ngFor="let s of savings" class="jumbotron savingContainer">
       <div class="page-header">
         <h3>{{s.name}}</h3>
+        <div class="savingState">
+          <mat-icon *ngIf="s.done">done_outline</mat-icon>
+          <mat-icon *ngIf="!s.done">priority_high</mat-icon>
+        </div>
       </div>
       <mat-divider></mat-divider>
       <div class="row">
@@ -39,6 +43,9 @@
           </button>
           <button mat-icon-button (click)="deleteSaving(s)">
             <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button (click)="changeSavingStatus(s)">
+            <mat-icon>check</mat-icon>
           </button>
         </div>
       </div>

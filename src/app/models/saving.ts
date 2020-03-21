@@ -10,6 +10,8 @@ export class Saving {
 
   description: string;
 
+  done: boolean;
+
   dateFrom: Date;
 
   dateTo: Date;

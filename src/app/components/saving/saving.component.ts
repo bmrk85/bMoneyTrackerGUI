@@ -62,10 +62,15 @@ export class SavingComponent implements OnInit {
     });
   }
 
+  changeSavingStatus(clickedSaving){
+    this.savingService.changeSavingStatus(clickedSaving).subscribe(null,null,()=>this.savingService.getAll().subscribe(data =>{
+      this.savings = data;
+    }));
+  }
+
   deleteSaving(s) {
     this.savingService.deleteSaving(s.id).subscribe(null,null,()=>this.savingService.getAll().subscribe(data =>{
       this.savings = data;
     }));
-
   }
 }
