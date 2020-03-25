@@ -1,8 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth-service/auth.service';
 import {Subject} from 'rxjs';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {MatDialogRef} from '@angular/material/dialog';
+import {ErrorStateMatcher} from '@angular/material';
+
+
+export class CustomErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    return control.dirty && form.invalid;
+  }
+}
 
 
 @Component({
@@ -19,6 +27,8 @@ export class RegisterModalComponent implements OnInit {
   minLength = 5;
   maxLength = 32;
 
+  matcher = new CustomErrorStateMatcher();
+
   constructor(private authService: AuthService,
               public dialogRef: MatDialogRef<RegisterModalComponent>) {
   }
@@ -30,8 +40,13 @@ export class RegisterModalComponent implements OnInit {
       password: new FormControl('',
         [Validators.required, Validators.minLength(5), Validators.maxLength(32)],
       ),
-    })
+      retypePassword: new FormControl('',
+        [Validators.required, Validators.minLength(5), Validators.maxLength(32)],
+      ),
+    }, {validators: this.checkPasswords})
   }
+
+
 
   get username() {
     return this.registerForm.get('username')
@@ -40,6 +55,10 @@ export class RegisterModalComponent implements OnInit {
   get password() {
     return this.registerForm.get('password')
   };
+
+  checkPasswords(form: FormGroup){
+    return form.get('password').value !== form.get('retypePassword').value ? {notSame: true} : null;
+  }
 
 
   tryRegister() {
@@ -60,13 +79,7 @@ export class RegisterModalComponent implements OnInit {
       )
   }
 
-  public hasError = (controlName: string, errorName: string) => {
-    return this.registerForm.controls[controlName].hasError(errorName);
-  };
-
   onCancelClick() {
-    this.dialogRef.close();
-    this.action.next('No');
   }
 
 }

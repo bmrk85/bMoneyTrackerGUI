@@ -5,18 +5,34 @@
       <mat-label>User name</mat-label>
       <input matInput formControlName="username">
       <mat-hint align="end">Unique username</mat-hint>
-      <mat-error *ngIf="hasError('username', 'required')">Required field</mat-error>
-      <mat-error *ngIf="hasError('username', 'minlength')">Must be between {{minLength}} and {{maxLength}} characters</mat-error>
+      <mat-error *ngIf="registerForm.hasError('required', 'username')">Required field</mat-error>
+      <mat-error *ngIf="registerForm.hasError('minlength', 'username')">Must be between {{minLength}} and {{maxLength}}
+        characters
+      </mat-error>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
       <input matInput type="password" formControlName="password">
       <mat-hint align="end">Strong password</mat-hint>
-      <mat-error *ngIf="hasError('password', 'required')">Required field</mat-error>
-      <mat-error *ngIf="hasError('password', 'minlength')">Required field</mat-error>
-      <mat-error *ngIf="hasError('password', 'minlength')">Must be between {{minLength}} and {{maxLength}} characters</mat-error>
+      <mat-error *ngIf="registerForm.hasError('required', 'password')">Required field</mat-error>
+      <mat-error *ngIf="registerForm.hasError('minlength', 'password')">Must be between {{minLength}} and {{maxLength}}
+        characters
+      </mat-error>
     </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Retype your password</mat-label>
+      <input matInput type="password" formControlName="retypePassword" [errorStateMatcher]="matcher">
+      <mat-hint align="end">Strong password</mat-hint>
+      <mat-error *ngIf="registerForm.hasError('required', 'retypePassword')">Required field</mat-error>
+      <mat-error *ngIf="registerForm.hasError('minlength', 'retypePassword')">Must be between {{minLength}}
+        and {{maxLength}} characters
+      </mat-error>
+      <mat-error *ngIf="registerForm.hasError('notSame') && !registerForm.hasError('minlength', 'retypePassword')">Passwords not matching</mat-error>
+
+    </mat-form-field>
+
     <p></p>
 
     <mat-dialog-actions>
