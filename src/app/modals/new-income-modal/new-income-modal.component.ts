@@ -44,7 +44,7 @@ export class NewIncomeModalComponent implements OnInit {
         newCategory: new FormControl(''),
         category: new FormControl('', Validators.required),
         date: new FormControl(''),
-        amount: new FormControl('', Validators.required)
+        amount: new FormControl('', [Validators.required, Validators.pattern('^(0|[1-9][0-9]*)$')])
       })
     } else {
       this.incomeForm = new FormGroup({
@@ -53,7 +53,7 @@ export class NewIncomeModalComponent implements OnInit {
         newCategory: new FormControl(''),
         category: new FormControl(this.row.category.title, Validators.required),
         date: new FormControl(this.row.date),
-        amount: new FormControl(this.row.amount, Validators.required)
+        amount: new FormControl(this.row.amount, [Validators.required, Validators.pattern('^(0|[1-9][0-9]*)$')])
       })
     }
     this.incomeForm.controls['newCategory'].disable();

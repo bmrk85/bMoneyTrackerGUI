@@ -20,7 +20,6 @@ export class CustomErrorStateMatcher implements ErrorStateMatcher {
 })
 export class RegisterModalComponent implements OnInit {
 
-  action: Subject<any> = new Subject();
   registerForm: FormGroup;
   registrationError = false;
   succesfullyRegistered = false;
@@ -64,7 +63,7 @@ export class RegisterModalComponent implements OnInit {
   tryRegister() {
     this.authService.register(this.username.value, this.password.value)
       .subscribe(
-        data => {
+        () => {
           this.registrationError = false;
           this.succesfullyRegistered = true;
           this.authService.authenticate(this.username.value, this.password.value)
@@ -73,7 +72,7 @@ export class RegisterModalComponent implements OnInit {
             this.dialogRef.close();
           }, 2000)
         },
-        error => {
+        () => {
           this.registrationError = true;
         }
       )

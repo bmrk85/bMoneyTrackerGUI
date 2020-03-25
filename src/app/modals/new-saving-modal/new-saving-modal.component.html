@@ -33,6 +33,7 @@
       <mat-label>Amount</mat-label>
       <input matInput formControlName="amount">
       <mat-hint align="end">Amount of your saving</mat-hint>
+      <mat-error *ngIf="savingForm.hasError('pattern', 'amount')">Only numbers accepted</mat-error>
     </mat-form-field>
     <br>
     <mat-checkbox formControlName="newCategoryCheckbox">Create new category</mat-checkbox>
