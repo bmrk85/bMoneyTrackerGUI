@@ -1,82 +1,82 @@
-<main role="main">
-  <div class="jumbotron">
-    <div class="container">
-      <h2 class="display-3">Welcome</h2>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
-      </p>
-      <p>
-        <button type="button" *ngIf="authService.isUserLoggedIn()" class="btn btn-primary">Add new spending</button>
-      </p>
-    </div>
+<div class="jumbotron">
+  <div class="container-fluid">
+    <h2 class="display-3">Welcome</h2>
+    <p>
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum."
+    </p>
+    <p>
+      <button type="button" *ngIf="authService.isUserLoggedIn()" class="btn btn-primary">Add new spending</button>
+    </p>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <!-- Card -->
-        <div class="card" *ngIf="!authService.isUserLoggedIn()">
-          <!-- Card image -->
-          <div class="view overlay">
-            <img
-              class="card-img-top"
-              src="https://simpleicon.com/wp-content/uploads/favorite-user.png"
-              alt="Card image cap"
-            />
-            <a (click)="openLoginModal()">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
-
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="card-title">Login</h4>
-            <!-- Text -->
-            <p class="card-text">
-              Log in here, if you already have an account.
-            </p>
-            <!-- Button -->
-            <button (click)="openLoginModal()" mat-raised-button color="primary">Take me there</button>
-          </div>
+</div>
+<div class="jumbotron" *ngIf="!authService.isUserLoggedIn()">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <!-- Card -->
+      <div class="card">
+        <!-- Card image -->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="../../../assets/icons/loginUser.png"
+            alt="Card image cap"
+          />
+          <a (click)="openLoginModal()">
+            <div class="mask rgba-white-slight"></div>
+          </a>
         </div>
-        <!-- Card -->
-      </div>
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <!-- Card -->
-        <div class="card" *ngIf="!authService.isUserLoggedIn()">
-          <!-- Card image -->
-          <div class="view overlay">
-            <img
-              class="card-img-top"
-              src="https://simpleicon.com/wp-content/uploads/add-user.png"
-              alt="Card image cap"
-            />
-            <a (click)="openRegisterModal()">
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
 
-          <!-- Card content -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="card-title">Register</h4>
-            <!-- Text -->
-            <p class="card-text">
-              Don't have an account yet? Register here.
-            </p>
-            <!-- Button -->
-            <button (click)="openRegisterModal()" mat-raised-button color="primary">Take me there</button>
-          </div>
+        <!-- Card content -->
+        <div class="card-body">
+          <!-- Title -->
+          <h4 class="card-title">Login</h4>
+          <!-- Text -->
+          <p class="card-text">
+            Log in here, if you already have an account.
+          </p>
+          <!-- Button -->
+          <button (click)="openLoginModal()" mat-raised-button color="primary">Take me there</button>
         </div>
-        <!-- Card -->
       </div>
+      <!-- Card -->
     </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-2">
+      <!-- Card -->
+      <div class="card">
+        <!-- Card image -->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="../../../assets/icons/newUser.png"
+            alt="Card image cap"
+          />
+          <a (click)="openRegisterModal()">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body">
+          <!-- Title -->
+          <h4 class="card-title">Register</h4>
+          <!-- Text -->
+          <p class="card-text">
+            Don't have an account yet? Register here.
+          </p>
+          <!-- Button -->
+          <button (click)="openRegisterModal()" mat-raised-button color="primary">Take me there</button>
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+    <div class="col-md-1"></div>
   </div>
-</main>
+</div>

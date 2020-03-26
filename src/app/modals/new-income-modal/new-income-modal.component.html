@@ -1,0 +1,54 @@
+<h4 mat-dialog-title>Create an income</h4>
+<div mat-dialog-content>
+  <form class="text-center" [formGroup]="incomeForm" (ngSubmit)="createIncome()">
+    <mat-form-field appearance="outline">
+      <mat-label>Income name</mat-label>
+      <input matInput formControlName="name">
+      <mat-hint align="end">What is the source of this income?</mat-hint>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="dateDP" formControlName="date">
+      <mat-datepicker-toggle matSuffix [for]="dateDP"></mat-datepicker-toggle>
+      <mat-hint align="end">Date of your income. If empty, current date gets saved.</mat-hint>
+      <mat-datepicker #dateDP></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-checkbox formControlName="newCategoryCheckbox">Create new category</mat-checkbox>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="newCategory">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Existing categories</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let cat of availableCategories" [value]="cat.title">
+          {{cat.title}}
+        </mat-option>
+      </mat-select>
+      <mat-hint align="end">Category of your income</mat-hint>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Amount</mat-label>
+      <input matInput formControlName="amount">
+      <mat-hint align="end">Amount of your income</mat-hint>
+      <mat-error *ngIf="incomeForm.hasError('pattern', 'amount')">Only numbers accepted</mat-error>
+    </mat-form-field>
+    <br>
+
+    <mat-dialog-actions>
+
+      <button mat-raised-button color="primary" [disabled]="incomeForm.invalid" type="submit">
+        Save
+      </button>
+      <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
+              (click)="onCancelClick()">Cancel
+      </button>
+
+    </mat-dialog-actions>
+  </form>
+</div>
+

@@ -1,1 +1,219 @@
-<p>income works!</p>
+<main role="main">
+  <div class="jumbotron">
+    <div class="container">
+      <h2 class="display-3">Your income history</h2>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum."
+      </p>
+      <div class="d-flex justify-content-center">
+        <button mat-fab color="primary" (click)="newIncome()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img
+              class="card-img-top"
+              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              alt="Card image cap"
+            />
+            <a (click)="toggleTable('specificDate')">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title">Specify a date</h4>
+            <!-- Text -->
+            <p class="card-text">
+              Take a quick look at your incomes between two dates.
+            </p>
+            <!-- Button -->
+            <button mat-raised-button color="primary"
+                    (click)="toggleTable('specificDate')">
+              <span *ngIf="!tableToggled">Show me</span>
+              <span *ngIf="tableToggled">Close table</span>
+            </button>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img
+              class="card-img-top"
+              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              alt="Card image cap"
+            />
+            <a (click)="toggleTable('week')">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title">This week</h4>
+            <!-- Text -->
+            <p class="card-text">
+              Take a quick look at your incomes this week.
+            </p>
+            <!-- Button -->
+            <button mat-raised-button color="primary"
+                    (click)="toggleTable('week')">
+              <span *ngIf="!tableToggled">Show me</span>
+              <span *ngIf="tableToggled">Close table</span>
+            </button>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img
+              class="card-img-top"
+              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              alt="Card image cap"
+            />
+            <a (click)="toggleTable('month')">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title">This month</h4>
+            <!-- Text -->
+            <p class="card-text">
+              Take a quick look at your incomes this month.
+            </p>
+            <!-- Button -->
+            <button mat-raised-button color="primary"
+                    (click)="toggleTable('month')">
+              <span *ngIf="!tableToggled">Show me</span>
+              <span *ngIf="tableToggled">Close table</span>
+            </button>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img
+              class="card-img-top"
+              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              alt="Card image cap"
+            />
+            <a (click)="toggleTable('all')">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title">Everything</h4>
+            <!-- Text -->
+            <p class="card-text">
+              Take a quick look at your all-time incomes.
+            </p>
+            <!-- Button -->
+            <button mat-raised-button color="primary"
+                    (click)="toggleTable('all')">
+              <span *ngIf="!tableToggled">Show me</span>
+              <span *ngIf="tableToggled">Close table</span>
+            </button>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron" #dataTable >
+    <div class="row" [hidden]="tableToggled">
+      <h3>Select what to display.</h3>
+    </div>
+    <div class="row" [hidden]="!tableToggled">
+      <div class="col-md-9">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="incomeId">
+          <th mat-header-cell *matHeaderCellDef> Id</th>
+          <td mat-cell *matCellDef="let income"> {{income.id}} </td>
+          <td mat-footer-cell *matFooterCellDef></td>
+        </ng-container>
+        <ng-container matColumnDef="incomeName">
+          <th mat-header-cell *matHeaderCellDef> Name</th>
+          <td mat-cell *matCellDef="let income"> {{income.name}} </td>
+          <td mat-footer-cell *matFooterCellDef> Total </td>
+        </ng-container>
+        <ng-container matColumnDef="incomeCategory">
+          <th mat-header-cell *matHeaderCellDef> Category</th>
+          <td mat-cell *matCellDef="let income"> {{income.category.title}} </td>
+          <td mat-footer-cell *matFooterCellDef></td>
+        </ng-container>
+        <ng-container matColumnDef="incomeDate">
+          <th mat-header-cell *matHeaderCellDef> Date</th>
+          <td mat-cell *matCellDef="let income"> {{income.date | date}} </td>
+          <td mat-footer-cell *matFooterCellDef></td>
+        </ng-container>
+        <ng-container matColumnDef="incomeAmount">
+          <th mat-header-cell *matHeaderCellDef> Amount</th>
+          <td mat-cell *matCellDef="let income"> {{income.amount | currency:'HUF':'symbol':'1.0-0'}} </td>
+          <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency:'HUF':'symbol':'1.0-0'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let row" >
+            <button mat-icon-button (click)="editIncome(row)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deleteIncome(row)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+          <td mat-footer-cell *matFooterCellDef></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+      <div class="col-md-3" *ngIf="tableToggled">
+        <h4 class="pie-header">Pie Chart for incomes by categories
+        </h4>
+        <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [colors]="pieChartColors"
+                [chartType]="pieChartType"></canvas>
+      </div>
+    </div>
+  </div>
+</main>

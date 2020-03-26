@@ -24,10 +24,14 @@ export class HomeComponent implements OnInit {
   openLoginModal(){
     // this.modalRef = this.modalService.show(LoginModalComponent);
     // this.modalRef.content.action.subscribe( (result: any) => { console.log(result); });
-    this.dialog.open(LoginModalComponent)
+    this.dialog.open(LoginModalComponent, {
+      width:'32rem'
+    })
   }
   openRegisterModal(){
-    this.dialog.open(RegisterModalComponent)
+    this.dialog.open(RegisterModalComponent,{
+      width:'32rem'
+    })
     // this.modalRef = this.modalService.show(RegisterModalComponent);
     // this.modalRef.content.action.subscribe( (result: any) => { console.log(result); });
   }
