@@ -19,7 +19,7 @@ export class CashFlowComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true})
   paginator: MatPaginator;
 
-  dataSource = new MatTableDataSource<Spending>();
+  dataSource = new MatTableDataSource<CashFlow>();
 
   tableToggled = false;
   specificToggled = false;
@@ -30,7 +30,8 @@ export class CashFlowComponent implements OnInit {
 
   constructor(private cashFlowService: CashFlowService,
               private dialog: MatDialog,
-              private messageService: MessageService) { }
+              private messageService: MessageService) {
+  }
 
   ngOnInit() {
   }
@@ -52,10 +53,10 @@ export class CashFlowComponent implements OnInit {
             this.specificToggled = true;
             this.cashFlowService.getBetweenDates(data.dateFrom, data.dateTo).subscribe((data: CashFlow[]) => {
               //   console.log(data);
-              data.sort((a,b) => (a.date > b.date) ? 1 : -1);
+              data.sort((a, b) => (a.date > b.date) ? 1 : -1);
               this.dataSource.data = data;
               this.dataSource.paginator = this.paginator;
-            }, ()=>this.messageService.displayErrorMessage());
+            }, () => this.messageService.displayErrorMessage());
 
             this.tableToggled = true;
           } else {
@@ -69,5 +70,15 @@ export class CashFlowComponent implements OnInit {
 
     this.dataTable.nativeElement.scrollIntoView();
   }
+
+  createXls() {
+    this.cashFlowService.sendDatasourceData(this.dataSource.data).subscribe(data => {
+      const blob = new Blob([data], {type: 'application/vnd.ms-excel'});
+      window.open(window.URL.createObjectURL(blob));
+    }, () => this.messageService.displayCustomMessage('Error downloading excel file'));
+  }
+
+
+
 
 }

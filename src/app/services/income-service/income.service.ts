@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Category} from '../../models/category';
@@ -24,7 +24,7 @@ export class IncomeService {
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<Income[]> {
 
-    dateTo.setDate(dateTo.getDate()+1);
+    dateTo.setDate(dateTo.getDate() + 1);
 
     return this.http.get<Income[]>(`http://localhost:8080/incomes/date`, {
       params: {
@@ -47,11 +47,15 @@ export class IncomeService {
         name: income.name,
         amount: income.amount,
         date: income.date
-      })
+      }, {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      });
   }
 
   deleteIncome(id): Observable<void> {
-    return this.http.post<void>(`http://localhost:8080/incomes/delete/${id}`,{});
+    return this.http.post<void>(`http://localhost:8080/incomes/delete/${id}`, {});
   }
 
 }

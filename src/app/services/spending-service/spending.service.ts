@@ -24,7 +24,7 @@ export class SpendingService {
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<Spending[]> {
 
-    dateTo.setDate(dateTo.getDate()+1);
+    dateTo.setDate(dateTo.getDate() + 1);
 
     return this.http.get<Spending[]>(`http://localhost:8080/spendings/date`, {
       params: {
@@ -47,7 +47,11 @@ export class SpendingService {
         name: spending.name,
         amount: spending.amount < 0 ? spending.amount : -spending.amount,
         date: spending.date
-      })
+      }, {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      });
   }
 
   deleteSpending(id): Observable<void> {
