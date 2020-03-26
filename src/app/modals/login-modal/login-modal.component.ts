@@ -30,19 +30,15 @@ export class LoginModalComponent implements OnInit {
 
   tryLogin() {
     this.authService.authenticate(this.loginForm.get('username').value, this.loginForm.get('password').value).subscribe(
-      data => {
+      () => {
         this.invalidLogin = false;
         this.dialogRef.close();
       },
-      error => {
+      () => {
         this.invalidLogin = true;
       });
   }
 
-
-  public hasError = (controlName: string, errorName: string) => {
-    return this.loginForm.controls[controlName].hasError(errorName);
-  };
 
   onCancelClick() {
     this.dialogRef.close();

@@ -12,7 +12,7 @@
         mollit anim id est laborum."
       </p>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary">
+        <button type="button" class="btn btn-primary" (click)="createXls()">
           Generate excel of the table
         </button>
       </div>
@@ -62,7 +62,8 @@
       <h3>Select what to display.</h3>
     </div>
     <div class="row" [hidden]="!tableToggled">
-      <table mat-table [dataSource]="dataSource">
+      <div class="col-md-9">
+        <table mat-table [dataSource]="dataSource">
           <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> Id</th>
             <td mat-cell *matCellDef="let cashflow"> {{cashflow.id}} </td>
@@ -92,9 +93,18 @@
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"
               [ngClass]="{'minusIncome' : row.amount < 0, 'plusIncome' : row.amount > 0}"></tr>
           <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
-      </table>
-      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+      <div class="col-md-3">
+        <h4 class="pie-header">Pie Chart for cash-flow visualisation
+        </h4>
+        <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [colors]="pieChartColors"
+                [chartType]="pieChartType"></canvas>
+      </div>
     </div>
   </div>
 </main>

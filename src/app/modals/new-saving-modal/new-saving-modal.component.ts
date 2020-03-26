@@ -41,7 +41,7 @@ export class NewSavingModalComponent implements OnInit {
         description: new FormControl('', Validators.required),
         dateFrom: new FormControl('', Validators.required),
         dateTo: new FormControl('', Validators.required),
-        amount: new FormControl('', Validators.required),
+        amount: new FormControl('', [Validators.required, Validators.pattern('^(0|[1-9][0-9]*)$')]),
         newCategoryCheckbox: new FormControl(false),
         newCategory: new FormControl(''),
         category: new FormControl('', Validators.required)
@@ -52,7 +52,7 @@ export class NewSavingModalComponent implements OnInit {
         description: new FormControl(this.saving.description, Validators.required),
         dateFrom: new FormControl(this.saving.dateFrom, Validators.required),
         dateTo: new FormControl(this.saving.dateTo, Validators.required),
-        amount: new FormControl(this.saving.amount, Validators.required),
+        amount: new FormControl(this.saving.amount, [Validators.required, Validators.pattern('^(0|[1-9][0-9]*)$')]),
         newCategoryCheckbox: new FormControl(false),
         newCategory: new FormControl(''),
         category: new FormControl(this.saving.category.title, Validators.required)

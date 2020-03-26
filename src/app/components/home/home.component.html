@@ -17,14 +17,15 @@
 </div>
 <div class="jumbotron" *ngIf="!authService.isUserLoggedIn()">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
       <!-- Card -->
       <div class="card">
         <!-- Card image -->
         <div class="view overlay">
           <img
             class="card-img-top"
-            src="https://simpleicon.com/wp-content/uploads/favorite-user.png"
+            src="../../../assets/icons/loginUser.png"
             alt="Card image cap"
           />
           <a (click)="openLoginModal()">
@@ -47,14 +48,14 @@
       <!-- Card -->
     </div>
     <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-2">
       <!-- Card -->
       <div class="card">
         <!-- Card image -->
         <div class="view overlay">
           <img
             class="card-img-top"
-            src="https://simpleicon.com/wp-content/uploads/add-user.png"
+            src="../../../assets/icons/newUser.png"
             alt="Card image cap"
           />
           <a (click)="openRegisterModal()">
@@ -76,5 +77,6 @@
       </div>
       <!-- Card -->
     </div>
+    <div class="col-md-1"></div>
   </div>
 </div>

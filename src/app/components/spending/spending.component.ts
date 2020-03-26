@@ -6,6 +6,7 @@ import {NewSpendingModalComponent} from '../../modals/new-spending-modal/new-spe
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 import {Spending} from '../../models/spending';
 import {MessageService} from '../../services/message-service/message.service';
+import {Income} from '../../models/income';
 
 @Component({
   selector: 'app-spending',
@@ -31,6 +32,13 @@ export class SpendingComponent implements OnInit {
   specifiedDateFrom: any;
   specifiedDateTo: any;
 
+  pieChartLabels: string[] = ['Category'];
+  pieChartData: number[] = [100];
+  pieChartType: string = 'pie';
+  pieChartColors: any[] = [
+    {backgroundColor: []}
+  ];
+
   displayedColumns: string[] = ['spendingId', 'spendingName', 'spendingCategory', 'spendingDate', 'spendingAmount', 'actions'];
 
   constructor(private spendingService: SpendingService,
@@ -55,6 +63,7 @@ export class SpendingComponent implements OnInit {
       this.spendingService.getAll().subscribe(data => {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
+        this.generatePieChartData(data);
       }, () => this.messageService.displayErrorMessage())
     } else if (param === 'week') {
       let date = new Date();
@@ -63,6 +72,7 @@ export class SpendingComponent implements OnInit {
         //console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
+        this.generatePieChartData(data);
       }, () => this.messageService.displayErrorMessage())
     } else if (param === 'month') {
       let date = new Date();
@@ -71,6 +81,7 @@ export class SpendingComponent implements OnInit {
         //  console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
+        this.generatePieChartData(data);
       }, () => this.messageService.displayErrorMessage())
     } else if (param === 'specificDate' && !this.tableToggled) {
       const dialogRef = this.dialog.open(SpecificDateModalComponent, {
@@ -86,6 +97,7 @@ export class SpendingComponent implements OnInit {
               //   console.log(data);
               this.dataSource.data = data;
               this.dataSource.paginator = this.paginator;
+              this.generatePieChartData(data);
             }, () => this.messageService.displayErrorMessage());
 
             this.tableToggled = true;
@@ -195,6 +207,29 @@ export class SpendingComponent implements OnInit {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
       },()=>this.messageService.displayErrorMessage())
+    }
+
+  }
+
+  generatePieChartData(data: Spending[]){
+
+    let amountsByCategory = new Map();
+
+    data.forEach(i =>{
+      if(!amountsByCategory.has(i.category.title)){
+        amountsByCategory.set(i.category.title,-i.amount);
+      }else{
+        let currentAmount = amountsByCategory.get(i.category.title);
+        amountsByCategory.set(i.category.title, currentAmount-i.amount);
+      }
+    });
+    this.pieChartLabels = [];
+    this.pieChartData = [];
+
+    for(let [key,value] of amountsByCategory){
+      this.pieChartColors[0].backgroundColor.push('#'+Math.floor(Math.random()*16777215).toString(16));
+      this.pieChartLabels.push(key);
+      this.pieChartData.push(value);
     }
 
   }

@@ -23,6 +23,10 @@ export class SavingService {
         title: saving.category
       },
       amount: saving.amount
+    }, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     });
   }
 
@@ -36,6 +40,9 @@ export class SavingService {
       dateTo: saving.dateTo,
       category: saving.category,
       amount: saving.amount
+    },{headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     });
   }
 
