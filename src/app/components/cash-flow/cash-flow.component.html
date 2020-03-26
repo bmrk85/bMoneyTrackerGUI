@@ -97,7 +97,13 @@
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
       </div>
       <div class="col-md-3">
-        <canvas baseChart></canvas>
+        <h4 class="pie-header">Pie Chart for cash-flow visualisation
+        </h4>
+        <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [colors]="pieChartColors"
+                [chartType]="pieChartType"></canvas>
       </div>
     </div>
   </div>

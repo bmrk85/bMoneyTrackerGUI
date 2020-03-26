@@ -6,6 +6,8 @@ import {SpecificDateModalComponent} from '../../modals/specific-date-modal/speci
 import {NewSpendingModalComponent} from '../../modals/new-spending-modal/new-spending-modal.component';
 import {NewIncomeModalComponent} from '../../modals/new-income-modal/new-income-modal.component';
 import {MessageService} from '../../services/message-service/message.service';
+import {Category} from '../../models/category';
+import {Income} from '../../models/income';
 
 @Component({
   selector: 'app-income',
@@ -32,6 +34,15 @@ export class IncomeComponent implements OnInit {
 
   displayedColumns: string[] = ['incomeId', 'incomeName', 'incomeCategory', 'incomeDate', 'incomeAmount', 'actions'];
 
+
+  pieChartLabels: string[] = ['Category'];
+  pieChartData: number[] = [100];
+  pieChartType: string = 'pie';
+  pieChartColors: any[] = [
+    {backgroundColor: []}
+  ];
+
+
   constructor(private incomeService: IncomeService,
               public dialog: MatDialog,
               private messageService: MessageService) {
@@ -53,7 +64,8 @@ export class IncomeComponent implements OnInit {
       this.incomeService.getAll().subscribe(data => {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
-      }, ()=>this.messageService.displayErrorMessage())
+        this.generatePieChartData(data);
+      }, () => this.messageService.displayErrorMessage())
     } else if (param === 'week') {
       let date = new Date();
       this.toggleWeek();
@@ -61,6 +73,7 @@ export class IncomeComponent implements OnInit {
         //console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
+        this.generatePieChartData(data);
       }, () => this.messageService.displayErrorMessage())
     } else if (param === 'month') {
       let date = new Date();
@@ -69,6 +82,7 @@ export class IncomeComponent implements OnInit {
         //  console.log(data);
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
+        this.generatePieChartData(data);
       }, () => this.messageService.displayErrorMessage())
     } else if (param === 'specificDate' && !this.tableToggled) {
       const dialogRef = this.dialog.open(SpecificDateModalComponent, {
@@ -84,6 +98,7 @@ export class IncomeComponent implements OnInit {
               //   console.log(data);
               this.dataSource.data = data;
               this.dataSource.paginator = this.paginator;
+              this.generatePieChartData(data);
             }, () => this.messageService.displayErrorMessage());
 
             this.tableToggled = true;
@@ -192,6 +207,29 @@ export class IncomeComponent implements OnInit {
         this.dataSource.data = data;
         this.dataSource.paginator = this.paginator;
       }, () => this.messageService.displayErrorMessage())
+    }
+
+  }
+
+  generatePieChartData(data: Income[]){
+
+    let amountsByCategory = new Map();
+
+    data.forEach(i =>{
+      if(!amountsByCategory.has(i.category.title)){
+        amountsByCategory.set(i.category.title,i.amount);
+      }else{
+        let currentAmount = amountsByCategory.get(i.category.title);
+        amountsByCategory.set(i.category.title, currentAmount+i.amount);
+      }
+    });
+    this.pieChartLabels = [];
+    this.pieChartData = [];
+
+    for(let [key,value] of amountsByCategory){
+      this.pieChartColors[0].backgroundColor.push('#'+Math.floor(Math.random()*16777215).toString(16));
+      this.pieChartLabels.push(key);
+      this.pieChartData.push(value);
     }
 
   }

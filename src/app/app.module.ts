@@ -36,6 +36,7 @@ import {SavingComponent} from './components/saving/saving.component';
 import {NewSavingModalComponent} from './modals/new-saving-modal/new-saving-modal.component';
 import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-date-modal.component';
 import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-modal.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-mo
     MatNativeDateModule,
     MatSelectModule,
     MatCardModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ChartsModule
   ],
   providers: [
     MatDatepickerModule,
