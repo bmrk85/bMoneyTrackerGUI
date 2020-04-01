@@ -14,7 +14,7 @@
         <a mat-list-item routerLink='/'>Home</a>
         <a mat-list-item routerLink='/'>FAQ</a>
         <mat-divider></mat-divider>
-        <a *ngIf="authService.isUserLoggedIn()" mat-list-item routerLink='/'>My profile</a>
+        <a *ngIf="authService.isUserLoggedIn()" mat-list-item routerLink='/myprofile'>My profile</a>
         <a *ngIf="authService.isUserLoggedIn()" mat-list-item routerLink='/cashflow'>Cash flow</a>
         <a *ngIf="authService.isUserLoggedIn()" mat-list-item routerLink='/incomes'>Incomes</a>
         <a *ngIf="authService.isUserLoggedIn()" mat-list-item routerLink='/spendings'>Spendings</a>

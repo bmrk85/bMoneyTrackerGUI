@@ -13,7 +13,7 @@ export class NewSavingModalComponent implements OnInit {
 
 
   savingForm: FormGroup;
-  availableCategories: Category[];
+  availableCategories: Category[] = [];
 
   constructor(private categoryService: CategoryService,
               @Inject(MAT_DIALOG_DATA) public saving: any,
@@ -31,7 +31,11 @@ export class NewSavingModalComponent implements OnInit {
     });
 
     this.categoryService.getAll().subscribe(data => {
-      this.availableCategories = data;
+      data.forEach(c => {
+        if (c.enabled) {
+          this.availableCategories.push(c)
+        }
+      });
     });
 
 
@@ -78,6 +82,8 @@ export class NewSavingModalComponent implements OnInit {
 
 
   createSaving() {
+    const selectedCategory = this.availableCategories.find( cat => cat.id === this.savingForm.controls['category'].value );
+
     this.dialogRef.close({
       id: this.saving ? this.saving.id : null,
       name: this.savingForm.controls['name'].value,
@@ -85,7 +91,22 @@ export class NewSavingModalComponent implements OnInit {
       dateFrom: this.savingForm.controls['dateFrom'].value,
       dateTo: this.savingForm.controls['dateTo'].value,
       amount: this.savingForm.controls['amount'].value,
-      category: this.savingForm.controls['newCategoryCheckbox'].value ? this.savingForm.controls['newCategory'].value : this.savingForm.controls['category'].value,
+      categoryTitle: this.savingForm.controls['newCategoryCheckbox'].value ?
+        this.savingForm.controls['newCategory'].value
+        :
+        selectedCategory.title,
+      categoryEnabled: this.savingForm.controls['newCategoryCheckbox'].value ?
+        true
+        :
+        selectedCategory.enabled,
+      categoryColor: this.savingForm.controls['newCategoryCheckbox'].value ?
+        '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )
+        :
+        selectedCategory.color,
+      categoryId: this.savingForm.controls['newCategoryCheckbox'].value ?
+        null
+        :
+        selectedCategory.id,
       done: this.saving ? this.saving.done : false
     });
   }

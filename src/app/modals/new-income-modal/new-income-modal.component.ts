@@ -12,7 +12,7 @@ import {CategoryService} from '../../services/category-service/category.service'
 export class NewIncomeModalComponent implements OnInit {
 
   incomeForm: FormGroup;
-  availableCategories: Category[];
+  availableCategories: Category[] = [];
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public row: any,
@@ -34,7 +34,11 @@ export class NewIncomeModalComponent implements OnInit {
 
 
     this.categoryService.getAll().subscribe(data => {
-      this.availableCategories = data;
+      data.forEach(c => {
+        if (c.enabled) {
+          this.availableCategories.push(c)
+        }
+      });
     });
 
     if (!this.row) {
@@ -75,10 +79,27 @@ export class NewIncomeModalComponent implements OnInit {
 
 
   createIncome() {
+    const selectedCategory = this.availableCategories.find( cat => cat.id === this.incomeForm.controls['category'].value );
+
     this.dialogRef.close({
       id: this.row ? this.row.id : null,
       name: this.incomeForm.controls['name'].value,
-      category: this.incomeForm.controls['newCategoryCheckbox'].value ? this.incomeForm.controls['newCategory'].value : this.incomeForm.controls['category'].value,
+      categoryTitle: this.incomeForm.controls['newCategoryCheckbox'].value ?
+        this.incomeForm.controls['newCategory'].value
+        :
+        selectedCategory.title,
+      categoryEnabled: this.incomeForm.controls['newCategoryCheckbox'].value ?
+        true
+        :
+        selectedCategory.enabled,
+      categoryColor: this.incomeForm.controls['newCategoryCheckbox'].value ?
+        '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )
+        :
+        selectedCategory.color,
+      categoryId: this.incomeForm.controls['newCategoryCheckbox'].value ?
+        null
+        :
+        selectedCategory.id,
       amount: this.incomeForm.controls['amount'].value,
       date: this.incomeForm.controls['date'].value === '' ?
         new Date().toISOString() :
@@ -89,7 +110,6 @@ export class NewIncomeModalComponent implements OnInit {
   onCancelClick() {
     this.dialogRef.close({'cancelled': true})
   }
-
 
 
 }

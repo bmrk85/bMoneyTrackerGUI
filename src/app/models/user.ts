@@ -1,6 +1,7 @@
 import {Spending} from "./spending";
 import {Saving} from "./saving";
 import {Income} from "./income";
+import {Category} from './category';
 
 export class User {
 
@@ -10,7 +11,11 @@ export class User {
 
   password: string;
 
+  registerDate: Date;
+
   spendings: Spending[];
+
+  categories: Category[];
 
   savings: Saving[];
 

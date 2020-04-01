@@ -37,6 +37,8 @@ import {NewSavingModalComponent} from './modals/new-saving-modal/new-saving-moda
 import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-date-modal.component';
 import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-modal.component';
 import { ChartsModule } from 'ng2-charts';
+import { ProfileComponent } from './components/profile/profile.component';
+import { EditCategoryModalComponent } from './modals/edit-category-modal/edit-category-modal.component';
 
 @NgModule({
   declarations: [
@@ -49,12 +51,15 @@ import { ChartsModule } from 'ng2-charts';
     LoginModalComponent,
     RegisterModalComponent,
     NewSpendingModalComponent,
+    EditCategoryModalComponent,
     SpendingComponent,
     IncomeComponent,
     SavingComponent,
     NewSavingModalComponent,
     SpecificDateModalComponent,
-    NewIncomeModalComponent
+    NewIncomeModalComponent,
+    ProfileComponent,
+    EditCategoryModalComponent
 
   ],
   imports: [
@@ -94,7 +99,8 @@ import { ChartsModule } from 'ng2-charts';
     NewSavingModalComponent,
     SpecificDateModalComponent,
     NewSpendingModalComponent,
-    NewIncomeModalComponent
+    NewIncomeModalComponent,
+    EditCategoryModalComponent
   ]
 })
 export class AppModule {

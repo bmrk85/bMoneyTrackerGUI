@@ -1,0 +1,21 @@
+<div class="jumbotron" *ngIf="currentUser">
+  <h4>User details
+    <br>By clicking on the edit button next to the categories, you can set the category to enabled or disabled
+  </h4>
+  <br>
+  <p>User name: {{currentUser.username}}</p>
+  <p>Your categories:</p>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+      <div *ngFor="let c of currentUser.categories">
+        {{c.title}}
+        <button mat-icon-button (click)="editCategory(c)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <mat-icon *ngIf="c.enabled">done_outline</mat-icon>
+        <mat-icon *ngIf="!c.enabled">clear</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

@@ -42,7 +42,10 @@ export class IncomeService {
       {
         id: income.id ? income.id : null,
         category: {
-          title: income.category
+          id: income.categoryId,
+          title: income.categoryTitle,
+          enabled: income.categoryEnabled,
+          color: income.categoryColor
         } as Category,
         name: income.name,
         amount: income.amount,

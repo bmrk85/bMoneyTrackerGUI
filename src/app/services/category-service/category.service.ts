@@ -19,5 +19,9 @@ export class CategoryService {
     });
   }
 
+  editCategory(c: Category): Observable<Category>{
+    return this.http.post<Category>(`http://localhost:8080/categories`, c);
+  }
+
 
 }

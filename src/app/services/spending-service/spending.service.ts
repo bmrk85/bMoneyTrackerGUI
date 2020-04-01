@@ -42,7 +42,10 @@ export class SpendingService {
       {
         id: spending.id ? spending.id : null,
         category: {
-          title: spending.category
+          id: spending.categoryId,
+          title: spending.categoryTitle,
+          enabled: spending.categoryEnabled,
+          color: spending.categoryColor
         } as Category,
         name: spending.name,
         amount: spending.amount < 0 ? spending.amount : -spending.amount,

@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Saving} from '../../models/saving';
+import { Category } from '../../models/category';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +21,11 @@ export class SavingService {
       dateFrom: saving.dateFrom,
       dateTo: saving.dateTo,
       category: {
-        title: saving.category
-      },
+        id: saving.categoryId? saving.categoryId : null,
+        title: saving.categoryTitle,
+        enabled: saving.categoryEnabled,
+        color: saving.categoryColor
+      } as Category,
       amount: saving.amount
     }, {
       headers: new HttpHeaders({
@@ -38,7 +42,12 @@ export class SavingService {
       description: saving.description,
       dateFrom: saving.dateFrom,
       dateTo: saving.dateTo,
-      category: saving.category,
+      category: {
+        id: saving.categoryId,
+        title: saving.categoryTitle,
+        enabled: saving.categoryEnabled,
+        color: saving.categoryColor
+      } as Category,
       amount: saving.amount
     },{headers: new HttpHeaders({
         'Content-Type': 'application/json'
