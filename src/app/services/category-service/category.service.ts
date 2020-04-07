@@ -24,5 +24,8 @@ export class CategoryService {
     return this.http.post<Category>(`${environment.apiUrl}/categories`, c);
   }
 
+  deleteCategory(id): Observable<void> {
+    return this.http.post<void>(`${environment.apiUrl}/categories/delete/${id}`, {});
+  }
 
 }

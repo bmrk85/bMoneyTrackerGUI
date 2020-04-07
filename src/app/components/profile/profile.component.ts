@@ -44,4 +44,12 @@ export class ProfileComponent implements OnInit {
       }
     })
   }
+
+  deleteCategory( id: number ) {
+    this.categoryService.deleteCategory(id).subscribe(
+      null,
+      ()=> this.messageService.displayErrorMessage('category'),
+      ()=> this.messageService.displaySuccessMessage('category') //todo auto reload after delete + show 500 msg -- constraint violation
+    );
+  }
 }
