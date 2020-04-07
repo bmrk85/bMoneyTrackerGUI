@@ -1576,13 +1576,14 @@
         <note priority="1" from="description"> page body text</note>
         <note priority="1" from="meaning">savings</note>
       </trans-unit>
-      <trans-unit id="9860ccdb57ed198f97ce0e8a55e780790784bafd" datatype="html">
+      <trans-unit id="78471917ba9e15f25271ff508c670db93f220e44" datatype="html">
         <source>
         Here, you can save your spendings, and check them time to time.
         <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
         You can list them by dates, edit them, delete them, etc..
         <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
         There is even a pie chart on the right side of the datatable! Check that out!
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
       </source>
       <target>
       	Itt felvehetsz új kiadásokat, és ellenőrizheted őket időről időre.
@@ -1590,6 +1591,7 @@
       	Kilistázhatod dátum szerint, módosíthatod , vagy akár ki is törölheted őket.
       	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
       	Még egy diagrammon is ábrázolva vannak kategóriák szerint a jobb alsó sarokban!
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
@@ -1729,6 +1731,53 @@
         </context-group>
         <note priority="1" from="description"> changeLang</note>
         <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="ae7b90ec1938e0e399fcfc7ebc5e83ab560f6e9a" datatype="html">
+        <source>Name filter</source>
+        <target>Név szűrő</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+        <note priority="1" from="description">nameFilter</note>
+      </trans-unit>
+      <trans-unit id="c02935bad23452bc7d913d6477692ac73a489a97" datatype="html">
+        <source>Based on your previous month, you are going to spend <x id="INTERPOLATION" equiv-text="{{probableSpending}}"/> more money this month.</source>
+        <target>Az előző havi adatok alapján, még ennyit fogsz költeni a hónapban: <x id="INTERPOLATION" equiv-text="{{probableSpending}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description"> will spend more</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="e3c9b2214a6983648fb533757e9f0fd2251e7a31" datatype="html">
+        <source>Based on your previous month, you are not going to spend any more money this month.</source>
+        <target>Az előző havi adatok alapján, a hónapban már nem lesz több kiadásod.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> not gona spend anymore</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="6cde777a275f46e49039f4b95e4f635e22c605fe" datatype="html">
+        <source>Take me there</source>
+        <target>Regisztráció</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <note priority="1" from="description"> register card button text</note>
+        <note priority="1" from="meaning">homeREG</note>
       </trans-unit>
     </body>
   </file>

@@ -18,6 +18,7 @@ export class NavigationComponent implements OnInit {
   }
 
   changeLang() {
+    this.authService.logout();
     window.location.href.startsWith(this.enUrl) ? window.location.href=this.huUrl : window.location.href=this.enUrl;
   }
 }

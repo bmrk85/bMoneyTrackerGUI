@@ -61,6 +61,10 @@
     </div>
     <div class="row" [hidden]="!tableToggled">
       <div class="col-md-9">
+        <mat-form-field>
+          <mat-label i18n="nameFilter">Name filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
         <table mat-table [dataSource]="dataSource">
           <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> Id</th>

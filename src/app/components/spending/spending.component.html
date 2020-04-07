@@ -8,7 +8,10 @@
         You can list them by dates, edit them, delete them, etc..
         <br>
         There is even a pie chart on the right side of the datatable! Check that out!
+        <br>
       </p>
+      <h4 *ngIf="this.probableSpending && this.probableSpending > 0" i18n="spending| will spend more">Based on your previous month, you are going to spend {{probableSpending}} more money this month.</h4>
+      <h4 *ngIf="this.probableSpending && this.probableSpending < 0" i18n="spending| not gona spend anymore">Based on your previous month, you are not going to spend any more money this month.</h4>
       <div class="d-flex justify-content-center">
         <button mat-fab color="primary" (click)="newSpending()">
           <mat-icon>add</mat-icon>
@@ -158,6 +161,10 @@
     </div>
     <div class="row" [hidden]="!tableToggled">
       <div class="col-md-9">
+        <mat-form-field>
+          <mat-label i18n="nameFilter">Name filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
         <table mat-table [dataSource]="dataSource">
           <ng-container matColumnDef="spendingId">
             <th mat-header-cell *matHeaderCellDef> Id</th>

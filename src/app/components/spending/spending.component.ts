@@ -40,6 +40,9 @@ export class SpendingComponent implements OnInit {
   ];
 
   displayedColumns: string[] = ['spendingId', 'spendingName', 'spendingCategory', 'spendingDate', 'spendingAmount', 'actions'];
+  probableSpending: number;
+  spentLastMonth: number = 0;
+  spentThisMonth: number = 0;
 
   constructor(private spendingService: SpendingService,
               public dialog: MatDialog,
@@ -47,6 +50,8 @@ export class SpendingComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.calculateProbableSpending();
   }
 
 
@@ -233,6 +238,41 @@ export class SpendingComponent implements OnInit {
     }
 
   }
+
+
+  applyFilter(event: KeyboardEvent ) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  private calculateProbableSpending() {
+
+    let date = new Date();
+    let previousMonthLastDay = new Date(date.getFullYear(), date.getMonth(), 0);
+
+    let previousMonth = new Date(date.getFullYear(), date.getMonth()-1, 1);
+    previousMonth.setMonth(date.getMonth()-1);
+
+    let currentMonthFirstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+
+    this.spendingService.getBetweenDates(previousMonth, previousMonthLastDay).subscribe(data => {
+      data.forEach( spending => {
+        this.spentLastMonth -= spending.amount;
+      });
+    }, null, ()=> {
+      this.probableSpending = this.spentLastMonth;
+      this.spendingService.getBetweenDates(currentMonthFirstDay, new Date()).subscribe(data => {
+        data.forEach(spending => {
+          this.probableSpending += spending.amount;
+        });
+      });
+    });
+
+
+
+  }
+
+
 
 
 }
