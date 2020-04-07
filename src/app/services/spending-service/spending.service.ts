@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Spending} from '../../models/spending';
 import {Category} from '../../models/category';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class SpendingService {
 
   getAll(): Observable<Spending[]> {
 
-    return this.http.get<Spending[]>(`http://localhost:8080/spendings`, {
+    return this.http.get<Spending[]>(`${environment.apiUrl}/spendings`, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
@@ -26,7 +27,7 @@ export class SpendingService {
 
     dateTo.setDate(dateTo.getDate() + 1);
 
-    return this.http.get<Spending[]>(`http://localhost:8080/spendings/date`, {
+    return this.http.get<Spending[]>(`${environment.apiUrl}/spendings/date`, {
       params: {
         dateFrom: dateFrom.toISOString(),
         dateTo: dateTo.toISOString()
@@ -38,7 +39,7 @@ export class SpendingService {
   }
 
   saveSpending(spending): Observable<Spending> {
-    return this.http.post<Spending>(`http://localhost:8080/spendings`,
+    return this.http.post<Spending>(`${environment.apiUrl}/spendings`,
       {
         id: spending.id ? spending.id : null,
         category: {
@@ -58,7 +59,7 @@ export class SpendingService {
   }
 
   deleteSpending(id): Observable<void> {
-    return this.http.post<void>(`http://localhost:8080/spendings/delete/${id}`, {});
+    return this.http.post<void>(`${environment.apiUrl}/spendings/delete/${id}`, {});
   }
 
 }

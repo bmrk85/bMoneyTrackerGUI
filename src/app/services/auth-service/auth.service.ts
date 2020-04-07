@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs/operators";
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class AuthService {
 
 
   authenticate(username, password) {
-    return this.httpClient.post<any>('http://localhost:8080/auth', {username, password}).pipe(
+    return this.httpClient.post<any>(`${environment.apiUrl}/auth`, {username, password}).pipe(
       map(
         userData => {
           sessionStorage.setItem('username', username);
@@ -26,7 +27,7 @@ export class AuthService {
   }
 
   register(username, password){
-    return this.httpClient.post<any>('http://localhost:8080/register', {username, password});
+    return this.httpClient.post<any>(`${environment.apiUrl}/register`, {username, password});
   }
 
   isUserLoggedIn() {

@@ -12,7 +12,7 @@ import {MessageService} from '../../services/message-service/message.service';
 })
 export class SavingComponent implements OnInit {
 
-  private savings: Saving[];
+  public savings: Saving[];
 
   constructor(private savingService: SavingService,
               public dialog: MatDialog,

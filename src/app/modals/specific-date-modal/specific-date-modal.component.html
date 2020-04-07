@@ -1,28 +1,28 @@
-<h4 mat-dialog-title>Specify a date</h4>
+<h4 mat-dialog-title i18n="specDate| modal title">Specify a date</h4>
 <form class="text-center border border-light p-5" [formGroup]="dateForm" (ngSubmit)="setDate()">
   <mat-form-field appearance="outline">
-    <mat-label>Date from</mat-label>
+    <mat-label i18n="specDate| dateFrom field">Date from</mat-label>
     <input matInput [matDatepicker]="dateFromDP" formControlName="dateFrom">
     <mat-datepicker-toggle matSuffix [for]="dateFromDP"></mat-datepicker-toggle>
-    <mat-hint align="end">Start date of your saving</mat-hint>
+    <mat-hint align="end" i18n="specDate| dateFrom hint">Start date of your saving</mat-hint>
     <mat-datepicker #dateFromDP></mat-datepicker>
   </mat-form-field>
   <br>
   <mat-form-field appearance="outline">
-    <mat-label>Date to</mat-label>
+    <mat-label i18n="specDate| dateTo field">Date to</mat-label>
     <input matInput [matDatepicker]="dateToDP" formControlName="dateTo">
     <mat-datepicker-toggle matSuffix [for]="dateToDP"></mat-datepicker-toggle>
-    <mat-hint align="end">Start date of your saving</mat-hint>
+    <mat-hint align="end" i18n="specDate| dateTo hint">End date of your saving</mat-hint>
     <mat-datepicker #dateToDP></mat-datepicker>
   </mat-form-field>
 
   <mat-dialog-actions>
 
     <button mat-raised-button color="primary" [disabled]="dateForm.invalid" type="submit">
-      Query
+      <mat-icon>send</mat-icon>
     </button>
     <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
-            (click)="onCancelClick()">Cancel
+            (click)="onCancelClick()"><mat-icon>clear</mat-icon>
     </button>
 
   </mat-dialog-actions>

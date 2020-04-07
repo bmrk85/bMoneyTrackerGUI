@@ -14,7 +14,7 @@ import {MatDialog} from '@angular/material/dialog';
 export class HomeComponent implements OnInit {
 
 
-  constructor(private authService: AuthService,
+  constructor(public authService: AuthService,
               public dialog: MatDialog) {
   }
 

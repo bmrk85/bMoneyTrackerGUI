@@ -1,27 +1,27 @@
-<h4 mat-dialog-title>Sign in to your user</h4>
+<h4 mat-dialog-title i18n="loginModal| dialog header">Sign in to your user</h4>
 <div mat-dialog-content>
   <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
     <mat-form-field appearance="outline">
-      <mat-label>User name</mat-label>
+      <mat-label i18n="loginModal| uname">User name</mat-label>
       <input matInput formControlName="username">
-      <mat-hint>Unique username</mat-hint>
-      <mat-error *ngIf="loginForm.hasError('required', 'username')">Required field</mat-error>
+      <mat-hint i18n="loginModal| uname hint">Unique username</mat-hint>
+      <mat-error *ngIf="loginForm.hasError('required', 'username')" i18n="loginModal| required">Required field</mat-error>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
+      <mat-label i18n="loginModal| password">Password</mat-label>
       <input matInput type="password" formControlName="password">
-      <mat-hint>Strong password</mat-hint>
-      <mat-error *ngIf="loginForm.hasError('required', 'password')">Required field</mat-error>
+      <mat-hint i18n="loginModal| pw hint">Strong password</mat-hint>
+      <mat-error *ngIf="loginForm.hasError('required', 'password')" i18n="loginModal| required">Required field</mat-error>
     </mat-form-field>
 
     <mat-dialog-actions>
 
       <button mat-raised-button color="primary" [disabled]="loginForm.invalid" type="submit">
-        Sign in
+        <mat-icon>send</mat-icon>
       </button>
       <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
-              (click)="onCancelClick()">Cancel
+              (click)="onCancelClick()"><mat-icon>clear</mat-icon>
       </button>
 
     </mat-dialog-actions>
@@ -30,9 +30,9 @@
 
   <div *ngIf="invalidLogin" class="alert alert-danger" role="alert">
     <h4 class="alert-heading">Oops!</h4>
-    <p>Something went wrong during your login process. You might try again.</p>
+    <p i18n="loginModal| errorText1">Something went wrong during your login process. You might try again.</p>
     <hr>
-    <p class="mb-0">If the error consists, try contacting one of our administrators.</p>
+    <p class="mb-0" i18n="loginModal| errorText2">If the error consists, try contacting one of our administrators.</p>
   </div>
 </div>
 

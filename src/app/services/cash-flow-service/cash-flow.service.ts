@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {CashFlow} from '../../models/cash-flow';
 import {stringify} from 'querystring';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class CashFlowService {
 
     dateTo.setDate(dateTo.getDate() + 1);
 
-    return this.http.get<CashFlow[]>(`http://localhost:8080/cashflow`, {
+    return this.http.get<CashFlow[]>(`${environment.apiUrl}/cashflow`, {
       params: {
         dateFrom: dateFrom.toISOString(),
         dateTo: dateTo.toISOString()
@@ -28,7 +29,7 @@ export class CashFlowService {
   }
 
   sendDatasourceData(data: CashFlow[]): Observable<Blob> {
-    return this.http.post<Blob>(`http://localhost:8080/cashflow`, data, {
+    return this.http.post<Blob>(`${environment.apiUrl}/cashflow`, data, {
       responseType:'blob' as 'json'
     });
   }

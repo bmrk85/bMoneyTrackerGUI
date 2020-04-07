@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Category} from '../../models/category';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class CategoryService {
 
 
   getAll(): Observable<Category[]> {
-    return this.http.get<Category[]>(`http://localhost:8080/categories`, {
+    return this.http.get<Category[]>(`${environment.apiUrl}/categories`, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
@@ -20,7 +21,7 @@ export class CategoryService {
   }
 
   editCategory(c: Category): Observable<Category>{
-    return this.http.post<Category>(`http://localhost:8080/categories`, c);
+    return this.http.post<Category>(`${environment.apiUrl}/categories`, c);
   }
 
 

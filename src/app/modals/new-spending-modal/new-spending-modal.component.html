@@ -1,51 +1,51 @@
-<h4 mat-dialog-title>Create a spending</h4>
+<h4 mat-dialog-title i18n="spendingModal| modal title">Create a spending</h4>
 <div mat-dialog-content>
   <form class="text-center" [formGroup]="spendingForm" (ngSubmit)="createSpending()">
     <mat-form-field appearance="outline">
-      <mat-label>Spending name</mat-label>
+      <mat-label i18n="spendingModal| name field">Spending name</mat-label>
       <input matInput formControlName="name">
-      <mat-hint align="end">What have you spent your money for?</mat-hint>
+      <mat-hint align="end" i18n="spendingModal| name hint">What have you spent your money for?</mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Date</mat-label>
+      <mat-label i18n="spendingModal| date field">Date</mat-label>
       <input matInput [matDatepicker]="dateDP" formControlName="date">
       <mat-datepicker-toggle matSuffix [for]="dateDP"></mat-datepicker-toggle>
-      <mat-hint align="end">Date of your spending. If empty, current date gets saved.</mat-hint>
+      <mat-hint align="end" i18n="spendingModal| date hint">Date of your spending. If empty, current date gets saved.</mat-hint>
       <mat-datepicker #dateDP></mat-datepicker>
     </mat-form-field>
     <br>
-    <mat-checkbox formControlName="newCategoryCheckbox">Create new category</mat-checkbox>
+    <mat-checkbox formControlName="newCategoryCheckbox" i18n="spendingModal| new cat checkbox">Create new category</mat-checkbox>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Category</mat-label>
+      <mat-label i18n="spendingModal| cat field">Category</mat-label>
       <input matInput formControlName="newCategory">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Existing categories</mat-label>
+      <mat-label i18n="spendingModal| cat list dropdown">Existing categories</mat-label>
       <mat-select formControlName="category">
         <mat-option *ngFor="let cat of availableCategories" [value]="cat.id">
           {{cat.title}}
         </mat-option>
       </mat-select>
-      <mat-hint align="end">Category of your spending</mat-hint>
+      <mat-hint align="end" i18n="spendingModal| cat hint">Category of your spending</mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Amount</mat-label>
+      <mat-label i18n="spendingModal| amt field">Amount</mat-label>
       <input matInput formControlName="amount">
-      <mat-hint align="end">Amount of your spending</mat-hint>
-      <mat-error *ngIf="spendingForm.hasError('pattern', 'amount')">Only numbers accepted</mat-error>
+      <mat-hint align="end" i18n="spendingModal| amt hint">Amount of your spending</mat-hint>
+      <mat-error *ngIf="spendingForm.hasError('pattern', 'amount')" i18n="spendingModal| amt regex error">Only numbers accepted</mat-error>
     </mat-form-field>
     <br>
 
     <mat-dialog-actions>
 
       <button mat-raised-button color="primary" [disabled]="spendingForm.invalid" type="submit">
-        Save
+        <mat-icon>send</mat-icon>
       </button>
       <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
-              (click)="onCancelClick()">Cancel
+              (click)="onCancelClick()"><mat-icon>clear</mat-icon>
       </button>
 
     </mat-dialog-actions>

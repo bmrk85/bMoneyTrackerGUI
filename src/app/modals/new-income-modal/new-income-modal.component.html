@@ -1,51 +1,51 @@
-<h4 mat-dialog-title>Create an income</h4>
+<h4 mat-dialog-title i18n="incomeModal| modal title">Create an income</h4>
 <div mat-dialog-content>
   <form class="text-center" [formGroup]="incomeForm" (ngSubmit)="createIncome()">
     <mat-form-field appearance="outline">
-      <mat-label>Income name</mat-label>
+      <mat-label i18n="incomeModal| name field">Income name</mat-label>
       <input matInput formControlName="name">
-      <mat-hint align="end">What is the source of this income?</mat-hint>
+      <mat-hint align="end" i18n="incomeModal| name hint">What is the source of this income?</mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Date</mat-label>
+      <mat-label i18n="incomeModal| date field">Date</mat-label>
       <input matInput [matDatepicker]="dateDP" formControlName="date">
       <mat-datepicker-toggle matSuffix [for]="dateDP"></mat-datepicker-toggle>
-      <mat-hint align="end">Date of your income. If empty, current date gets saved.</mat-hint>
+      <mat-hint align="end" i18n="incomeModal| date hint">Date of your income. If empty, current date gets saved.</mat-hint>
       <mat-datepicker #dateDP></mat-datepicker>
     </mat-form-field>
     <br>
-    <mat-checkbox formControlName="newCategoryCheckbox">Create new category</mat-checkbox>
+    <mat-checkbox formControlName="newCategoryCheckbox" i18n="incomeModal| new cat checkbox">Create new category</mat-checkbox>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Category</mat-label>
+      <mat-label i18n="incomeModal| cat field">Category</mat-label>
       <input matInput formControlName="newCategory">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Existing categories</mat-label>
+      <mat-label i18n="incomeModal| cat list dropdown">Existing categories</mat-label>
       <mat-select formControlName="category">
         <mat-option *ngFor="let cat of availableCategories" [value]="cat.id">
           {{cat.title}}
         </mat-option>
       </mat-select>
-      <mat-hint align="end">Category of your income</mat-hint>
+      <mat-hint align="end" i18n="incomeModal| cat hint">Category of your income</mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Amount</mat-label>
+      <mat-label i18n="incomeModal| amt field">Amount</mat-label>
       <input matInput formControlName="amount">
-      <mat-hint align="end">Amount of your income</mat-hint>
-      <mat-error *ngIf="incomeForm.hasError('pattern', 'amount')">Only numbers accepted</mat-error>
+      <mat-hint align="end" i18n="incomeModal| amt hint">Amount of your income</mat-hint>
+      <mat-error *ngIf="incomeForm.hasError('pattern', 'amount')" i18n="incomeModal| amt regex error">Only numbers accepted</mat-error>
     </mat-form-field>
     <br>
 
     <mat-dialog-actions>
 
       <button mat-raised-button color="primary" [disabled]="incomeForm.invalid" type="submit">
-        Save
+        <mat-icon>send</mat-icon>
       </button>
       <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
-              (click)="onCancelClick()">Cancel
+              (click)="onCancelClick()"><mat-icon>clear</mat-icon>
       </button>
 
     </mat-dialog-actions>

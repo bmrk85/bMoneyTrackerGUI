@@ -1,20 +1,26 @@
 <div class="jumbotron" *ngIf="currentUser">
-  <h4>User details
-    <br>By clicking on the edit button next to the categories, you can set the category to enabled or disabled
+  <h4> <span i18n="profile| header text">User details</span>
+    <br> <span i18n="profile| body text">By clicking on the edit button next to the categories, you can set the category to enabled or disabled</span>
   </h4>
   <br>
-  <p>User name: {{currentUser.username}}</p>
-  <p>Your categories:</p>
+  <p i18n="profile| uname">User name: {{currentUser.username}}</p>
+  <p i18n="profile| your categories">Your categories:</p>
   <div class="row">
     <div class="col-md-1"></div>
-    <div class="col-md-2">
+    <div class="col-md-3">
       <div *ngFor="let c of currentUser.categories">
-        {{c.title}}
-        <button mat-icon-button (click)="editCategory(c)">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <mat-icon *ngIf="c.enabled">done_outline</mat-icon>
-        <mat-icon *ngIf="!c.enabled">clear</mat-icon>
+        <mat-card class="category-card">
+          {{c.title}}
+          <button mat-icon-button (click)="editCategory(c)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="editCategory(c)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <p i18n="profile| is category enabled text">Is enabled?</p>
+          <mat-icon *ngIf="c.enabled">done_outline</mat-icon>
+          <mat-icon *ngIf="!c.enabled">clear</mat-icon>
+        </mat-card>
       </div>
     </div>
   </div>
