@@ -217,18 +217,18 @@ export class SpendingComponent implements OnInit {
 
     data.forEach(i =>{
       if(!amountsByCategory.has(i.category.title)){
-        amountsByCategory.set(i.category.title,-i.amount);
+        amountsByCategory.set(`${i.category.title}+${i.category.color}`,-i.amount);
       }else{
         let currentAmount = amountsByCategory.get(i.category.title);
-        amountsByCategory.set(i.category.title, currentAmount-i.amount);
+        amountsByCategory.set(`${i.category.title}+${i.category.color}`, currentAmount-i.amount);
       }
     });
     this.pieChartLabels = [];
     this.pieChartData = [];
 
     for(let [key,value] of amountsByCategory){
-      this.pieChartColors[0].backgroundColor.push('#'+Math.floor(Math.random()*16777215).toString(16));
-      this.pieChartLabels.push(key);
+      this.pieChartColors[0].backgroundColor.push(key.split("+")[1]);
+      this.pieChartLabels.push(key.split("+")[0]);
       this.pieChartData.push(value);
     }
 

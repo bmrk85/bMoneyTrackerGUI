@@ -1,65 +1,65 @@
-<h4 mat-dialog-title>Create a saving</h4>
+<h4 mat-dialog-title i18n="savingModal| modal title">Create a saving</h4>
 <div mat-dialog-content>
   <form class="text-center" [formGroup]="savingForm" (ngSubmit)="createSaving()">
     <mat-form-field appearance="outline">
-      <mat-label>Saving name</mat-label>
+      <mat-label i18n="savingModal| name field">Saving name</mat-label>
       <input matInput formControlName="name">
-      <mat-hint align="end">Unique name for what you are saving up for</mat-hint>
+      <mat-hint align="end" i18n="savingModal| name hint">Unique name for what you are saving up for</mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Saving description</mat-label>
+      <mat-label i18n="savingModal| desc field">Saving description</mat-label>
       <textarea matInput formControlName="description"></textarea>
-      <mat-hint align="end">Description of your saving</mat-hint>
+      <mat-hint align="end" i18n="savingModal| desc hint">Description of your saving</mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Date From</mat-label>
+      <mat-label i18n="savingModal| dateFrom field">Date From</mat-label>
       <input matInput [matDatepicker]="dateFromDP" formControlName="dateFrom">
       <mat-datepicker-toggle matSuffix [for]="dateFromDP"></mat-datepicker-toggle>
-      <mat-hint align="end">Start date of your saving</mat-hint>
+      <mat-hint align="end" i18n="savingModal| dateFrom hint">Start date of your saving</mat-hint>
       <mat-datepicker #dateFromDP></mat-datepicker>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Date To</mat-label>
+      <mat-label i18n="savingModal| dateTo field">Date To</mat-label>
       <input matInput [matDatepicker]="dateToDP" formControlName="dateTo">
       <mat-datepicker-toggle matSuffix [for]="dateToDP"></mat-datepicker-toggle>
-      <mat-hint align="end">End date of your saving</mat-hint>
+      <mat-hint align="end" i18n="savingModal| dateTo hint">End date of your saving</mat-hint>
       <mat-datepicker #dateToDP></mat-datepicker>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Amount</mat-label>
+      <mat-label i18n="savingModal| amt field">Amount</mat-label>
       <input matInput formControlName="amount">
-      <mat-hint align="end">Amount of your saving</mat-hint>
-      <mat-error *ngIf="savingForm.hasError('pattern', 'amount')">Only numbers accepted</mat-error>
+      <mat-hint align="end" i18n="savingModal| amt hint">Amount of your saving</mat-hint>
+      <mat-error *ngIf="savingForm.hasError('pattern', 'amount')" i18n="savingModal| amt regex error">Only numbers accepted</mat-error>
     </mat-form-field>
     <br>
-    <mat-checkbox formControlName="newCategoryCheckbox">Create new category</mat-checkbox>
+    <mat-checkbox formControlName="newCategoryCheckbox" i18n="savingModal| new cat checkbox">Create new category</mat-checkbox>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label>Category</mat-label>
+      <mat-label i18n="savingModal| cat field">Category</mat-label>
       <input matInput formControlName="newCategory">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label>Existing categories</mat-label>
+      <mat-label i18n="savingModal| cat list dropdown">Existing categories</mat-label>
       <mat-select formControlName="category">
-        <mat-option *ngFor="let cat of availableCategories" [value]="cat.title">
+        <mat-option *ngFor="let cat of availableCategories" [value]="cat.id">
           {{cat.title}}
         </mat-option>
       </mat-select>
-      <mat-hint align="end">Category of your spending</mat-hint>
+      <mat-hint align="end" i18n="savingModal| cat hint">Category of your spending</mat-hint>
     </mat-form-field>
     <br>
 
     <mat-dialog-actions>
 
       <button mat-raised-button color="primary" [disabled]="savingForm.invalid" type="submit">
-        Save
+        <mat-icon>send</mat-icon>
       </button>
       <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
-              (click)="onCancelClick()">Cancel
+              (click)="onCancelClick()"><mat-icon>clear</mat-icon>
       </button>
 
     </mat-dialog-actions>

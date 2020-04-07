@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3a22b73993981fcc8c570a122a05dd24323d401b" datatype="html">
+        <source>Home</source>
+        <target>Kezdőlap</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> home</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="ff2aeea45abc6bf6cb5a554d2d30a994b812e1b2" datatype="html">
+        <source>FAQ</source>
+        <target>GY.I.K.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description"> faq</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="646af8237c0166d1052698403abfff9627c48881" datatype="html">
+        <source>My profile</source>
+        <target>Profilom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description"> my profile</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="4edde5448de402ba01ff990dd2b4347986950c3e" datatype="html">
+        <source>Cash flow</source>
+        <target>Pénzmozgás</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> cashFlow</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="fc1a8d680c249c192f70247d7b16d72b2b292338" datatype="html">
+        <source>Incomes</source>
+        <target>Bevételek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description"> incomes</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="cc132fa9387b141c5afcbd22334e0b0d634f1342" datatype="html">
+        <source>Spendings</source>
+        <target>Kiadások</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description"> spendings</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="ae63bb2866aee21e863c0da26e7658b32e395b96" datatype="html">
+        <source>Savings</source>
+        <target>Megtakarítások</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description"> savings</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="ba847c2d85ab95a8a96755083b94aaea760f5fea" datatype="html">
+        <source>Log out</source>
+        <target>Kijelentkezés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description"> logout</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+      <trans-unit id="bdb2c3df91f9e4ebef4b4e355c70e80847632a15" datatype="html">
+        <source>Sign in to your user</source>
+        <target>Bejelentkezés meglévő felhasználóba</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> dialog header</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="7b028d5c6fa25efb5dd51f053e3e08ec16081ca7" datatype="html">
+        <source>User name</source>
+        <target>Felhasználónév</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> uname</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="6de0e7d94c97bf6237338b173fdd9df3e243a795" datatype="html">
+        <source>Unique username</source>
+        <target>Egyedi felhasználónév</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> uname hint</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="cd463247d00f5f87c9c8250f4cb1c41d97729ae7" datatype="html">
+        <source>Required field</source>
+        <target>Kötelező mező</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description"> required</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="a949b0e152db6b2ef63efdb2e363415059c9db92" datatype="html">
+        <source>Password</source>
+        <target>Jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description"> password</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="b7024837947db35ee8f6343581c5ddbe7c030d2c" datatype="html">
+        <source>Strong password</source>
+        <target>Erős jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> pw hint</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="9886abe42618ddbf0686170f558bf2427fff0b23" datatype="html">
+        <source>Something went wrong during your login process. You might try again.</source>
+        <target>Nem sikerült valami a regisztráció során. Próbáld újra.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description"> errorText1</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="5eb96aa7c55d05d8e3a1dbc0d8c9af2e35c63855" datatype="html">
+        <source>If the error consists, try contacting one of our administrators.</source>
+        <target>Ha fennáll a hiba, keress fel egy adminisztrátort.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/login-modal/login-modal.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description"> errorText2</note>
+        <note priority="1" from="meaning">loginModal</note>
+      </trans-unit>
+      <trans-unit id="b1c4c180cfdbb89cac81625605b230352ac17cf2" datatype="html">
+        <source>Create a new user</source>
+        <target>Új felhasználó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> modal title</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="c99e491cea8ea5a73d2c5f553b1c6901a2aba0b6" datatype="html">
+        <source>User name</source>
+        <target>Felhasználónév</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> uname field</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="ba5f38223945251999b93771f64ca52280a61cc9" datatype="html">
+        <source>Unique username</source>
+        <target>Egyedi felhasználónév</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> uname hint</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="52a4ef335b354b338ac94132f1d3bef7411d0ce8" datatype="html">
+        <source>Required field
+      </source>
+      <target>Kötelező mező</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description"> required</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="1171527b02d47c7ec13b7681b51c14c20679f1cd" datatype="html">
+        <source>Must be
+        between <x id="INTERPOLATION" equiv-text="{{minLength}}"/> and <x id="INTERPOLATION_1" equiv-text="{{maxLength}}"/>
+        characters
+      </source>
+      <target>
+      	<x id="INTERPOLATION" equiv-text="{{minLength}}"/> és <x id="INTERPOLATION_1" equiv-text="{{maxLength}}"/> 
+      karakter között kell legyen a hossza
+  	  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description"> length</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="22c091723f752fa242d197e02436e1956b2e60ba" datatype="html">
+        <source>Password</source>
+        <target>Jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description"> pw field</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="06d4666494e13c51586efc7acce5002c8965f059" datatype="html">
+        <source>Strong password</source>
+        <target>Erős jelszó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description"> pw hint</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="8d66146184d7c348293feca8023208ec2abf24b8" datatype="html">
+        <source>Required field</source>
+        <target>Kötelező mező</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description"> required</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="2a78ac98f6bf112fcd9b9dc2c041319d57df889c" datatype="html">
+        <source>Must be between <x id="INTERPOLATION" equiv-text="{{minLength}}"/> and <x id="INTERPOLATION_1" equiv-text="{{maxLength}}"/>
+        characters
+      </source>
+      <target>
+      	<x id="INTERPOLATION" equiv-text="{{minLength}}"/> és <x id="INTERPOLATION_1" equiv-text="{{maxLength}}"/> 
+      karakter között kell legyen a hossza
+  	  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description"> length</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="ab090460f0a157ccba37cfa0fca7fad03ee06584" datatype="html">
+        <source>Retype your password</source>
+        <target>Jelszó megerősítése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description"> pw retype field</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="1fa4c95314f1330f439966a5fabe3a73c3698f5b" datatype="html">
+        <source>Retype the same password</source>
+        <target>Jelszó megerősítése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description"> retype pw hint</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="80fee0f14c6644619f93810d20a84ecfc4a4cc3a" datatype="html">
+        <source>Must be between <x id="INTERPOLATION" equiv-text="{{minLength}}"/>
+        and <x id="INTERPOLATION_1" equiv-text="{{maxLength}}"/> characters
+      </source>
+       <target>
+      	<x id="INTERPOLATION" equiv-text="{{minLength}}"/> és <x id="INTERPOLATION_1" equiv-text="{{maxLength}}"/> 
+      karakter között kell legyen a hossza
+  	  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description"> length</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="6fd5f25c25dd2fac76f6f618cadb4d514b0741fd" datatype="html">
+        <source>
+        Passwords not matching
+      </source>
+      <target>Nem egyeznek a jelszavak</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description"> pw not matching</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="0cba97bfb15599bc2f06b5961140b5d292f76c4f" datatype="html">
+        <source>Well done!</source>
+        <target>Gratulálunk!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description"> success reg title</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="038071e718d5432faefa8b0543def86c372be1df" datatype="html">
+        <source>You have succesfully registered.</source>
+        <target>Sikeres regisztráció.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description"> success reg body</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="1f510e7f1c216114933e5afd3ebd4abc6bd7d17d" datatype="html">
+        <source>Something went wrong during your registration process. You might try again with a different username.</source>
+        <target>Valami nem sikerült a reigsztráció során. Próbáld újra más adatokkal.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description"> error reg text1</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="7d3b7e0c7178fef63e8583e3bb56682ec2a8470a" datatype="html">
+        <source>If the error consists, try contacting one of our administrators.</source>
+        <target>Ha továbbra is fennáll a hiba, keress fel egy adminisztrátort.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/register-modal/register-modal.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <note priority="1" from="description"> error reg text2</note>
+        <note priority="1" from="meaning">registerModal</note>
+      </trans-unit>
+      <trans-unit id="a6da93d9be134551d3b5718bc46b1c31aa2cf8d1" datatype="html">
+        <source>Welcome</source>
+        <target>Kedves Látogató</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description"> page welcome</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="d231300cd667dab874689b0a9ccc7475986adae7" datatype="html">
+        <source>
+      &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.&quot;
+    </source>
+    <target>&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.&quot;</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> page body text</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="1ba078333113608c417ee677a6c56e0ca22d73dd" datatype="html">
+        <source>Login</source>
+        <target>Bejelentkezés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description"> login card header text</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="ea725218f1c0a58c9cb8cab671ab5158582b5f97" datatype="html">
+        <source>
+            Log in here, if you already have an account.
+          </source>
+          <target>Ha már regisztráltál, jelentkezz be itt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description"> login card body text</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="017de1fe3094be7884f9011df6d1ebf8ce5f5145" datatype="html">
+        <source>Take me there</source>
+        <target>Bejelentkezés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description"> login card button text</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="cd4fb1ab7ff585078d3bf7c59f3336710d7e7147" datatype="html">
+        <source>Register</source>
+        <target>Regisztráció</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description"> register card header text</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="6108ce4b826152fecc0cc6209ddf45a5ece45a9a" datatype="html">
+        <source>
+            Don&apos;t have an account yet? Register here.
+          </source>
+          <target>Nincs még felhasználód? Regisztrálj itt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <note priority="1" from="description"> register card body text</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="6201184e13298648187181bebe6ec4932db991e6" datatype="html">
+        <source>Specify a date</source>
+        <target>Dátum beállítása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/specific-date-modal/specific-date-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> modal title</note>
+        <note priority="1" from="meaning">specDate</note>
+      </trans-unit>
+      <trans-unit id="8beb9629ee47374221ecd78cd9b24ce54ce24fc8" datatype="html">
+        <source>Date from</source>
+        <target>Kezdő dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/specific-date-modal/specific-date-modal.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> dateFrom field</note>
+        <note priority="1" from="meaning">specDate</note>
+      </trans-unit>
+      <trans-unit id="9ccb54c59f6a80d9a3c526f772e4d187e48d0a87" datatype="html">
+        <source>Start date of your saving</source>
+        <target>Kezdeti dátuma a megtakarításnak.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/specific-date-modal/specific-date-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> dateFrom hint</note>
+        <note priority="1" from="meaning">specDate</note>
+      </trans-unit>
+      <trans-unit id="c30d27ae6aa805cdc093b703d8894997a7b209c8" datatype="html">
+        <source>Date to</source>
+        <target>Befejezés dátuma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/specific-date-modal/specific-date-modal.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description"> dateTo field</note>
+        <note priority="1" from="meaning">specDate</note>
+      </trans-unit>
+      <trans-unit id="c4b1d9eac61c8309e2a32c6be78d5f00104a3144" datatype="html">
+        <source>End date of your saving</source>
+        <target>Megtakarításod befejezési dátuma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/specific-date-modal/specific-date-modal.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description"> dateTo hint</note>
+        <note priority="1" from="meaning">specDate</note>
+      </trans-unit>
+      <trans-unit id="6a2b42b5e65b64eef7c4ebb5ef7cd94d5ff12120" datatype="html">
+        <source>Your cash flow</source>
+        <target>Pénzmozgás nyomonkövetése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> header text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="83b997ff249e1a579d388ea700e98eff303fc1f8" datatype="html">
+        <source>
+        &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.&quot;
+      </source>
+      <target>&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.&quot;</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> body text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="444ec869e47695bc6cc60ed07b803b64e02758cb" datatype="html">
+        <source>
+          Generate excel of the table
+        </source>
+        <target>Excel készítése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description"> excelButton</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="92286b2879386b087e58f7cd96887c0aa2c8972a" datatype="html">
+        <source>Specific date</source>
+        <target>Dátum beállítása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description"> specificDate card header</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="8e698ac4c53eeecfa3130617b13ec588e9f0aaf4" datatype="html">
+        <source>
+              Take a quick look at your cashflow between two dates.
+            </source>
+            <target>Tekintsd meg a pénzmozgásaid két dátum között.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description"> specific date card body text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="0f26be360ca0d97947b3ee72274348534cb8321b" datatype="html">
+        <source>Select what to display.</source>
+        <target>Válaszd ki mit szeretnél látni.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description"> placeholder text for unopened table</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="825ece65afea19a469583dfc5391e58812afb5da" datatype="html">
+        <source> Name</source>
+        <target> Név</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description"> name col text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="352ac0aa0ebdab68c962c3472ef12187b5bc1f6e" datatype="html">
+        <source> Total</source>
+        <target> Összesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description"> total row text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="1c0badc0d2a896b21b71397b0c2d7a7724d5a7cb" datatype="html">
+        <source> Category</source>
+        <target> Kategória</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <note priority="1" from="description"> cat col text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="29463076b54277a6fa8169792978942d203db5c5" datatype="html">
+        <source> Date</source>
+        <target> Dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description"> date col text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="ad20bdbfa9ff789ca014814c1bc0fa2b2f478367" datatype="html">
+        <source> Amount</source>
+        <target> Összeg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description"> amount col text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="b6b60a017f90dcb7205f87bde3d59eed45c322f5" datatype="html">
+        <source>Pie Chart for cash-flow visualisation
+        </source>
+        <target>Pénzmozgás diagrammja</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <note priority="1" from="description"> pie chart text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="9db6e209cb6950576c9977fc524786fff76dfbda" datatype="html">
+        <source>
+        Page not found
+      </source>
+      <target>A keresett oldal nem található</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/error/error.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> page not found title</note>
+        <note priority="1" from="meaning">error</note>
+      </trans-unit>
+      <trans-unit id="dfd8a1a119ead9ecb34bcda3d7f01d4f9753e385" datatype="html">
+        <source>Go back to home page</source>
+        <target>Vissza a kezdőlapra</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/error/error.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description"> page go back text</note>
+        <note priority="1" from="meaning">error</note>
+      </trans-unit>
+      <trans-unit id="d245bb8552184643dd1c43a23301a653fe729ac7" datatype="html">
+        <source>Logged out</source>
+        <target>Kijelentkezve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/logout/logout.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> header text</note>
+        <note priority="1" from="meaning">logout</note>
+      </trans-unit>
+      <trans-unit id="7a5d9b88edc9a700d5f5a0ccdaf9c6ffd9b8554e" datatype="html">
+        <source>
+        You have been logged out succesfully. Redirecting to the home page
+      </source>
+      <target>Sikeresen kijelentkeztél. Vissza a kezdőlapra.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/logout/logout.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> body text</note>
+        <note priority="1" from="meaning">logout</note>
+      </trans-unit>
+      <trans-unit id="c8f2e7000314806cfc9b1c42d3dd8612d20e044a" datatype="html">
+        <source>Create a spending</source>
+        <target>Kiadás felvétele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> modal title</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="1deffa7e554c75600b266b1401e8d79696e051ba" datatype="html">
+        <source>Spending name</source>
+        <target>Kiadás neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> name field</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="158032184a3829e3639f6f0d40d2b3c1ac56101f" datatype="html">
+        <source>What have you spent your money for?</source>
+        <target>Mire költöttél?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> name hint</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="7ee7249c98c290633a22afa7773365234b8e1315" datatype="html">
+        <source>Date</source>
+        <target>Dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description"> date field</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="1f4a8659a6e9811bb267705b92cd5d8c12858399" datatype="html">
+        <source>Date of your spending. If empty, current date gets saved.</source>
+        <target>Kiadás dátuma. Ha üres, a mostani időpont lesz elmentve.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> date hint</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="8a604f2711a93ff3ccb54cad843950f842d95ffd" datatype="html">
+        <source>Create new category</source>
+        <target>Új kategória felvétele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> new cat checkbox</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="29750e60bed12e8d4a8bc4115eb7aa4c3e7fce19" datatype="html">
+        <source>Category</source>
+        <target>Kategória</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description"> cat field</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="bd708ac19e98425c190fff675a4fd3cd40b1c428" datatype="html">
+        <source>Existing categories</source>
+        <target>Meglévő kategóriák</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description"> cat list dropdown</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="3e2db477f90c395f068345bca3fa214817e6c74b" datatype="html">
+        <source>Category of your spending</source>
+        <target>Kiadás kategóriája</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description"> cat hint</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="d2a9c35242dca398c04a4947c971dd057e600a88" datatype="html">
+        <source>Amount</source>
+        <target>Összeg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description"> amt field</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="2307e45868edca03b2fe3b346e113ae8bb5f33ee" datatype="html">
+        <source>Amount of your spending</source>
+        <target>Kiadás összege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description"> amt hint</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="1c7a5efb38dcca5a0e4daad1360730369602285c" datatype="html">
+        <source>Only numbers accepted</source>
+        <target>Csak számokat írhatsz be</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-spending-modal/new-spending-modal.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description"> amt regex error</note>
+        <note priority="1" from="meaning">spendingModal</note>
+      </trans-unit>
+      <trans-unit id="55d2be83ed52ee6d8641ff7d8ec8afbab12cfb5f" datatype="html">
+        <source>Edit category</source>
+        <target>Kategória szerkesztése</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/edit-category-modal/edit-category-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> title</note>
+        <note priority="1" from="meaning">editCatModal</note>
+      </trans-unit>
+      <trans-unit id="64945ae67b25f9fedc497e695442809b605f8e2e" datatype="html">
+        <source>Category title</source>
+        <target>Kategória címe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/edit-category-modal/edit-category-modal.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> cat title</note>
+        <note priority="1" from="meaning">editCatModal</note>
+      </trans-unit>
+      <trans-unit id="1296d4efc651e943f2d57bbf280fb8f3e5c0f69e" datatype="html">
+        <source>What is the title of this category?</source>
+        <target>Mi a címe a kategóriának?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/edit-category-modal/edit-category-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> cat title hint</note>
+        <note priority="1" from="meaning">editCatModal</note>
+      </trans-unit>
+      <trans-unit id="4210997532ba7c5c180fe91c42c052763b283437" datatype="html">
+        <source>Category enabled</source>
+        <target>Kategória elérhető</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/edit-category-modal/edit-category-modal.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description"> enabled checkbox</note>
+        <note priority="1" from="meaning">editCatModal</note>
+      </trans-unit>
+      <trans-unit id="ce9fc6564716aa9c10d3ca15acb54da2263209fd" datatype="html">
+        <source>Category HEX color</source>
+        <target>Kategória HEX kódja</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/edit-category-modal/edit-category-modal.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description"> cat hex color</note>
+        <note priority="1" from="meaning">editCatModal</note>
+      </trans-unit>
+      <trans-unit id="1cb594663d790390bcd85bb326c7cc125dedfff4" datatype="html">
+        <source>What is the hex color of this category?</source>
+        <target>Mi a kategória HEX kódja?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/edit-category-modal/edit-category-modal.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description"> cat hex hint</note>
+        <note priority="1" from="meaning">editCatModal</note>
+      </trans-unit>
+      <trans-unit id="1edce2cbc3488e9f3509de908c469dd5b8a811fa" datatype="html">
+        <source>Your spending history</source>
+        <target>Kiadások</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> page header text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="18e33dd0912ee11bfe06bafa3dfe703208c85e9b" datatype="html">
+        <source>
+      Have you ever wondered, where your hard earned money go? Was it always hard for you to keep track on your incomes and spendings?
+      <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>Are you saving up for something, and want to keep track on that? Try this app!
+      <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>It has all the features, a money tracker app must have, and very easy to use.
+    </source>
+    <target>
+    	Mindig is érdekelt, hogy hová tűnt a nehezen megkeresett pénzed? Mindig is nehéznek találtad, hogy nyomon kövesd a bevételeid és kiadásaid?
+      <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>Éppen spórolnál valamire, és kéne valamilyen felület, ahol lépést tudsz tartani? Próbáld ki ezt az appot!
+      <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>Mindent tud, amit egy ilyen alkalmazásnak tudnia kell, és nagyon egyszerű a használata.
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> page body text</note>
+        <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="f95666986e6061dff8f6a4fd4293870835075986" datatype="html">
+        <source>Specify a date</source>
+        <target>Dátum megadása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description"> date card title</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="35c91260436acb2095679153073201bf2899c9bb" datatype="html">
+        <source>
+              Take a quick look at your spendings between two dates.
+            </source>
+            <target>Nézd meg a kiadásaid két dátum közt.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description"> date card body text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="bbe8306bf6f29ebbd08d02d66b89a6a50aace26a" datatype="html">
+        <source>This week</source>
+        <target>E hét</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <note priority="1" from="description"> this week card title</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="29d2ab4f1a935cd1c64a4debd0d6fbaea0e314c8" datatype="html">
+        <source>
+              Take a quick look at your spendings this week.
+            </source>
+            <target>Nézd meg a heti kiadásaid.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description"> this week card body text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="edd955ebf785637e481c91a6571522148fd18ceb" datatype="html">
+        <source>This month</source>
+        <target>E hónap</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <note priority="1" from="description"> this month card title</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="dd530990b113b4a9685dd2b066267b88fee5c185" datatype="html">
+        <source>
+              Take a quick look at your spendings this month.
+            </source>
+            <target>Nézd meg a havi kiadásaid.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <note priority="1" from="description"> this month card body</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="438730a82199d03d22c8c22ae1369c6c8a43c706" datatype="html">
+        <source>Everything</source>
+        <target>Összes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <note priority="1" from="description"> all card title</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="ef297777f78f3efa014ccec50dee869bbb4a80f2" datatype="html">
+        <source>
+              Take a quick look at your all-time spendings.
+            </source>
+            <target>Nézd meg az összes kiadásod.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+        <note priority="1" from="description"> all card body text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="f0b4d1474a73b52a95f258db2f2f2a240597cbf5" datatype="html">
+        <source>Select what to display.</source>
+        <target>Válaszd ki mit jelenítsünk meg.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <note priority="1" from="description"> placeholder text for unopened table</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="3805da5c0eb6a3d17fec9e34d97433e43f0d3419" datatype="html">
+        <source> Name</source>
+        <target> Név</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <note priority="1" from="description"> name col text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="9d64c52b2132dec9b2d0d7acb709515a0ffc0379" datatype="html">
+        <source> Total</source>
+        <target> Összesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+        <note priority="1" from="description"> total row text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="363f6cc5b2f4543d9ce85e2098b99b8a52046d02" datatype="html">
+        <source> Category</source>
+        <target> Kategória</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+        <note priority="1" from="description"> cat col text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="4e27e1cda139439271b7b51801f492edf50c693c" datatype="html">
+        <source> Date</source>
+        <target> Dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+        <note priority="1" from="description"> date col text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="7b7a6f866d1ced4a85d60f55a45e92a4f82f1957" datatype="html">
+        <source> Amount</source>
+        <target> Összeg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+        <note priority="1" from="description"> amt col text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="b15351a848830edde88a25a0d13273a8ae72c186" datatype="html">
+        <source> Actions</source>
+        <target> Műveletek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+        <note priority="1" from="description"> actions col text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="d7d973ce367b083f57c998a458844e35ab8de5be" datatype="html">
+        <source>Pie Chart for spendings by categories
+        </source>
+        <target>Kategóriák szerinti diagramm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+        <note priority="1" from="description"> pie chart text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="bfec5e24a6392def40d9c3823717f813a05effa3" datatype="html">
+        <source>Create an income</source>
+        <target>Bevétel felvétele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> modal title</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="717d6e67cc24dc0ff8a5f23986baec26dfdfb3f6" datatype="html">
+        <source>Income name</source>
+        <target>Bevétel neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> name field</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="62e049b42f842b54f8e1824ff5103cb55f839ed7" datatype="html">
+        <source>What is the source of this income?</source>
+        <target>Honnan származik a bevétel?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> name hint</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="5aebd5706cdd3dca288b29125e098b533cb0a221" datatype="html">
+        <source>Date</source>
+        <target>Dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description"> date field</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="47cae9cb9f19d361bdc185bbee924521456a8cfc" datatype="html">
+        <source>Date of your income. If empty, current date gets saved.</source>
+        <target>Bevétel dátumat. Ha üres, a mostani időpont mentődik el.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> date hint</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="7e0e61a2cae7daa57d25fd4580d7e1f43ec34173" datatype="html">
+        <source>Create new category</source>
+        <target>Új kategória felvétele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description"> new cat checkbox</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="9367290288b596af24ad3821844cef1f1a53ef73" datatype="html">
+        <source>Category</source>
+        <target>Kategória</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description"> cat field</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="3a5cccf97e03e5fc314792aea5976be2825fe82d" datatype="html">
+        <source>Existing categories</source>
+        <target>Meglévő kategóriák</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description"> cat list dropdown</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="4ccf1c726bc33af5f57446c88514618cde6e0742" datatype="html">
+        <source>Category of your income</source>
+        <target>Bevétel kategóriája</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description"> cat hint</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="5326bdb807ea114d5cb14952cfc8a6dfa4fc9490" datatype="html">
+        <source>Amount</source>
+        <target>Összeg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description"> amt field</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="81a33593ec1320fa0d7a289bf5e866752e35f0b6" datatype="html">
+        <source>Amount of your income</source>
+        <target>Bevétel összege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description"> amt hint</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="907c53f5802101c26726714c52234455c7a61435" datatype="html">
+        <source>Only numbers accepted</source>
+        <target>Csak számokat lehet megadni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-income-modal/new-income-modal.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description"> amt regex error</note>
+        <note priority="1" from="meaning">incomeModal</note>
+      </trans-unit>
+      <trans-unit id="c98e5019d35253582e4f33170f4b4de08948d48f" datatype="html">
+        <source>Your income history</source>
+        <target>Bevételeid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">income header text</note>
+      </trans-unit>
+      <trans-unit id="ecd64eabf2ff0a6d13ea619bb08758fec1211286" datatype="html">
+        <source>
+        Here, you can save your incomes, and check them time to time.
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        You can list them by dates, edit them, delete them, etc..
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        There is even a pie chart on the right side of the datatable! Check that out!
+      </source>
+      <target>
+      	Itt felvehetsz új bevételeket, és ellenőrizheted őket időről időre.
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Kilistázhatod dátum szerint, módosíthatod , vagy akár ki is törölheted őket.
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Még egy diagrammon is ábrázolva vannak kategóriák szerint a jobb alsó sarokban!
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">income body text</note>
+      </trans-unit>
+      <trans-unit id="36331e8a14c81f322fbc84c89a089e789a84fbbd" datatype="html">
+        <source>Specify a date</source>
+        <target>Dátum beállítása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description"> date card header text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="23b6b2a2a004aa1105ba444661d0be933f5ca879" datatype="html">
+        <source>
+              Take a quick look at your incomes between two dates.
+            </source>
+            <target>Nézd meg két dátum közti bevételeid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description"> date card body text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="e592fa4873c682c64e61ffb656094e62934bc51f" datatype="html">
+        <source>This week</source>
+        <target>E hét</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <note priority="1" from="description"> this week card header text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="4ad2298b7e6d91e6a701594fdac9db542a1763e5" datatype="html">
+        <source>
+              Take a quick look at your incomes this week.
+            </source>
+            <target>Nézd meg a heti bevételeid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description"> this week card body text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="ac41a362f791bc1ef1762ced8f0cbdebee54a032" datatype="html">
+        <source>This month</source>
+        <target>E hónap</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <note priority="1" from="description"> this month card header text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="487824ab25b129366b0bca475c5f7adfbdb6f635" datatype="html">
+        <source>
+              Take a quick look at your incomes this month.
+            </source>
+            <target>Nézd meg a havi bevételeid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <note priority="1" from="description"> this month card body text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="9ea4e3f449ebfeed6d0ee54d54252d75765ab703" datatype="html">
+        <source>Everything</source>
+        <target>Összes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <note priority="1" from="description"> everything card header text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="793d5bc19377a89428bd030a9bc5344719c67d54" datatype="html">
+        <source>
+              Take a quick look at your all-time incomes.
+            </source>
+            <target>Nézd meg az összes bevételed</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+        <note priority="1" from="description"> everything card body text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="d7e0c266424b78590b26d95bf74128a005d3d88e" datatype="html">
+        <source>Select what to display.</source>
+        <target>Válaszd ki mit jelenítsünk meg.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <note priority="1" from="description"> placeholder text for unopened table</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="4d6802c0164e08016545aca0bbd1f154154d8259" datatype="html">
+        <source> Name</source>
+        <target> Név</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <note priority="1" from="description"> name col text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="ad06308bcacd942fabaf381bd521867e75921e66" datatype="html">
+        <source> Total </source>
+        <target> Összesen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+        <note priority="1" from="description"> total row text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="a39314f50e27836cb244336147f74d7179e08b8f" datatype="html">
+        <source> Category</source>
+        <target> Kategória</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+        <note priority="1" from="description"> cat col text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="04b5fde7ff089946f9d9260ad6552401a729b9c8" datatype="html">
+        <source> Date</source>
+        <target> Dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+        <note priority="1" from="description"> date col text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="4d88a3b9d46a4582db563ffc4bdff62b7e4c9e8a" datatype="html">
+        <source> Amount</source>
+        <target> Összeg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+        <note priority="1" from="description"> amt col text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="5067d81143b71ed58f870d2198eca05abd81ddd0" datatype="html">
+        <source> Actions </source>
+        <target> Műveletek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+        <note priority="1" from="description"> actions col text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="7339c08343837e7dbf1654c9b7b8c24fdcc07ac7" datatype="html">
+        <source>Pie Chart for incomes by categories
+        </source>
+        <target>Bevételek kategóriák szerint</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+        <note priority="1" from="description"> pie chart text</note>
+        <note priority="1" from="meaning">income</note>
+      </trans-unit>
+      <trans-unit id="e596a91e3611158b55c16dfceb5288138179d458" datatype="html">
+        <source>Create a saving</source>
+        <target>Megtakarítás felvétele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description"> modal title</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="c063dffdeffc19e6753af65fe74312759ab54bc2" datatype="html">
+        <source>Saving name</source>
+        <target>Megtakarítás neve</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> name field</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="297cc215376da579dca560cadc9321becd40ae01" datatype="html">
+        <source>Unique name for what you are saving up for</source>
+        <target>Egyedi név a megtakarításodnak</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> name hint</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="ba30e407aadc99683a8c60f78f86da655a88de3e" datatype="html">
+        <source>Saving description</source>
+        <target>Megtakarítás leírása</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description"> desc field</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="8d80598f005ed62d34cdab51f7f0819b175de855" datatype="html">
+        <source>Description of your saving</source>
+        <target>Rövid leírása a megtakarításnak</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description"> desc hint</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="16e65e83857fb430e1ba7ee0c6a89ffb3a45a461" datatype="html">
+        <source>Date From</source>
+        <target>Kezdő dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description"> dateFrom field</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="6ec8aa73affefe6a27d464178d79e27a6884f88c" datatype="html">
+        <source>Start date of your saving</source>
+        <target>Megtakarítás kezdeti dátuma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description"> dateFrom hint</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="8a4ed10ec23063251deee29d1fca845050c3ee54" datatype="html">
+        <source>Date To</source>
+        <target>Befejezés dátum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description"> dateTo field</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="cf5ba14c093c961c9ee23937eeb0e5f4c9915774" datatype="html">
+        <source>End date of your saving</source>
+        <target>Megtakarítás befejezési dátuma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description"> dateTo hint</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="2667f675fd65c45d3346bdad7ef061c7bb5ea926" datatype="html">
+        <source>Amount</source>
+        <target>Összeg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description"> amt field</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="71ec07fe175a431930f39ceff4fbee9b3c6611f8" datatype="html">
+        <source>Amount of your saving</source>
+        <target>Megtakarítás összege</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description"> amt hint</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="a8dec634a239e345331e02aaa7a1f0a4f9478b0e" datatype="html">
+        <source>Only numbers accepted</source>
+        <target>Csak számokat adhatsz meg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description"> amt regex error</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="6870c7050298039009b29c1aff847cef8e35a637" datatype="html">
+        <source>Create new category</source>
+        <target>Új kategória felvétele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description"> new cat checkbox</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="89c4e9da0c99af10e6a350bbf2657aee677a1ca7" datatype="html">
+        <source>Category</source>
+        <target>Kategória</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description"> cat field</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="37e819e0293027983ccf62ef0d43dd3b3849c6f1" datatype="html">
+        <source>Existing categories</source>
+        <target>Meglévő kategóriák</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description"> cat list dropdown</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="d32cc917512bef94284489567933f287ce9be87d" datatype="html">
+        <source>Category of your saving</source>
+        <target>Megtakarítás kategóriája</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modals/new-saving-modal/new-saving-modal.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description"> cat hint</note>
+        <note priority="1" from="meaning">savingModal</note>
+      </trans-unit>
+      <trans-unit id="6ac25590ea9d02b27d1946d669a35dd16b940160" datatype="html">
+        <source>Your savings</source>
+        <target>Megtakarításaid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/saving/saving.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> page header text</note>
+        <note priority="1" from="meaning">savings</note>
+      </trans-unit>
+      <trans-unit id="f4275f0ea1b87a25de476994c2d933fc51bbb0ea" datatype="html">
+        <source>
+        Here, you can create savings, and check them time to time.
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        Are you saving up for something?
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        Or just want to take a look, at your previous savings?
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        Check below, how are you doing with your savings!
+      </source>
+      <target>
+      	Itt felvehetsz megtakarításokat, és ellenőrizheted hogy állsz velük.
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Valamire gyűjtessz?
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Vagy csak rá szeretnél pillantani, hogy az eddigiekkel hogy állsz?
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Nézd meg lent!
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/saving/saving.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> page body text</note>
+        <note priority="1" from="meaning">savings</note>
+      </trans-unit>
+      <trans-unit id="9860ccdb57ed198f97ce0e8a55e780790784bafd" datatype="html">
+        <source>
+        Here, you can save your spendings, and check them time to time.
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        You can list them by dates, edit them, delete them, etc..
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        There is even a pie chart on the right side of the datatable! Check that out!
+      </source>
+      <target>
+      	Itt felvehetsz új kiadásokat, és ellenőrizheted őket időről időre.
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Kilistázhatod dátum szerint, módosíthatod , vagy akár ki is törölheted őket.
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Még egy diagrammon is ábrázolva vannak kategóriák szerint a jobb alsó sarokban!
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> page body text</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="8c2e8875364b02c5ed602e487a8a2d2724b735b1" datatype="html">
+        <source>About</source>
+        <target>Leírás</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/saving/saving.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description"> about col text</note>
+        <note priority="1" from="meaning">saving</note>
+      </trans-unit>
+      <trans-unit id="a12557b4a211d8de3ca8b8ca3dc2b4d6d711fe60" datatype="html">
+        <source>Category</source>
+        <target>Kategória</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/saving/saving.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description"> cat col text</note>
+        <note priority="1" from="meaning">saving</note>
+      </trans-unit>
+      <trans-unit id="a7375ce7c36cebd46d8c330f7b6bdab513880106" datatype="html">
+        <source>Date (from-to)</source>
+        <target>Dátum (tól-ig)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/saving/saving.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description"> date col text</note>
+        <note priority="1" from="meaning">saving</note>
+      </trans-unit>
+      <trans-unit id="b19268a4ce0e9556ca3ff6adb77c693ec5086571" datatype="html">
+        <source>Amount</source>
+        <target>Összeg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/saving/saving.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description"> amount col text</note>
+        <note priority="1" from="meaning">saving</note>
+      </trans-unit>
+      <trans-unit id="6961cdcac04b7d81b0cc8f80becca8a836939e8b" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{s.amount | currency:&apos;HUF&apos;:&apos;symbol&apos;:&apos;1.0-0&apos;}}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{s.amount | currency:&apos;HUF&apos;:&apos;symbol&apos;:&apos;1.0-0&apos;}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/saving/saving.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description"> ccy</note>
+        <note priority="1" from="meaning">saving</note>
+      </trans-unit>
+      <trans-unit id="79ace1d964c27857a516510f6fd05f44d0959567" datatype="html">
+        <source>User details</source>
+        <target>Felhasználó adatai</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/profile/profile.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description"> header text</note>
+        <note priority="1" from="meaning">profile</note>
+      </trans-unit>
+      <trans-unit id="5e8e1f51e8bd156c6a4bf98820267a9a6553afc3" datatype="html">
+        <source>By clicking on the edit button next to the categories, you can set the category to enabled or disabled</source>
+        <target>A ceruza gombra kattintva módosíthatod a kategóriáidat.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/profile/profile.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description"> body text</note>
+        <note priority="1" from="meaning">profile</note>
+      </trans-unit>
+      <trans-unit id="b05eea793f1a30017453b6af88b96284aaf7b830" datatype="html">
+        <source>User name: <x id="INTERPOLATION" equiv-text="{{currentUser.username}}"/></source>
+        <target>Felhasználónév: <x id="INTERPOLATION" equiv-text="{{currentUser.username}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/profile/profile.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description"> uname</note>
+        <note priority="1" from="meaning">profile</note>
+      </trans-unit>
+      <trans-unit id="eac6842abbc416bc30938c5f68c6797f9f329a82" datatype="html">
+        <source>Your categories:</source>
+        <target>Kategóriáid</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/profile/profile.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> your categories</note>
+        <note priority="1" from="meaning">profile</note>
+      </trans-unit>
+      <trans-unit id="df58613c23288cebc08a2dac33727e1a1ced3d82" datatype="html">
+        <source>Is enabled?</source>
+        <target>Engedélyezve?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/profile/profile.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description"> is category enabled text</note>
+        <note priority="1" from="meaning">profile</note>
+      </trans-unit>
+      <trans-unit id="d2ef1a7221c85e4fd4aa202f27fe01bbebe527fa" datatype="html">
+        <source>
+        Here you can check your cash flow between two specified dates.
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        Down there, you will see a pie chart showing how the incomes/spendings fare to each other.
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        If you want, you can create an excel file by clicking the button below.
+      </source>
+      <target>
+      	Itt látható egy összegzés, megadott dátumok közti pénzmozgásaidról.
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	A jobb alsó sarokban láthatsz egy tortadiagrammot, ami a kiadásaid és bevételeid eloszlását ábrázolja.
+      	<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      	Ha szeretnéd, generálhatsz egy excel kimutatást az alábbi gombra kattintva.
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> body text</note>
+        <note priority="1" from="meaning">cashFlow</note>
+      </trans-unit>
+      <trans-unit id="38f732301c4103cf6ba22f29116a35bcdbcbffb1" datatype="html">
+        <source>HU language</source>
+        <target>EN language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description"> changeLang</note>
+        <note priority="1" from="meaning">nav</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

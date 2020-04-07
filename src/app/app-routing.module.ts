@@ -8,6 +8,7 @@ import {LogoutComponent} from "./components/home/logout/logout.component";
 import {IncomeComponent} from "./components/income/income.component";
 import {SpendingComponent} from "./components/spending/spending.component";
 import {SavingComponent} from "./components/saving/saving.component";
+import {ProfileComponent} from './components/profile/profile.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'incomes', component: IncomeComponent, canActivate: [AuthGuardService]},
   {path: 'spendings', component: SpendingComponent, canActivate: [AuthGuardService]},
   {path: 'savings', component: SavingComponent, canActivate: [AuthGuardService]},
+  {path: 'myprofile', component: ProfileComponent, canActivate: [AuthGuardService]},
   {path: 'logout', component: LogoutComponent},
   {path: '**', component: ErrorComponent}
 ];

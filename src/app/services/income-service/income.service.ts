@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Category} from '../../models/category';
 import {Income} from '../../models/income';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class IncomeService {
 
   getAll(): Observable<Income[]> {
 
-    return this.http.get<Income[]>(`http://localhost:8080/incomes`, {
+    return this.http.get<Income[]>(`${environment.apiUrl}/incomes`, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
@@ -26,7 +27,7 @@ export class IncomeService {
 
     dateTo.setDate(dateTo.getDate() + 1);
 
-    return this.http.get<Income[]>(`http://localhost:8080/incomes/date`, {
+    return this.http.get<Income[]>(`${environment.apiUrl}/incomes/date`, {
       params: {
         dateFrom: dateFrom.toISOString(),
         dateTo: dateTo.toISOString()
@@ -38,11 +39,14 @@ export class IncomeService {
   }
 
   saveIncome(income): Observable<Income> {
-    return this.http.post<Income>(`http://localhost:8080/incomes`,
+    return this.http.post<Income>(`${environment.apiUrl}/incomes`,
       {
         id: income.id ? income.id : null,
         category: {
-          title: income.category
+          id: income.categoryId,
+          title: income.categoryTitle,
+          enabled: income.categoryEnabled,
+          color: income.categoryColor
         } as Category,
         name: income.name,
         amount: income.amount,
@@ -55,7 +59,7 @@ export class IncomeService {
   }
 
   deleteIncome(id): Observable<void> {
-    return this.http.post<void>(`http://localhost:8080/incomes/delete/${id}`, {});
+    return this.http.post<void>(`${environment.apiUrl}/incomes/delete/${id}`, {});
   }
 
 }

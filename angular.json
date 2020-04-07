@@ -72,6 +72,14 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "hu": {
+              "aot": true,
+              "outputPath": "dist/gyak-hu",
+              "i18nFile": "src/locale/messages.hu.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "hu",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -83,6 +91,9 @@
           "configurations": {
             "production": {
               "browserTarget": "gyak:build:production"
+            },
+            "hu": {
+              "browserTarget": "gyak:build:hu"
             }
           }
         },

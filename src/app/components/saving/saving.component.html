@@ -1,19 +1,19 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <h2 class="display-3">Your savings</h2>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum."
+      <h2 class="display-3" i18n="savings| page header text">Your savings</h2>
+      <p i18n="savings| page body text">
+        Here, you can create savings, and check them time to time.
+        <br>
+        Are you saving up for something?
+        <br>
+        Or just want to take a look, at your previous savings?
+        <br>
+        Check below, how are you doing with your savings!
       </p>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary" (click)="addSaving()">
-          Add saving
+        <button mat-fab color="primary" (click)="addSaving()">
+          <mat-icon>add</mat-icon>
         </button>
       </div>
     </div>
@@ -29,14 +29,14 @@
       </div>
       <mat-divider></mat-divider>
       <div class="row">
-        <div class="col-md-4"><h4>Leírás</h4>
+        <div class="col-md-4"><h4 i18n="saving| about col text">About</h4>
           <p>{{s.description}}</p></div>
-        <div class="col-md-2"><h4>Kategória</h4>
+        <div class="col-md-2"><h4 i18n="saving| cat col text">Category</h4>
           <p>{{s.category.title}}</p></div>
-        <div class="col-md-3"><h4>Dátum tól-ig</h4>
+        <div class="col-md-3"><h4 i18n="saving| date col text">Date (from-to)</h4>
           <p>{{s.dateFrom | date}} - {{s.dateTo | date}}</p></div>
-        <div class="col-md-2"><h4>Összeg</h4>
-          <p>{{s.amount | currency:'HUF':'symbol':'1.0-0'}}</p></div>
+        <div class="col-md-2"><h4 i18n="saving| amount col text">Amount</h4>
+          <p i18n="saving| ccy">{{s.amount | currency:'HUF':'symbol':'1.0-0'}}</p></div>
         <div class="col-md-1">
           <button mat-icon-button (click)="editSaving(s)">
             <mat-icon>edit</mat-icon>

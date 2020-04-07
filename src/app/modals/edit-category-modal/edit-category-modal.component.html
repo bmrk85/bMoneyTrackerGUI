@@ -1,0 +1,31 @@
+<h4 mat-dialog-title i18n="editCatModal| title">Edit category</h4>
+<div mat-dialog-content>
+  <form class="text-center" [formGroup]="categoryForm" (ngSubmit)="saveCategory()">
+    <mat-form-field appearance="outline">
+      <mat-label i18n="editCatModal| cat title">Category title</mat-label>
+      <input matInput formControlName="title">
+      <mat-hint align="end" i18n="editCatModal| cat title hint">What is the title of this category?</mat-hint>
+    </mat-form-field>
+    <br>
+    <mat-checkbox formControlName="isEnabled" i18n="editCatModal| enabled checkbox">Category enabled</mat-checkbox>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label i18n="editCatModal| cat hex color">Category HEX color</mat-label>
+      <input matInput formControlName="color">
+      <mat-hint align="end" i18n="editCatModal| cat hex hint">What is the hex color of this category?</mat-hint>
+    </mat-form-field>
+    <br>
+
+    <mat-dialog-actions>
+
+      <button mat-raised-button color="primary" [disabled]="categoryForm.invalid" type="submit">
+        <mat-icon>send</mat-icon>
+      </button>
+      <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
+              (click)="onCancelClick()"><mat-icon>clear</mat-icon>
+      </button>
+
+    </mat-dialog-actions>
+  </form>
+</div>
+
