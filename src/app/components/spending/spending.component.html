@@ -1,17 +1,18 @@
-<main role="main">
+<main role="main" xmlns="http://www.w3.org/1999/html">
   <div class="jumbotron">
     <div class="container">
-      <h2 class="display-3" i18n="spending| page header text">Your spending history</h2>
-      <p i18n="spending| page body text">
-        Here, you can save your spendings, and check them time to time.
+      <h2 class="display-3" [translate]="'spendings.title'"></h2>
+      <p>
+        <span [translate]="'spendings.body1'"></span>
         <br>
-        You can list them by dates, edit them, delete them, etc..
+        <span [translate]="'spendings.body2'"></span>
         <br>
-        There is even a pie chart on the right side of the datatable! Check that out!
+        <span [translate]="'spendings.body3'"></span>
         <br>
       </p>
-      <h4 *ngIf="this.probableSpending && this.probableSpending > 0" i18n="spending| will spend more">Based on your previous month, you are going to spend {{probableSpending}} more money this month.</h4>
-      <h4 *ngIf="this.probableSpending && this.probableSpending < 0" i18n="spending| not gona spend anymore">Based on your previous month, you are not going to spend any more money this month.</h4>
+      <h4 *ngIf="this.probableSpending && this.probableSpending > 0" [translate]="'spendings.willSpendMore'"
+          [translateParams]="{amount: probableSpending}"></h4>
+      <h4 *ngIf="this.probableSpending && this.probableSpending < 0" [translate]="'spendings.notGonnaSpend'"></h4>
       <div class="d-flex justify-content-center">
         <button mat-fab color="primary" (click)="newSpending()">
           <mat-icon>add</mat-icon>
@@ -28,7 +29,7 @@
           <div class="view overlay">
             <img
               class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              src="../../../assets/icons/specdate.png"
               alt="Card image cap"
             />
             <a (click)="toggleTable('specificDate')">
@@ -39,10 +40,10 @@
           <!-- Card content -->
           <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title" i18n="spending| date card title">Specify a date</h4>
+            <h4 class="card-title" [translate]="'card.specificDateTitle'"></h4>
             <!-- Text -->
-            <p class="card-text" i18n="spending| date card body text">
-              Take a quick look at your spendings between two dates.
+            <p class="card-text" [translate]="'card.specificDateBody'"
+               [translateParams]="{typeEN: 'spendings', typeHU:'kiadások'}">
             </p>
             <!-- Button -->
             <button mat-raised-button color="primary"
@@ -61,7 +62,7 @@
           <div class="view overlay">
             <img
               class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              src="../../../assets/icons/week.png"
               alt="Card image cap"
             />
             <a (click)="toggleTable('week')">
@@ -72,10 +73,10 @@
           <!-- Card content -->
           <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title" i18n="spending| this week card title">This week</h4>
+            <h4 class="card-title" [translate]="'card.thisWeekTitle'"></h4>
             <!-- Text -->
-            <p class="card-text" i18n="spending| this week card body text">
-              Take a quick look at your spendings this week.
+            <p class="card-text" [translate]="'card.thisWeekBody'"
+               [translateParams]="{typeEN: 'spendings', typeHU:'kiadások'}">
             </p>
             <!-- Button -->
             <button mat-raised-button color="primary"
@@ -94,7 +95,7 @@
           <div class="view overlay">
             <img
               class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              src="../../../assets/icons/month.png"
               alt="Card image cap"
             />
             <a (click)="toggleTable('month')">
@@ -105,10 +106,10 @@
           <!-- Card content -->
           <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title" i18n="spending| this month card title">This month</h4>
+            <h4 class="card-title" [translate]="'card.thisMonthTitle'"></h4>
             <!-- Text -->
-            <p class="card-text" i18n="spending| this month card body">
-              Take a quick look at your spendings this month.
+            <p class="card-text" [translate]="'card.thisMonthBody'"
+               [translateParams]="{typeEN: 'spendings', typeHU:'kiadások'}">
             </p>
             <!-- Button -->
             <button mat-raised-button color="primary"
@@ -127,7 +128,7 @@
           <div class="view overlay">
             <img
               class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              src="../../../assets/icons/everything.png"
               alt="Card image cap"
             />
             <a (click)="toggleTable('all')">
@@ -138,10 +139,10 @@
           <!-- Card content -->
           <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title" i18n="spending| all card title">Everything</h4>
+            <h4 class="card-title" [translate]="'card.allTimeTitle'"></h4>
             <!-- Text -->
-            <p class="card-text" i18n="spending| all card body text">
-              Take a quick look at your all-time spendings.
+            <p class="card-text" [translate]="'card.allTimeBody'"
+               [translateParams]="{typeEN: 'spendings', typeHU:'kiadások'}">
             </p>
             <!-- Button -->
             <button mat-raised-button color="primary"
@@ -157,12 +158,12 @@
   </div>
   <div class="jumbotron" #dataTable>
     <div class="row" [hidden]="tableToggled">
-      <h3 i18n="spending| placeholder text for unopened table">Select what to display.</h3>
+      <h3 [translate]="'data.unopenedTable'"></h3>
     </div>
     <div class="row" [hidden]="!tableToggled">
       <div class="col-md-9">
         <mat-form-field>
-          <mat-label i18n="nameFilter">Name filter</mat-label>
+          <mat-label><span [translate]="'data.nameFilter'"></span></mat-label>
           <input matInput (keyup)="applyFilter($event)">
         </mat-form-field>
         <table mat-table [dataSource]="dataSource">
@@ -172,27 +173,27 @@
             <td mat-footer-cell *matFooterCellDef></td>
           </ng-container>
           <ng-container matColumnDef="spendingName">
-            <th mat-header-cell *matHeaderCellDef i18n="spending| name col text"> Name</th>
+            <th mat-header-cell *matHeaderCellDef><span [translate]="'data.nameCol'"></span></th>
             <td mat-cell *matCellDef="let spending"> {{spending.name}} </td>
-            <td mat-footer-cell *matFooterCellDef i18n="spending| total row text"> Total</td>
+            <td mat-footer-cell *matFooterCellDef><span [translate]="'data.total'"></span></td>
           </ng-container>
           <ng-container matColumnDef="spendingCategory">
-            <th mat-header-cell *matHeaderCellDef i18n="spending| cat col text"> Category</th>
+            <th mat-header-cell *matHeaderCellDef><span [translate]="'data.categoryCol'"></span></th>
             <td mat-cell *matCellDef="let spending"> {{spending.category.title}} </td>
             <td mat-footer-cell *matFooterCellDef></td>
           </ng-container>
           <ng-container matColumnDef="spendingDate">
-            <th mat-header-cell *matHeaderCellDef i18n="spending| date col text"> Date</th>
+            <th mat-header-cell *matHeaderCellDef><span [translate]="'data.dateCol'"></span></th>
             <td mat-cell *matCellDef="let spending"> {{spending.date | date}} </td>
             <td mat-footer-cell *matFooterCellDef></td>
           </ng-container>
           <ng-container matColumnDef="spendingAmount">
-            <th mat-header-cell *matHeaderCellDef i18n="spending| amt col text"> Amount</th>
+            <th mat-header-cell *matHeaderCellDef><span [translate]="'data.amountCol'"></span></th>
             <td mat-cell *matCellDef="let spending"> {{spending.amount | currency:'HUF':'symbol':'1.0-0'}} </td>
             <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency:'HUF':'symbol':'1.0-0'}} </td>
           </ng-container>
           <ng-container matColumnDef="actions">
-            <th mat-header-cell *matHeaderCellDef i18n="spending| actions col text"> Actions</th>
+            <th mat-header-cell *matHeaderCellDef><span [translate]="'data.actions'"></span></th>
             <td mat-cell *matCellDef="let row">
               <button mat-icon-button (click)="editSpending(row)">
                 <mat-icon>edit</mat-icon>
@@ -211,7 +212,8 @@
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
       </div>
       <div class="col-md-3" *ngIf="tableToggled">
-        <h4 class="pie-header" i18n="spending| pie chart text">Pie Chart for spendings by categories
+        <h4 class="pie-header" [translate]="'data.pieChart'"
+            [translateParams]="{typeEN:'spendings', typeHU:'kiadások'}">
         </h4>
         <canvas baseChart
                 [data]="pieChartData"

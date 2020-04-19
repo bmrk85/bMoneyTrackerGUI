@@ -9,10 +9,12 @@ import {IncomeComponent} from "./components/income/income.component";
 import {SpendingComponent} from "./components/spending/spending.component";
 import {SavingComponent} from "./components/saving/saving.component";
 import {ProfileComponent} from './components/profile/profile.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'faq', component: FaqComponent},
   {path: 'cashflow', component: CashFlowComponent, canActivate: [AuthGuardService]},
   {path: 'incomes', component: IncomeComponent, canActivate: [AuthGuardService]},
   {path: 'spendings', component: SpendingComponent, canActivate: [AuthGuardService]},

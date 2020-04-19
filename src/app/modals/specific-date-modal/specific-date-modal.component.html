@@ -1,18 +1,16 @@
-<h4 mat-dialog-title i18n="specDate| modal title">Specify a date</h4>
+<h4 mat-dialog-title [translate]="'modal.specificDateTitle'"></h4>
 <form class="text-center border border-light p-5" [formGroup]="dateForm" (ngSubmit)="setDate()">
   <mat-form-field appearance="outline">
-    <mat-label i18n="specDate| dateFrom field">Date from</mat-label>
+    <mat-label><span [translate]="'modal.title.dateFrom'"></span></mat-label>
     <input matInput [matDatepicker]="dateFromDP" formControlName="dateFrom">
     <mat-datepicker-toggle matSuffix [for]="dateFromDP"></mat-datepicker-toggle>
-    <mat-hint align="end" i18n="specDate| dateFrom hint">Start date of your saving</mat-hint>
     <mat-datepicker #dateFromDP></mat-datepicker>
   </mat-form-field>
   <br>
   <mat-form-field appearance="outline">
-    <mat-label i18n="specDate| dateTo field">Date to</mat-label>
+    <mat-label> <span [translate]="'modal.title.dateTo'"></span></mat-label>
     <input matInput [matDatepicker]="dateToDP" formControlName="dateTo">
     <mat-datepicker-toggle matSuffix [for]="dateToDP"></mat-datepicker-toggle>
-    <mat-hint align="end" i18n="specDate| dateTo hint">End date of your saving</mat-hint>
     <mat-datepicker #dateToDP></mat-datepicker>
   </mat-form-field>
 

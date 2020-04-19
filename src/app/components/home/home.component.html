@@ -1,10 +1,10 @@
-<div class="jumbotron">
+<div class="jumbotron" xmlns="http://www.w3.org/1999/html">
   <div class="container-fluid">
-    <h2 class="display-3" i18n="home| page welcome">Welcome</h2>
-    <p i18n="home| page body text">
-      Have you ever wondered, where your hard earned money go? Was it always hard for you to keep track on your incomes and spendings?
-      <br>Are you saving up for something, and want to keep track on that? Try this app!
-      <br>It has all the features, a money tracker app must have, and very easy to use.
+    <h2 class="display-3" [translate]="'home.welcome'"></h2>
+    <p>
+      <span [translate]="'home.body1'"> </span>
+      <br><span [translate]="'home.body2'"></span>
+      <br><span [translate]="'home.body3'"></span>
     </p>
 <!--    <p>-->
 <!--      <button type="button" *ngIf="authService.isUserLoggedIn()" class="btn btn-primary">Add new spending</button>-->
@@ -32,13 +32,12 @@
         <!-- Card content -->
         <div class="card-body">
           <!-- Title -->
-          <h4 class="card-title" i18n="home| login card header text">Login</h4>
+          <h4 class="card-title" [translate]="'home.loginCardTitle'"></h4>
           <!-- Text -->
-          <p class="card-text" i18n="home| login card body text">
-            Log in here, if you already have an account.
+          <p class="card-text" [translate]="'home.loginCardBody'">
           </p>
           <!-- Button -->
-          <button (click)="openLoginModal()" mat-raised-button color="primary" i18n="home| login card button text">Take me there</button>
+          <button (click)="openLoginModal()" mat-raised-button color="primary"> <span [translate]="'home.cardButton'"></span></button>
         </div>
       </div>
       <!-- Card -->
@@ -62,13 +61,12 @@
         <!-- Card content -->
         <div class="card-body">
           <!-- Title -->
-          <h4 class="card-title" i18n="home| register card header text">Register</h4>
+          <h4 class="card-title" [translate]="'home.regCardTitle'"></h4>
           <!-- Text -->
-          <p class="card-text" i18n="home| register card body text">
-            Don't have an account yet? Register here.
+          <p class="card-text" [translate]="'home.regCardBody'">
           </p>
           <!-- Button -->
-          <button (click)="openRegisterModal()" mat-raised-button color="primary" i18n="homeREG| register card button text">Take me there</button>
+          <button (click)="openRegisterModal()" mat-raised-button color="primary" ><span [translate]="'home.cardButton'"></span></button>
         </div>
       </div>
       <!-- Card -->

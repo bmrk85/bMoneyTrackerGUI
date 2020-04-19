@@ -1,15 +1,15 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <h2 class="display-3" i18n="savings| page header text">Your savings</h2>
-      <p i18n="savings| page body text">
-        Here, you can create savings, and check them time to time.
+      <h2 class="display-3" [translate]="'savings.title'"></h2>
+      <p>
+        <span [translate]="'savings.body1'"></span>
         <br>
-        Are you saving up for something?
+        <span [translate]="'savings.body2'"></span>
         <br>
-        Or just want to take a look, at your previous savings?
+        <span [translate]="'savings.body3'"></span>
         <br>
-        Check below, how are you doing with your savings!
+        <span [translate]="'savings.body4'"></span>
       </p>
       <div class="d-flex justify-content-center">
         <button mat-fab color="primary" (click)="addSaving()">
@@ -29,14 +29,14 @@
       </div>
       <mat-divider></mat-divider>
       <div class="row">
-        <div class="col-md-4"><h4 i18n="saving| about col text">About</h4>
+        <div class="col-md-4"><h4 [translate]="'savings.about'"></h4>
           <p>{{s.description}}</p></div>
-        <div class="col-md-2"><h4 i18n="saving| cat col text">Category</h4>
+        <div class="col-md-2"><h4 [translate]="'savings.category'"></h4>
           <p>{{s.category.title}}</p></div>
-        <div class="col-md-3"><h4 i18n="saving| date col text">Date (from-to)</h4>
+        <div class="col-md-3"><h4 [translate]="'savings.date'"></h4>
           <p>{{s.dateFrom | date}} - {{s.dateTo | date}}</p></div>
-        <div class="col-md-2"><h4 i18n="saving| amount col text">Amount</h4>
-          <p i18n="saving| ccy">{{s.amount | currency:'HUF':'symbol':'1.0-0'}}</p></div>
+        <div class="col-md-2"><h4 [translate]="'savings.amount'"></h4>
+          <p>{{s.amount | currency:'HUF':'symbol':'1.0-0'}}</p></div>
         <div class="col-md-1">
           <button mat-icon-button (click)="editSaving(s)">
             <mat-icon>edit</mat-icon>

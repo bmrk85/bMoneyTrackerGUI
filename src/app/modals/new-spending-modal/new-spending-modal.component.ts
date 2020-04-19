@@ -55,7 +55,7 @@ export class NewSpendingModalComponent implements OnInit {
         name: new FormControl( this.row.name, Validators.required ),
         newCategoryCheckbox: new FormControl( false ),
         newCategory: new FormControl( '', Validators.required ),
-        category: new FormControl( this.row.category.title, Validators.required ),
+        category: new FormControl( this.row.category.title, Validators.required ), //todo: not being display on edit idk why
         date: new FormControl( this.row.date ),
         amount: new FormControl( -this.row.amount, [Validators.required, Validators.pattern( '^(0|[1-9][0-9]*)$' )] )
       } )

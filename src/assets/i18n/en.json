@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "change": "HU language",
+    "myProfile": "My profile",
+    "cashFlow": "Cash flow",
+    "incomes": "Incomes",
+    "spendings": "Spendings",
+    "savings": "Savings",
+    "logout": "Log out",
+    "faq": "FAQ",
+    "home": "Home"
+  },
+  "error": {
+    "title": "Page not found",
+    "body": "Go back to home page"
+  },
+  "logout": {
+    "title": "Logged out",
+    "body": "You have been logged out succesfully. Redirecting to the home page"
+  },
+  "cashFlow": {
+    "title": "Your cash flow",
+    "body1": "Here you can check your cash flow between two specified dates.",
+    "body2": "Down there, you will see a pie chart showing how the incomes/spendings fare to each other.",
+    "body3": "If you want, you can create an excel file by clicking the button below.",
+    "excel": "Generate excel of the table"
+  },
+  "card": {
+    "specificDateTitle": "Specifiy a date",
+    "specificDateBody": "Take a look at your {{typeEN}} between two dates",
+    "thisWeekTitle": "This week",
+    "thisWeekBody": "Take a quick look at your {{typeEN}} this week.",
+    "thisMonthTitle": "This month",
+    "thisMonthBody": "Take a quick look at your {{typeEN}} this month.",
+    "allTimeTitle": "Everything",
+    "allTimeBody": "Take a quick look at your all-time {{typeEN}}."
+  },
+  "data": {
+    "unopenedTable": "Select what to display.",
+    "nameFilter": "Filter by name",
+    "nameCol": "Name",
+    "categoryCol": "Category",
+    "dateCol": "Date",
+    "total": "Total",
+    "amountCol": "Amount",
+    "pieChart": "{{typeEN}} visualisation",
+    "actions": "Actions"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "body1": "Have you ever wondered, where your hard earned money go? Was it always hard for you to keep track on your incomes and spendings?",
+    "body2": "Are you saving up for something, and want to keep track on that? Try this app!",
+    "body3": "It has all the features, a money tracker app must have, and very easy to use.",
+    "cardButton": "Take me there",
+    "regCardTitle": "Register",
+    "regCardBody": "Don't have an account yet? Register here.",
+    "loginCardTitle": "Login",
+    "loginCardBody": "Log in here, if you already have an account."
+  },
+  "income": {
+    "title": "Your income history",
+    "body1": "Here, you can save your incomes, and check them time to time.",
+    "body2": "You can list them by dates, edit them, delete them, etc..",
+    "body3": "There is even a pie chart on the right side of the datatable! Check that out!"
+  },
+  "profile": {
+    "title": "User details",
+    "body": "By clicking on the edit button next to the categories, you can set the category to enabled or disabled",
+    "uname": "User name: {{uname}}",
+    "yourCats": "Your categories:",
+    "isEnabled": "Is enabled?"
+  },
+  "savings": {
+    "title": "Your savings",
+    "body1": "Here, you can create savings, and check them time to time.",
+    "body2": "Are you saving up for something?",
+    "body3": "Or just want to take a look, at your previous savings?",
+    "body4": "Check below, how are you doing with your savings!",
+    "about": "About",
+    "category": "Category",
+    "date": "Date (from-to)",
+    "amount": "Amount"
+  },
+  "spendings": {
+    "title": "Your spending history",
+    "body1": "Here, you can save your spendings, and check them time to time.",
+    "body2": "You can list them by dates, edit them, delete them, etc..",
+    "body3": "There is even a pie chart on the right side of the datatable! Check that out!",
+    "willSpendMore": "Based on your previous month, you are going to spend {{amount}} more money this month.",
+    "notGonnaSpend": "Based on your previous month, you are not going to spend any more money this month."
+  },
+  "modal": {
+    "editCategoryTitle": "Edit category",
+    "loginTitle": "Sign in to your user",
+    "createIncomeTitle": "Create an income",
+    "createSavingTitle": "Create a saving",
+    "createSpendingTitle": "Create a spending",
+    "registerTitle": "Create a new user",
+    "specificDateTitle": "Specify a date",
+    "title": {
+      "category": "Category title",
+      "catHex": "Category HEX color",
+      "catIsEnabled": "Category enabled",
+      "uname": "User name",
+      "password": "Password",
+      "name": "{{typeEN}} name",
+      "newCat": "Create new category",
+      "existingCats": "Existing categories",
+      "amount": "Amount",
+      "savingDesc": "Saving description",
+      "dateFrom": "Date From",
+      "dateTo": "Date To",
+      "date": "Date",
+      "retypePw": "Retype your password"
+    },
+    "hint": {
+      "editCategory": "What is the title of this category?",
+      "catHex": "What is the hex color of this category?",
+      "uname": "Unique username",
+      "password": "Strong password",
+      "incomeName": "What is the source of this income?",
+      "spendingName": "What have you spent your money for?",
+      "date": "Date of your {{typeEN}}. If empty, current date gets saved.",
+      "category": "Category of your {{typeEN}}",
+      "amount": "Amount of your {{typeEN}}",
+      "savingName": "Unique name for what you are saving up for",
+      "savingDesc": "Description of your saving",
+      "dateFrom": "Start date of your saving",
+      "dateTo": "End date of your saving",
+      "retypePw": "Retype the same password"
+    },
+    "error": {
+      "required": "Required field",
+      "numberFormatError": "Only numbers accepted",
+      "length": "Must be between {{min}} and {{max}} characters",
+      "pwNotMatching": "Passwords not matching"
+    },
+    "loginError1": "Oops!",
+    "loginError2": "Something went wrong during your login process. You might try again.",
+    "loginError3": "If the error consists, try contacting one of our administrators.",
+    "regSuccess1": "Well done!",
+    "regSuccess2": "You have succesfully registered.",
+    "regError1": "Something went wrong during your registration process. You might try again with a different username.",
+    "regError2": "If the error consists, try contacting one of our administrators."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "What can I do on this page?",
+    "a1": "On this page, you can manage your spendings, incomes, savings, and get a quick look at how you are doing so far in a specified period.",
+    "q2": "Do I have to register to use this page?",
+    "a2": "Yes, only registered users have full access to the page's functionality.",
+    "q3": "What if I have problems using this page?",
+    "a3": "You might contact an administrator _here_..."
+  }
+}

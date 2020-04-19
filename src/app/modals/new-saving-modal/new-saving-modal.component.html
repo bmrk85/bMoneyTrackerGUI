@@ -1,55 +1,62 @@
-<h4 mat-dialog-title i18n="savingModal| modal title">Create a saving</h4>
+<h4 mat-dialog-title [translate]="'modal.createSavingTitle'"></h4>
 <div mat-dialog-content>
   <form class="text-center" [formGroup]="savingForm" (ngSubmit)="createSaving()">
     <mat-form-field appearance="outline">
-      <mat-label i18n="savingModal| name field">Saving name</mat-label>
+      <mat-label><span [translate]="'modal.title.name'"
+                       [translateParams]="{typeEN:'Saving', typeHU:'Megtakarítás'}"></span></mat-label>
       <input matInput formControlName="name">
-      <mat-hint align="end" i18n="savingModal| name hint">Unique name for what you are saving up for</mat-hint>
+      <mat-hint align="end"><span [translate]="'modal.hint.savingName'"></span>
+      </mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="savingModal| desc field">Saving description</mat-label>
+      <mat-label><span [translate]="'modal.title.savingDesc'"></span></mat-label>
       <textarea matInput formControlName="description"></textarea>
-      <mat-hint align="end" i18n="savingModal| desc hint">Description of your saving</mat-hint>
+      <mat-hint align="end"><span [translate]="'modal.hint.savingDesc'"></span></mat-hint>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="savingModal| dateFrom field">Date From</mat-label>
+      <mat-label><span [translate]="'modal.title.dateFrom'"></span></mat-label>
       <input matInput [matDatepicker]="dateFromDP" formControlName="dateFrom">
       <mat-datepicker-toggle matSuffix [for]="dateFromDP"></mat-datepicker-toggle>
-      <mat-hint align="end" i18n="savingModal| dateFrom hint">Start date of your saving</mat-hint>
+      <mat-hint align="end"><span [translate]="'modal.hint.dateFrom'"></span></mat-hint>
       <mat-datepicker #dateFromDP></mat-datepicker>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="savingModal| dateTo field">Date To</mat-label>
+      <mat-label><span [translate]="'modal.title.dateTo'"></span></mat-label>
       <input matInput [matDatepicker]="dateToDP" formControlName="dateTo">
       <mat-datepicker-toggle matSuffix [for]="dateToDP"></mat-datepicker-toggle>
-      <mat-hint align="end" i18n="savingModal| dateTo hint">End date of your saving</mat-hint>
+      <mat-hint align="end"><span [translate]="'modal.hint.dateTo'"></span></mat-hint>
       <mat-datepicker #dateToDP></mat-datepicker>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="savingModal| amt field">Amount</mat-label>
+      <mat-label><span [translate]="'modal.title.amount'"></span></mat-label>
       <input matInput formControlName="amount">
-      <mat-hint align="end" i18n="savingModal| amt hint">Amount of your saving</mat-hint>
-      <mat-error *ngIf="savingForm.hasError('pattern', 'amount')" i18n="savingModal| amt regex error">Only numbers accepted</mat-error>
+      <mat-hint align="end"><span [translate]="'modal.hint.amount'"
+                                  [translateParams]="{typeEN:'saving', typeHU:'Megtakarítás'}"></span></mat-hint>
+      <mat-error *ngIf="savingForm.hasError('pattern', 'amount')"><span
+        [translate]="'modal.error.numberFormatError'"></span></mat-error>
     </mat-form-field>
     <br>
-    <mat-checkbox formControlName="newCategoryCheckbox" i18n="savingModal| new cat checkbox">Create new category</mat-checkbox>
+    <mat-checkbox formControlName="newCategoryCheckbox"> <span [translate]="'modal.title.newCat'"></span>
+    </mat-checkbox>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="savingModal| cat field">Category</mat-label>
+      <mat-label><span [translate]="'modal.title.category'"></span></mat-label>
       <input matInput formControlName="newCategory">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label i18n="savingModal| cat list dropdown">Existing categories</mat-label>
+      <mat-label> <span [translate]="'modal.title.existingCats'"></span></mat-label>
       <mat-select formControlName="category">
         <mat-option *ngFor="let cat of availableCategories" [value]="cat.id">
           {{cat.title}}
         </mat-option>
       </mat-select>
-      <mat-hint align="end" i18n="savingModal| cat hint">Category of your spending</mat-hint>
+      <mat-hint align="end"><span [translate]="'modal.hint.category'"
+                                  [translateParams]="{typeEN:'saving', typeHU:'Megtakarítás'}"></span>
+      </mat-hint>
     </mat-form-field>
     <br>
 
@@ -59,7 +66,8 @@
         <mat-icon>send</mat-icon>
       </button>
       <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
-              (click)="onCancelClick()"><mat-icon>clear</mat-icon>
+              (click)="onCancelClick()">
+        <mat-icon>clear</mat-icon>
       </button>
 
     </mat-dialog-actions>

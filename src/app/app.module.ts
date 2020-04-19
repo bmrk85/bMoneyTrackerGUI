@@ -7,7 +7,7 @@ import {NavigationComponent} from './components/navigation/navigation.component'
 import {HomeComponent} from './components/home/home.component';
 import {CashFlowComponent} from './components/cash-flow/cash-flow.component';
 import {ErrorComponent} from './components/error/error.component';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import {BasicAuthHttpInterceptorService} from './services/basic-auth-http-interceptor-service/basic-auth-http-interceptor.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LogoutComponent} from './components/home/logout/logout.component';
@@ -39,6 +39,9 @@ import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-mo
 import { ChartsModule } from 'ng2-charts';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditCategoryModalComponent } from './modals/edit-category-modal/edit-category-modal.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,8 @@ import { EditCategoryModalComponent } from './modals/edit-category-modal/edit-ca
     SpecificDateModalComponent,
     NewIncomeModalComponent,
     ProfileComponent,
-    EditCategoryModalComponent
+    EditCategoryModalComponent,
+    FaqComponent
 
   ],
   imports: [
@@ -84,7 +88,14 @@ import { EditCategoryModalComponent } from './modals/edit-category-modal/edit-ca
     MatSelectModule,
     MatCardModule,
     MatCheckboxModule,
-    ChartsModule
+    ChartsModule,
+    TranslateModule.forRoot({
+      loader:{
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     MatDatepickerModule,
@@ -104,4 +115,9 @@ import { EditCategoryModalComponent } from './modals/edit-category-modal/edit-ca
   ]
 })
 export class AppModule {
+}
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
 }

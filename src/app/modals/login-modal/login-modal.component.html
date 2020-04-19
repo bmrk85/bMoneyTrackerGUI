@@ -1,38 +1,36 @@
-<h4 mat-dialog-title i18n="loginModal| dialog header">Sign in to your user</h4>
+<h4 mat-dialog-title [translate]="'modal.loginTitle'"></h4>
 <div mat-dialog-content>
   <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
     <mat-form-field appearance="outline">
-      <mat-label i18n="loginModal| uname">User name</mat-label>
+      <mat-label><span [translate]="'modal.title.uname'"></span></mat-label>
       <input matInput formControlName="username">
-      <mat-hint i18n="loginModal| uname hint">Unique username</mat-hint>
-      <mat-error *ngIf="loginForm.hasError('required', 'username')" i18n="loginModal| required">Required field</mat-error>
+      <mat-hint> <span [translate]="'modal.hint.uname'"></span></mat-hint>
+      <mat-error *ngIf="loginForm.hasError('required', 'username')"> <span [translate]="'modal.error.required'"></span></mat-error>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="loginModal| password">Password</mat-label>
+      <mat-label><span [translate]="'modal.title.password'"></span></mat-label>
       <input matInput type="password" formControlName="password">
-      <mat-hint i18n="loginModal| pw hint">Strong password</mat-hint>
-      <mat-error *ngIf="loginForm.hasError('required', 'password')" i18n="loginModal| required">Required field</mat-error>
+      <mat-hint><span [translate]="'modal.hint.password'"></span></mat-hint>
+      <mat-error *ngIf="loginForm.hasError('required', 'password')"><span [translate]="'modal.error.required'"></span></mat-error>
     </mat-form-field>
 
     <mat-dialog-actions>
-
       <button mat-raised-button color="primary" [disabled]="loginForm.invalid" type="submit">
         <mat-icon>send</mat-icon>
       </button>
       <button type="button" mat-raised-button color="warn" mat-dialog-close aria-label="Cancel"
               (click)="onCancelClick()"><mat-icon>clear</mat-icon>
       </button>
-
     </mat-dialog-actions>
   </form>
 
 
   <div *ngIf="invalidLogin" class="alert alert-danger" role="alert">
-    <h4 class="alert-heading">Oops!</h4>
-    <p i18n="loginModal| errorText1">Something went wrong during your login process. You might try again.</p>
+    <h4 class="alert-heading" [translate]="'modal.loginError1'"></h4>
+    <p [translate]="'modal.loginError2'"></p>
     <hr>
-    <p class="mb-0" i18n="loginModal| errorText2">If the error consists, try contacting one of our administrators.</p>
+    <p class="mb-0" [translate]="'modal.loginError3'"></p>
   </div>
 </div>
 
