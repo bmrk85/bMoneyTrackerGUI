@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "change": "EN language",
+    "myProfile": "Profilom",
+    "cashFlow": "Pénzmozgás",
+    "incomes": "Bevételek",
+    "spendings": "Kiadások",
+    "savings": "Megtakarítások",
+    "logout": "Kijelentkezés",
+    "faq": "GY.I.K.",
+    "home": "Kezdőlap"
+  },
+  "error": {
+    "title": "Nem található az oldal",
+    "body": "Vissza a kezdőlapra"
+  },
+  "logout": {
+    "title": "Kiejelentkezve",
+    "body": "Sikeresen kijelentkeztél. Vissza a kezdőlapra."
+  },
+  "cashFlow": {
+    "title": "Pénzmozgásaid",
+    "body1": "Itt látható egy összegzés, megadott dátumok közti pénzmozgásaidról.",
+    "body2": "A jobb alsó sarokban láthatsz egy tortadiagrammot, ami a kiadásaid és bevételeid eloszlását ábrázolja.",
+    "body3": "Ha szeretnéd, generálhatsz egy excel kimutatást az alábbi gombra kattintva.",
+    "excel": "Excel készítése"
+  },
+  "card": {
+    "specificDateTitle": "Dátum megadása",
+    "specificDateBody": "Tekintsd meg a rekordokat két dátum között",
+    "thisWeekTitle": "E hét",
+    "thisWeekBody": "Heti {{typeHU}} megtekintése",
+    "thisMonthTitle": "E hó",
+    "thisMonthBody": "Havi {{typeHU}} megtekintése",
+    "allTimeTitle": "Összes",
+    "allTimeBody": "Összes {{typeHU}} megtekintése"
+  },
+  "data": {
+    "unopenedTable": "Válaszd ki mit szeretnél látni.",
+    "nameFilter": "Név szűrő",
+    "nameCol": "Név",
+    "categoryCol": "Kategória",
+    "dateCol": "Dátum",
+    "total": "Összesen",
+    "amountCol": "Összeg",
+    "pieChart": "{{typeHU}} vizuálisan",
+    "actions": "Műveletek"
+  },
+  "home": {
+    "welcome": "Kedves Látogató",
+    "body1": "Mindig is érdekelt, hogy hová tűnt a nehezen megkeresett pénzed? Mindig is nehéznek találtad, hogy nyomon kövesd a bevételeid és kiadásaid?",
+    "body2": "Éppen spórolnál valamire, és kéne valamilyen felület, ahol lépést tudsz tartani? Próbáld ki ezt az appot!",
+    "body3": "Mindent tud, amit egy ilyen alkalmazásnak tudnia kell, és nagyon egyszerű a használata.",
+    "cardButton": "Vigyél oda",
+    "regCardTitle": "Regisztráció",
+    "regCardBody": "Nincs még felhasználód? Regisztrálj itt.",
+    "loginCardTitle": "Bejelentkezés",
+    "loginCardBody": "Ha már regisztráltál, jelentkezz be itt."
+  },
+  "income": {
+    "title": "Bevételeid",
+    "body1": "Itt felvehetsz új bevételeket, és ellenőrizheted őket időről időre.",
+    "body2": "Kilistázhatod dátum szerint, módosíthatod , vagy akár ki is törölheted őket.",
+    "body3": "Még egy diagrammon is ábrázolva vannak kategóriák szerint a jobb alsó sarokban!"
+  },
+  "profile": {
+    "title": "Felhasználó adatai",
+    "body": "A ceruza gombra kattintva módosíthatod a kategóriáidat.",
+    "uname": "Felhasználónév: {{uname}}",
+    "yourCats": "Kategóriáid:",
+    "isEnabled": "Engedélyezve?"
+  },
+  "savings": {
+    "title": "Kiadásaid",
+    "body1": "Itt felvehetsz megtakarításokat, és ellenőrizheted hogy állsz velük.",
+    "body2": "Valamire gyűjtessz?",
+    "body3": "Vagy csak rá szeretnél pillantani, hogy az eddigiekkel hogy állsz?",
+    "body4": "Nézd meg lent!",
+    "about": "Leírás",
+    "category": "Kategória",
+    "date": "Dátum (tól-ig)",
+    "amount": "Összeg"
+  },
+  "spendings": {
+    "title": "Kiadásaid",
+    "body1": "Itt felvehetsz új kiadásokat, és ellenőrizheted őket időről időre.",
+    "body2": "Kilistázhatod dátum szerint, módosíthatod , vagy akár ki is törölheted őket.",
+    "body3": "Még egy diagrammon is ábrázolva vannak kategóriák szerint a jobb alsó sarokban!",
+    "willSpendMore": "Az előző havi adatok alapján, még ennyit fogsz költeni a hónapban: {{amount}}.",
+    "notGonnaSpend": "Az előző havi adatok alapján, a hónapban már nem lesz több kiadásod."
+  },
+  "modal": {
+    "editCategoryTitle": "Kategória szerkesztése",
+    "loginTitle": "Bejelentkezés meglévő felhasználóba",
+    "createIncomeTitle": "Bevétel felvétele",
+    "createSavingTitle": "Megtakarítás felvétele",
+    "createSpendingTitle": "Kiadás felvétele",
+    "registerTitle": "Új felhasználó létrehozása",
+    "specificDateTitle": "Dátum megadása",
+    "title": {
+      "category": "Kategória neve",
+      "catHex": "Kategória HEX kódja",
+      "catIsEnabled": "Kategória engedélyezése",
+      "uname": "Felhasználónév",
+      "password": "Jelszó",
+      "name": "{{typeHU}} neve",
+      "newCat": "Új kategória létrehozása",
+      "existingCats": "Meglévő kategóriák",
+      "amount": "Összeg",
+      "savingDesc": "Megtakarítás leírása",
+      "dateFrom": "Dátum -tól",
+      "dateTo": "Dátum -ig",
+      "date": "Dátum",
+      "retypePw": "Jelszó újból"
+    },
+    "hint": {
+      "editCategory": "Mi a kategória neve?",
+      "catHex": "Mi a kategória színkódja?",
+      "uname": "Egyedi felhasználónév",
+      "password": "Erős jelszó",
+      "incomeName": "Mi a bevétel forrása?",
+      "spendingName": "Mire költöttél?",
+      "date": "{{typeHU}} dátuma. Ha üres, a jelenlegi dátum mentődik el",
+      "category": "{{typeHU}} kategóriája",
+      "amount": "{{typeHU}} összege",
+      "savingName": "Egyedi név a megtakarításodnak",
+      "savingDesc": "Megtakarítás leírása",
+      "dateFrom": "Kezdő dátum",
+      "dateTo": "Vég dátum",
+      "retypePw": "Add meg a jelszavad ismét"
+    },
+    "error": {
+      "required": "Kötelező mező",
+      "numberFormatError": "Csak számokat adhatsz meg",
+      "length": "{{min}} és {{max}} karakter között kell lennie",
+      "pwNotMatching": "Nem egyeznek a jelszavak"
+    },
+    "loginError1": "Oops!",
+    "loginError2": "Nem sikerült valami a bejelentkezés során. Próbáld újra",
+    "loginError3": "Ha fennáll a hiba, keress fel egy adminisztrátort..",
+    "regSuccess1": "Gratulálunk!",
+    "regSuccess2": "Sikeres regisztráció.",
+    "regError1": "Valami nem sikerült a reigsztráció során. Próbáld újra más adatokkal.",
+    "regError2": "Ha továbbra is fennáll a hiba, keress fel egy adminisztrátort."
+  },
+  "faq": {
+    "title": "Gyakran ismételt kérdések",
+    "q1": "Mit tudok csinálni a honlapon?",
+    "a1": "Ezen a honlapon tudod kezelni a kiadásaid, bevételeid és megtakarításaid, és kaphatsz egy gyors áttekintést arról, hogy jelenleg hogy állsz.",
+    "q2": "Kell regisztrálnom, hogy használhassam az oldalt?",
+    "a2": "Igen, csak regisztrált felhasználóknak van hozzáférése az oldal teljes funkcionalitásához.",
+    "q3": "Mit tegyek, ha problémákba ütközök az oldal használata során?",
+    "a3": "Vedd fel a kapcsolatot az egyik adminisztrátorunkkal, ha problémába ütközöl, és a probléma huzamosabb ideig fennáll."
+  }
+}

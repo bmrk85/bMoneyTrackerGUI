@@ -1,17 +1,17 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <h2 class="display-3" i18n="cashFlow| header text">Your cash flow</h2>
-      <p i18n="cashFlow| body text">
-        Here you can check your cash flow between two specified dates.
+      <h2 class="display-3" [translate]="'cashFlow.title'"></h2>
+      <p>
+        <span [translate]="'cashFlow.body1'"></span>
         <br>
-        Down there, you will see a pie chart showing how the incomes/spendings fare to each other.
+        <span [translate]="'cashFlow.body2'"></span>
         <br>
-        If you want, you can create an excel file by clicking the button below.
+        <span [translate]="'cashFlow.body3'"></span>
       </p>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary" (click)="createXls()" i18n="cashFlow| excelButton">
-          Generate excel of the table
+        <button type="button" class="btn btn-primary" (click)="createXls()">
+          <span [translate]="'cashFlow.excel'"></span>
         </button>
       </div>
     </div>
@@ -27,7 +27,7 @@
           <div class="view overlay">
             <img
               class="card-img-top"
-              src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+              src="../../../assets/icons/specdate.png"
               alt="Card image cap"
             />
             <a (click)="toggleTable()">
@@ -38,10 +38,9 @@
           <!-- Card content -->
           <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title" i18n="cashFlow| specificDate card header">Specific date</h4>
+            <h4 class="card-title" [translate]="'card.specificDateTitle'"></h4>
             <!-- Text -->
-            <p class="card-text" i18n="cashFlow| specific date card body text">
-              Take a quick look at your cashflow between two dates.
+            <p class="card-text" [translate]="'card.specificDateBody'" [translateParams]="{typeEN: 'cashFlow', typeHU:'pénzmozgás'}">
             </p>
             <!-- Button -->
             <button mat-raised-button color="primary"
@@ -57,10 +56,14 @@
   </div>
   <div class="jumbotron" #dataTable>
     <div class="row" [hidden]="tableToggled">
-      <h3 i18n="cashFlow| placeholder text for unopened table">Select what to display.</h3>
+      <h3 [translate]="'data.unopenedTable'"></h3>
     </div>
     <div class="row" [hidden]="!tableToggled">
       <div class="col-md-9">
+        <mat-form-field>
+          <mat-label><span [translate]="'data.nameFilter'"></span></mat-label>
+          <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
         <table mat-table [dataSource]="dataSource">
           <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> Id</th>
@@ -68,22 +71,22 @@
             <td mat-footer-cell *matFooterCellDef></td>
           </ng-container>
           <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef i18n="cashFlow| name col text"> Name</th>
+            <th mat-header-cell *matHeaderCellDef><span [translate]="'data.nameCol'"></span></th>
             <td mat-cell *matCellDef="let cashflow"> {{cashflow.name}} </td>
-            <td mat-footer-cell *matFooterCellDef i18n="cashFlow| total row text"> Total</td>
+            <td mat-footer-cell *matFooterCellDef> <span [translate]="'data.total'"></span></td>
           </ng-container>
           <ng-container matColumnDef="category">
-            <th mat-header-cell *matHeaderCellDef i18n="cashFlow| cat col text"> Category</th>
+            <th mat-header-cell *matHeaderCellDef> <span [translate]="'data.categoryCol'"></span></th>
             <td mat-cell *matCellDef="let cashflow"> {{cashflow.category.title}} </td>
             <td mat-footer-cell *matFooterCellDef></td>
           </ng-container>
           <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef i18n="cashFlow| date col text"> Date</th>
+            <th mat-header-cell *matHeaderCellDef><span [translate]="'data.dateCol'"></span></th>
             <td mat-cell *matCellDef="let cashflow"> {{cashflow.date | date}} </td>
             <td mat-footer-cell *matFooterCellDef></td>
           </ng-container>
           <ng-container matColumnDef="amount">
-            <th mat-header-cell *matHeaderCellDef i18n="cashFlow| amount col text"> Amount</th>
+            <th mat-header-cell *matHeaderCellDef [translate]="'data.amountCol'"></th>
             <td mat-cell *matCellDef="let cashflow"> {{cashflow.amount | currency:'HUF':'symbol':'1.0-0'}} </td>
             <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency:'HUF':'symbol':'1.0-0'}} </td>
           </ng-container>
@@ -95,7 +98,7 @@
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
       </div>
       <div class="col-md-3">
-        <h4 class="pie-header" i18n="cashFlow| pie chart text">Pie Chart for cash-flow visualisation
+        <h4 class="pie-header" [translate]="'data.pieChart'" [translateParams]="{typeEN: 'cashFlow', typeHU:'Pénzmozgás'}">
         </h4>
         <canvas baseChart
                 [data]="pieChartData"

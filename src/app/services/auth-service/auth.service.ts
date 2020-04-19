@@ -36,6 +36,7 @@ export class AuthService {
 
   logout(){
     sessionStorage.removeItem('username');
+    sessionStorage.removeItem('jwtToken');
   }
 
 

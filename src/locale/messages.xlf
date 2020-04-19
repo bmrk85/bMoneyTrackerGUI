@@ -374,10 +374,6 @@
           <context context-type="sourcefile">src/app/components/home/home.component.html</context>
           <context context-type="linenumber">41</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">71</context>
-        </context-group>
         <note priority="1" from="description"> login card button text</note>
         <note priority="1" from="meaning">home</note>
       </trans-unit>
@@ -400,6 +396,15 @@
         </context-group>
         <note priority="1" from="description"> register card body text</note>
         <note priority="1" from="meaning">home</note>
+      </trans-unit>
+      <trans-unit id="6cde777a275f46e49039f4b95e4f635e22c605fe" datatype="html">
+        <source>Take me there</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <note priority="1" from="description"> register card button text</note>
+        <note priority="1" from="meaning">homeREG</note>
       </trans-unit>
       <trans-unit id="6201184e13298648187181bebe6ec4932db991e6" datatype="html">
         <source>Specify a date</source>
@@ -510,11 +515,27 @@
         <note priority="1" from="description"> placeholder text for unopened table</note>
         <note priority="1" from="meaning">cashFlow</note>
       </trans-unit>
+      <trans-unit id="ae7b90ec1938e0e399fcfc7ebc5e83ab560f6e9a" datatype="html">
+        <source>Name filter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/income/income.component.html</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+        <note priority="1" from="description">nameFilter</note>
+      </trans-unit>
       <trans-unit id="825ece65afea19a469583dfc5391e58812afb5da" datatype="html">
         <source> Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">75</context>
         </context-group>
         <note priority="1" from="description"> name col text</note>
         <note priority="1" from="meaning">cashFlow</note>
@@ -523,7 +544,7 @@
         <source> Total</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">77</context>
         </context-group>
         <note priority="1" from="description"> total row text</note>
         <note priority="1" from="meaning">cashFlow</note>
@@ -532,7 +553,7 @@
         <source> Category</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">80</context>
         </context-group>
         <note priority="1" from="description"> cat col text</note>
         <note priority="1" from="meaning">cashFlow</note>
@@ -541,7 +562,7 @@
         <source> Date</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="linenumber">85</context>
         </context-group>
         <note priority="1" from="description"> date col text</note>
         <note priority="1" from="meaning">cashFlow</note>
@@ -550,7 +571,7 @@
         <source> Amount</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
-          <context context-type="linenumber">86</context>
+          <context context-type="linenumber">90</context>
         </context-group>
         <note priority="1" from="description"> amount col text</note>
         <note priority="1" from="meaning">cashFlow</note>
@@ -560,7 +581,7 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/cash-flow/cash-flow.component.html</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">102</context>
         </context-group>
         <note priority="1" from="description"> pie chart text</note>
         <note priority="1" from="meaning">cashFlow</note>
@@ -776,13 +797,14 @@
         <note priority="1" from="description"> page header text</note>
         <note priority="1" from="meaning">spending</note>
       </trans-unit>
-      <trans-unit id="9860ccdb57ed198f97ce0e8a55e780790784bafd" datatype="html">
+      <trans-unit id="78471917ba9e15f25271ff508c670db93f220e44" datatype="html">
         <source>
         Here, you can save your spendings, and check them time to time.
         <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
         You can list them by dates, edit them, delete them, etc..
         <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
         There is even a pie chart on the right side of the datatable! Check that out!
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
       </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
@@ -791,11 +813,29 @@
         <note priority="1" from="description"> page body text</note>
         <note priority="1" from="meaning">spending</note>
       </trans-unit>
+      <trans-unit id="c02935bad23452bc7d913d6477692ac73a489a97" datatype="html">
+        <source>Based on your previous month, you are going to spend <x id="INTERPOLATION" equiv-text="{{probableSpending}}"/> more money this month.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description"> will spend more</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
+      <trans-unit id="e3c9b2214a6983648fb533757e9f0fd2251e7a31" datatype="html">
+        <source>Based on your previous month, you are not going to spend any more money this month.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description"> not gona spend anymore</note>
+        <note priority="1" from="meaning">spending</note>
+      </trans-unit>
       <trans-unit id="f95666986e6061dff8f6a4fd4293870835075986" datatype="html">
         <source>Specify a date</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <note priority="1" from="description"> date card title</note>
         <note priority="1" from="meaning">spending</note>
@@ -806,7 +846,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">44</context>
         </context-group>
         <note priority="1" from="description"> date card body text</note>
         <note priority="1" from="meaning">spending</note>
@@ -815,7 +855,7 @@
         <source>This week</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">75</context>
         </context-group>
         <note priority="1" from="description"> this week card title</note>
         <note priority="1" from="meaning">spending</note>
@@ -826,7 +866,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">77</context>
         </context-group>
         <note priority="1" from="description"> this week card body text</note>
         <note priority="1" from="meaning">spending</note>
@@ -835,7 +875,7 @@
         <source>This month</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">108</context>
         </context-group>
         <note priority="1" from="description"> this month card title</note>
         <note priority="1" from="meaning">spending</note>
@@ -846,7 +886,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">107</context>
+          <context context-type="linenumber">110</context>
         </context-group>
         <note priority="1" from="description"> this month card body</note>
         <note priority="1" from="meaning">spending</note>
@@ -855,7 +895,7 @@
         <source>Everything</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">138</context>
+          <context context-type="linenumber">141</context>
         </context-group>
         <note priority="1" from="description"> all card title</note>
         <note priority="1" from="meaning">spending</note>
@@ -866,7 +906,7 @@
             </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">140</context>
+          <context context-type="linenumber">143</context>
         </context-group>
         <note priority="1" from="description"> all card body text</note>
         <note priority="1" from="meaning">spending</note>
@@ -875,7 +915,7 @@
         <source>Select what to display.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">160</context>
         </context-group>
         <note priority="1" from="description"> placeholder text for unopened table</note>
         <note priority="1" from="meaning">spending</note>
@@ -884,7 +924,7 @@
         <source> Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">168</context>
+          <context context-type="linenumber">175</context>
         </context-group>
         <note priority="1" from="description"> name col text</note>
         <note priority="1" from="meaning">spending</note>
@@ -893,7 +933,7 @@
         <source> Total</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">170</context>
+          <context context-type="linenumber">177</context>
         </context-group>
         <note priority="1" from="description"> total row text</note>
         <note priority="1" from="meaning">spending</note>
@@ -902,7 +942,7 @@
         <source> Category</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">173</context>
+          <context context-type="linenumber">180</context>
         </context-group>
         <note priority="1" from="description"> cat col text</note>
         <note priority="1" from="meaning">spending</note>
@@ -911,7 +951,7 @@
         <source> Date</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">178</context>
+          <context context-type="linenumber">185</context>
         </context-group>
         <note priority="1" from="description"> date col text</note>
         <note priority="1" from="meaning">spending</note>
@@ -920,7 +960,7 @@
         <source> Amount</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">183</context>
+          <context context-type="linenumber">190</context>
         </context-group>
         <note priority="1" from="description"> amt col text</note>
         <note priority="1" from="meaning">spending</note>
@@ -929,7 +969,7 @@
         <source> Actions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">188</context>
+          <context context-type="linenumber">195</context>
         </context-group>
         <note priority="1" from="description"> actions col text</note>
         <note priority="1" from="meaning">spending</note>
@@ -939,7 +979,7 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/spending/spending.component.html</context>
-          <context context-type="linenumber">207</context>
+          <context context-type="linenumber">214</context>
         </context-group>
         <note priority="1" from="description"> pie chart text</note>
         <note priority="1" from="meaning">spending</note>
@@ -1167,7 +1207,7 @@
         <source> Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/income/income.component.html</context>
-          <context context-type="linenumber">168</context>
+          <context context-type="linenumber">172</context>
         </context-group>
         <note priority="1" from="description"> name col text</note>
         <note priority="1" from="meaning">income</note>
@@ -1176,7 +1216,7 @@
         <source> Total </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/income/income.component.html</context>
-          <context context-type="linenumber">170</context>
+          <context context-type="linenumber">174</context>
         </context-group>
         <note priority="1" from="description"> total row text</note>
         <note priority="1" from="meaning">income</note>
@@ -1185,7 +1225,7 @@
         <source> Category</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/income/income.component.html</context>
-          <context context-type="linenumber">173</context>
+          <context context-type="linenumber">177</context>
         </context-group>
         <note priority="1" from="description"> cat col text</note>
         <note priority="1" from="meaning">income</note>
@@ -1194,7 +1234,7 @@
         <source> Date</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/income/income.component.html</context>
-          <context context-type="linenumber">178</context>
+          <context context-type="linenumber">182</context>
         </context-group>
         <note priority="1" from="description"> date col text</note>
         <note priority="1" from="meaning">income</note>
@@ -1203,7 +1243,7 @@
         <source> Amount</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/income/income.component.html</context>
-          <context context-type="linenumber">183</context>
+          <context context-type="linenumber">187</context>
         </context-group>
         <note priority="1" from="description"> amt col text</note>
         <note priority="1" from="meaning">income</note>
@@ -1212,7 +1252,7 @@
         <source> Actions </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/income/income.component.html</context>
-          <context context-type="linenumber">188</context>
+          <context context-type="linenumber">192</context>
         </context-group>
         <note priority="1" from="description"> actions col text</note>
         <note priority="1" from="meaning">income</note>
@@ -1222,7 +1262,7 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/income/income.component.html</context>
-          <context context-type="linenumber">207</context>
+          <context context-type="linenumber">211</context>
         </context-group>
         <note priority="1" from="description"> pie chart text</note>
         <note priority="1" from="meaning">income</note>

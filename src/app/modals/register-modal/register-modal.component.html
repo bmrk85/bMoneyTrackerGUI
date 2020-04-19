@@ -1,38 +1,37 @@
-<h4 mat-dialog-title i18n="registerModal| modal title">Create a new user</h4>
+<h4 mat-dialog-title><span [translate]="'modal.registerTitle'"></span></h4>
 <div mat-dialog-content>
   <form class="text-center border border-light p-5" [formGroup]="registerForm" (ngSubmit)="tryRegister()">
     <mat-form-field appearance="outline">
-      <mat-label i18n="registerModal| uname field">User name</mat-label>
+      <mat-label><span [translate]="'modal.title.uname'"></span></mat-label>
       <input matInput formControlName="username">
-      <mat-hint align="end" i18n="registerModal| uname hint">Unique username</mat-hint>
-      <mat-error *ngIf="registerForm.hasError('required', 'username')" i18n="registerModal| required">Required field
-      </mat-error>
-      <mat-error *ngIf="registerForm.hasError('minlength', 'username')" i18n="registerModal| length">Must be
-        between {{minLength}} and {{maxLength}}
-        characters
+      <mat-hint> <span [translate]="'modal.hint.uname'"></span></mat-hint>
+      <mat-error *ngIf="registerForm.hasError('required', 'username')"> <span [translate]="'modal.error.required'"></span></mat-error>
+      <mat-error *ngIf="registerForm.hasError('minlength', 'username')">
+        <span [translate]="'modal.error.length'" [translateParams]="{min:minLength, max:maxLength}"></span>
+
       </mat-error>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="registerModal| pw field">Password</mat-label>
+      <mat-label><span [translate]="'modal.title.password'"></span></mat-label>
       <input matInput type="password" formControlName="password">
-      <mat-hint align="end" i18n="registerModal| pw hint">Strong password</mat-hint>
-      <mat-error *ngIf="registerForm.hasError('required', 'password')" i18n="registerModal| required">Required field</mat-error>
-      <mat-error *ngIf="registerForm.hasError('minlength', 'password')" i18n="registerModal| length">Must be between {{minLength}} and {{maxLength}}
-        characters
+      <mat-hint><span [translate]="'modal.hint.password'"></span></mat-hint>
+      <mat-error *ngIf="registerForm.hasError('required', 'password')"><span [translate]="'modal.error.required'"></span></mat-error>
+      <mat-error *ngIf="registerForm.hasError('minlength', 'username')">
+        <span [translate]="'modal.error.length'" [translateParams]="{min:minLength, max:maxLength}"></span>
       </mat-error>
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
-      <mat-label i18n="registerModal| pw retype field">Retype your password</mat-label>
+      <mat-label><span [translate]="'modal.title.retypePw'"></span></mat-label>
       <input matInput type="password" formControlName="retypePassword" [errorStateMatcher]="matcher">
-      <mat-hint align="end" i18n="registerModal| retype pw hint">Retype the same password</mat-hint>
-      <mat-error *ngIf="registerForm.hasError('required', 'retypePassword')" i18n="registerModal| required">Required field</mat-error>
-      <mat-error *ngIf="registerForm.hasError('minlength', 'retypePassword')" i18n="registerModal| length">Must be between {{minLength}}
-        and {{maxLength}} characters
+      <mat-hint align="end"> <span [translate]="'modal.hint.retypePw'"></span></mat-hint>
+      <mat-error *ngIf="registerForm.hasError('required', 'password')"><span [translate]="'modal.error.required'"></span></mat-error>
+      <mat-error *ngIf="registerForm.hasError('minlength', 'username')">
+        <span [translate]="'modal.error.length'" [translateParams]="{min:minLength, max:maxLength}"></span>
       </mat-error>
-      <mat-error *ngIf="registerForm.hasError('notSame') && !registerForm.hasError('minlength', 'retypePassword')" i18n="registerModal| pw not matching">
-        Passwords not matching
+      <mat-error *ngIf="registerForm.hasError('notSame') && !registerForm.hasError('minlength', 'retypePassword')">
+        <span [translate]="'modal.error.pwNotMatching'"></span>
       </mat-error>
 
     </mat-form-field>
@@ -53,14 +52,14 @@
 
 
   <div *ngIf="succesfullyRegistered" class="alert alert-success" role="alert">
-    <h4 class="alert-heading" i18n="registerModal| success reg title">Well done!</h4>
-    <p i18n="registerModal| success reg body">You have succesfully registered.</p>
+    <h4 class="alert-heading" [translate]="'modal.regSuccess1'"></h4>
+    <p [translate]="'modal.regSuccess2'"></p>
   </div>
   <div *ngIf="registrationError" class="alert alert-danger" role="alert">
-    <h4 class="alert-heading">Oops!</h4>
-    <p i18n="registerModal| error reg text1">Something went wrong during your registration process. You might try again with a different username.</p>
+    <h4 class="alert-heading" [translate]="'modal.loginError1'">Oops!</h4>
+    <p [translate]="'modal.regError1'"></p>
     <hr>
-    <p class="mb-0" i18n="registerModal| error reg text2">If the error consists, try contacting one of our administrators.</p>
+    <p class="mb-0" [translate]="'modal.regError2'"></p>
   </div>
 </div>
 

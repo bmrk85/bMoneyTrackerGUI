@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../services/auth-service/auth.service";
-import {FormControl, FormGroup} from "@angular/forms";
-import {MDBModalRef, MDBModalService} from "angular-bootstrap-md";
 import {LoginModalComponent} from "../../modals/login-modal/login-modal.component";
 import {RegisterModalComponent} from "../../modals/register-modal/register-modal.component";
 import {MatDialog} from '@angular/material/dialog';

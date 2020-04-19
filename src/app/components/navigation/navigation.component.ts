@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth-service/auth.service";
-import { environment } from '../../../environments/environment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav',
@@ -9,15 +9,17 @@ import { environment } from '../../../environments/environment';
 })
 export class NavigationComponent implements OnInit {
 
-  private enUrl = `${environment.baseUrl}:4200`;
-  private huUrl = `${environment.baseUrl}:4201`;
 
-  constructor(public authService: AuthService) { }
+
+  constructor(public authService: AuthService,
+              private translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
 
   ngOnInit() {
   }
 
   changeLang() {
-    window.location.href.startsWith(this.enUrl) ? window.location.href=this.huUrl : window.location.href=this.enUrl;
+    this.translate.use(this.translate.currentLang == 'en' ? 'hu' : 'en');
   }
 }

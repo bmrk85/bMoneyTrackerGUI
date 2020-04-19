@@ -24,13 +24,12 @@ export class SpendingService {
   }
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<Spending[]> {
-
     dateTo.setDate(dateTo.getDate() + 1);
 
     return this.http.get<Spending[]>(`${environment.apiUrl}/spendings/date`, {
       params: {
-        dateFrom: dateFrom.toISOString(),
-        dateTo: dateTo.toISOString()
+        dateFrom: dateFrom.toJSON(),
+        dateTo: dateTo.toJSON()
       },
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
