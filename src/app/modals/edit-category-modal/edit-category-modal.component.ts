@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { CategoryService } from '../../services/category-service/category.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Category } from '../../models/category';
 
@@ -15,8 +14,7 @@ export class EditCategoryModalComponent implements OnInit {
 
   constructor(
     @Inject( MAT_DIALOG_DATA ) public selectedCategory: Category,
-    public dialogRef: MatDialogRef<EditCategoryModalComponent>,
-    private categoryService: CategoryService
+    public dialogRef: MatDialogRef<EditCategoryModalComponent>
   ) {
   }
 

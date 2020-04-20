@@ -42,6 +42,7 @@ import { EditCategoryModalComponent } from './modals/edit-category-modal/edit-ca
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FaqComponent } from './components/faq/faq.component';
+import { MccColorPickerModule } from 'material-community-components';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { FaqComponent } from './components/faq/faq.component';
     MatCardModule,
     MatCheckboxModule,
     ChartsModule,
+    MccColorPickerModule,
     TranslateModule.forRoot({
       loader:{
         provide: TranslateLoader,

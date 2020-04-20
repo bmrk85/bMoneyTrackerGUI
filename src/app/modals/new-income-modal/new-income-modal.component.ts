@@ -1,8 +1,8 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Category} from '../../models/category';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {CategoryService} from '../../services/category-service/category.service';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Category } from '../../models/category';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { CategoryService } from '../../services/category-service/category.service';
 
 @Component({
   selector: 'app-new-income-modal',
@@ -79,7 +79,7 @@ export class NewIncomeModalComponent implements OnInit {
 
 
   createIncome() {
-    const selectedCategory = this.availableCategories.find( cat => cat.id === this.incomeForm.controls['category'].value );
+    const selectedCategory = this.availableCategories.find(cat => cat.id === this.incomeForm.controls['category'].value);
 
     this.dialogRef.close({
       id: this.row ? this.row.id : null,
@@ -93,7 +93,7 @@ export class NewIncomeModalComponent implements OnInit {
         :
         selectedCategory.enabled,
       categoryColor: this.incomeForm.controls['newCategoryCheckbox'].value ?
-        '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )
+        '#' + Math.floor(Math.random() * 16777215).toString(16)
         :
         selectedCategory.color,
       categoryId: this.incomeForm.controls['newCategoryCheckbox'].value ?
@@ -103,12 +103,14 @@ export class NewIncomeModalComponent implements OnInit {
       amount: this.incomeForm.controls['amount'].value,
       date: this.incomeForm.controls['date'].value === '' ?
         new Date().toISOString() :
-        this.row ? this.incomeForm.controls['date'].value : this.incomeForm.controls['date'].value.toISOString()
+        this.row ? this.incomeForm.controls['date'].value
+          :
+          new Date(this.incomeForm.controls['date'].value.getTime() - this.incomeForm.controls['date'].value.getTimezoneOffset() * 60000).toISOString()
     });
   }
 
   onCancelClick() {
-    this.dialogRef.close({'cancelled': true})
+    this.dialogRef.close({ 'cancelled': true })
   }
 
 

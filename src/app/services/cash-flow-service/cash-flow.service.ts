@@ -15,12 +15,10 @@ export class CashFlowService {
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<CashFlow[]> {
 
-    dateTo.setDate(dateTo.getDate() + 1);
-
     return this.http.get<CashFlow[]>(`${environment.apiUrl}/cashflow`, {
       params: {
-        dateFrom: dateFrom.toISOString(),
-        dateTo: dateTo.toISOString()
+        dateFrom: new Date(dateFrom.getTime() - dateFrom.getTimezoneOffset() * 60000).toISOString(),
+        dateTo: new Date(dateTo.getTime() - dateTo.getTimezoneOffset() * 60000).toISOString()
       },
       headers: new HttpHeaders({
         'Content-Type': 'application/json'

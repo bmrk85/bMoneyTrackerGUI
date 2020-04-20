@@ -1,3 +1,11 @@
 .mat-form-field{
   display:inline;
 }
+::ng-deep .mcc-color-picker-selector-preview {
+  display:none;
+}
+
+
+::ng-deep .mcc-color-picker-collection {
+  display:none;
+}

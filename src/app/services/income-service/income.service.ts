@@ -25,12 +25,10 @@ export class IncomeService {
 
   getBetweenDates(dateFrom: Date, dateTo: Date): Observable<Income[]> {
 
-    dateTo.setDate(dateTo.getDate() + 1);
-
     return this.http.get<Income[]>(`${environment.apiUrl}/incomes/date`, {
       params: {
-        dateFrom: dateFrom.toISOString(),
-        dateTo: dateTo.toISOString()
+        dateFrom: new Date(dateFrom.getTime() - dateFrom.getTimezoneOffset() * 60000).toISOString(),
+        dateTo: new Date(dateTo.getTime() - dateTo.getTimezoneOffset() * 60000).toISOString()
       },
       headers: new HttpHeaders({
         'Content-Type': 'application/json'

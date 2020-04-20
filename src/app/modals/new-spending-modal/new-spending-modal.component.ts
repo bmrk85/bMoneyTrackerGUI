@@ -103,7 +103,9 @@ export class NewSpendingModalComponent implements OnInit {
       amount: this.spendingForm.controls['amount'].value,
       date: this.spendingForm.controls['date'].value === '' ?
         new Date().toISOString() :
-        this.row ? this.spendingForm.controls['date'].value : this.spendingForm.controls['date'].value.toISOString()
+        this.row ? this.spendingForm.controls['date'].value
+          :
+          new Date(this.spendingForm.controls['date'].value.getTime() - this.spendingForm.controls['date'].value.getTimezoneOffset() * 60000).toISOString()
     } );
   }
 

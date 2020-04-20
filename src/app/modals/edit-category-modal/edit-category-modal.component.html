@@ -9,9 +9,11 @@
     <br>
     <mat-checkbox formControlName="isEnabled"><span [translate]="'modal.title.catIsEnabled'"></span></mat-checkbox>
     <br>
+    <mcc-color-picker mccConnectedColorPicker [mccConnectedColorPickerOrigin]="trigger">
+    </mcc-color-picker>
     <mat-form-field appearance="outline">
       <mat-label><span [translate]="'modal.title.catHex'"></span></mat-label>
-      <input matInput formControlName="color">
+      <input matInput mccColorPickerOrigin #trigger="mccColorPickerOrigin" formControlName="color">
       <mat-hint align="end"><span [translate]="'modal.hint.catHex'"></span></mat-hint>
     </mat-form-field>
     <br>
