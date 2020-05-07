@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {AuthService} from '../../services/auth-service/auth.service';
-import {Subject} from 'rxjs';
-import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {MatDialogRef} from '@angular/material/dialog';
-import {ErrorStateMatcher} from '@angular/material';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth-service/auth.service';
+import { Subject } from 'rxjs';
+import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { ErrorStateMatcher } from '@angular/material';
 
 
 export class CustomErrorStateMatcher implements ErrorStateMatcher {
@@ -21,8 +21,9 @@ export class CustomErrorStateMatcher implements ErrorStateMatcher {
 export class RegisterModalComponent implements OnInit {
 
   registerForm: FormGroup;
-  registrationError = false;
-  succesfullyRegistered = false;
+  registrationInternalError = false;
+  registrationUsernameTakenError = false;
+  successfullyRegistered = false;
   minLength = 5;
   maxLength = 32;
 
@@ -42,9 +43,8 @@ export class RegisterModalComponent implements OnInit {
       retypePassword: new FormControl('',
         [Validators.required, Validators.minLength(5), Validators.maxLength(32)],
       ),
-    }, {validators: this.checkPasswords})
+    }, { validators: this.checkPasswords })
   }
-
 
 
   get username() {
@@ -55,8 +55,8 @@ export class RegisterModalComponent implements OnInit {
     return this.registerForm.get('password')
   };
 
-  checkPasswords(form: FormGroup){
-    return form.get('password').value !== form.get('retypePassword').value ? {notSame: true} : null;
+  checkPasswords(form: FormGroup) {
+    return form.get('password').value !== form.get('retypePassword').value ? { notSame: true } : null;
   }
 
 
@@ -64,16 +64,23 @@ export class RegisterModalComponent implements OnInit {
     this.authService.register(this.username.value, this.password.value)
       .subscribe(
         () => {
-          this.registrationError = false;
-          this.succesfullyRegistered = true;
+          this.registrationInternalError = false;
+          this.registrationUsernameTakenError = false;
+          this.successfullyRegistered = true;
           this.authService.authenticate(this.username.value, this.password.value)
             .subscribe();
           setTimeout(() => {
             this.dialogRef.close();
           }, 2000)
         },
-        () => {
-          this.registrationError = true;
+        err => {
+          if (err.status === 409) {
+            this.registrationUsernameTakenError = true;
+            this.registrationInternalError = false;
+          } else {
+            this.registrationInternalError = true;
+            this.registrationUsernameTakenError = false;
+          }
         }
       )
   }

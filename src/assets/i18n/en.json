@@ -141,7 +141,9 @@
     "regSuccess1": "Well done!",
     "regSuccess2": "You have succesfully registered.",
     "regError1": "Something went wrong during your registration process. You might try again with a different username.",
-    "regError2": "If the error consists, try contacting one of our administrators."
+    "regError2": "If the error consists, try contacting one of our administrators.",
+    "regUsernameError1": "Error during the registration process.",
+    "regUsernameError2": "The username you have provided is already taken, try using an other."
   },
   "faq": {
     "title": "Frequently asked questions",

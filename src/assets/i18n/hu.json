@@ -71,7 +71,7 @@
     "isEnabled": "Engedélyezve?"
   },
   "savings": {
-    "title": "Kiadásaid",
+    "title": "Megtakarításaid",
     "body1": "Itt felvehetsz megtakarításokat, és ellenőrizheted hogy állsz velük.",
     "body2": "Valamire gyűjtessz?",
     "body3": "Vagy csak rá szeretnél pillantani, hogy az eddigiekkel hogy állsz?",
@@ -141,7 +141,9 @@
     "regSuccess1": "Gratulálunk!",
     "regSuccess2": "Sikeres regisztráció.",
     "regError1": "Valami nem sikerült a reigsztráció során. Próbáld újra más adatokkal.",
-    "regError2": "Ha továbbra is fennáll a hiba, keress fel egy adminisztrátort."
+    "regError2": "Ha továbbra is fennáll a hiba, keress fel egy adminisztrátort.",
+    "regUsernameError1": "Hiba a regisztrációs folyamat során.",
+    "regUsernameError2": "Az általad megadott felhasználónév már foglalt, kérjük próbálkozz másikkal."
   },
   "faq": {
     "title": "Gyakran ismételt kérdések",

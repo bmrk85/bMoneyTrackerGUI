@@ -51,15 +51,21 @@
   </form>
 
 
-  <div *ngIf="succesfullyRegistered" class="alert alert-success" role="alert">
+  <div *ngIf="successfullyRegistered" class="alert alert-success" role="alert">
     <h4 class="alert-heading" [translate]="'modal.regSuccess1'"></h4>
     <p [translate]="'modal.regSuccess2'"></p>
   </div>
-  <div *ngIf="registrationError" class="alert alert-danger" role="alert">
-    <h4 class="alert-heading" [translate]="'modal.loginError1'">Oops!</h4>
+  <div *ngIf="registrationInternalError" class="alert alert-danger" role="alert">
+    <h4 class="alert-heading" [translate]="'modal.loginError1'"></h4>
     <p [translate]="'modal.regError1'"></p>
     <hr>
     <p class="mb-0" [translate]="'modal.regError2'"></p>
+  </div>
+  <div *ngIf="registrationUsernameTakenError" class="alert alert-danger" role="alert">
+    <h4 class="alert-heading" [translate]="'modal.loginError1'"></h4>
+    <p [translate]="'modal.regUsernameError1'"></p>
+    <hr>
+    <p class="mb-0" [translate]="'modal.regUsernameError2'"></p>
   </div>
 </div>
 
