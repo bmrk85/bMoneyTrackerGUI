@@ -36,7 +36,7 @@ import {SavingComponent} from './components/saving/saving.component';
 import {NewSavingModalComponent} from './modals/new-saving-modal/new-saving-modal.component';
 import {SpecificDateModalComponent} from './modals/specific-date-modal/specific-date-modal.component';
 import { NewIncomeModalComponent } from './modals/new-income-modal/new-income-modal.component';
-import { ChartsModule } from 'ng2-charts';
+import {ChartsModule, ThemeService} from 'ng2-charts';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditCategoryModalComponent } from './modals/edit-category-modal/edit-category-modal.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -92,7 +92,7 @@ import { MccColorPickerModule } from 'material-community-components';
     ChartsModule,
     MccColorPickerModule,
     TranslateModule.forRoot({
-      loader:{
+      loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
@@ -101,6 +101,7 @@ import { MccColorPickerModule } from 'material-community-components';
   ],
   providers: [
     MatDatepickerModule,
+    ThemeService,
     {
       provide: HTTP_INTERCEPTORS, useClass: BasicAuthHttpInterceptorService, multi: true
     }
